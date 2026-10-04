@@ -285,6 +285,62 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
                   fetchPriority="high"
                 />
 
+                {/* Floating Badge 1 (Kiri): Website Creator (Orange/Yellow pill with thick white border) */}
+                <motion.div
+                  initial={{ opacity: 0, x: -25, scale: 0.85 }}
+                  animate={{
+                    opacity: 1,
+                    x: 0,
+                    scale: 1,
+                    y: [0, -7, 0],
+                    rotate: [-2, 1, -2],
+                  }}
+                  transition={{
+                    opacity: { duration: 0.7, delay: 0.85 },
+                    x: { duration: 0.7, delay: 0.85 },
+                    scale: { type: 'spring', stiffness: 220, damping: 18, delay: 0.85 },
+                    y: { duration: 4.8, repeat: Infinity, ease: 'easeInOut', delay: 1.5 },
+                    rotate: { duration: 5.4, repeat: Infinity, ease: 'easeInOut', delay: 1.5 },
+                  }}
+                  whileHover={{ scale: 1.08, rotate: 0 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="absolute left-[-6px] sm:left-[-18px] md:left-[-24px] lg:left-[-32px] top-[32%] sm:top-[34%] z-30 pointer-events-auto cursor-pointer"
+                >
+                  <div className="bg-[#F59E0B] dark:bg-[#F9B51B] text-white px-3.5 sm:px-5 md:px-6 py-1.5 sm:py-2 md:py-2.5 rounded-full border-[2.5px] border-white shadow-[0_10px_25px_-3px_rgba(245,158,11,0.45)] dark:shadow-[0_10px_25px_-3px_rgba(0,0,0,0.5)] flex items-center justify-center select-none transition-transform">
+                    <span className="font-display font-bold text-xs sm:text-sm md:text-base tracking-wide uppercase whitespace-nowrap drop-shadow-xs">
+                      Website Creator
+                    </span>
+                  </div>
+                </motion.div>
+
+                {/* Floating Badge 2 (Kanan): Digital Maker (Dark Green pill with thick white border) */}
+                <motion.div
+                  initial={{ opacity: 0, x: 25, scale: 0.85 }}
+                  animate={{
+                    opacity: 1,
+                    x: 0,
+                    scale: 1,
+                    y: [0, 8, 0],
+                    rotate: [2, -1, 2],
+                  }}
+                  transition={{
+                    opacity: { duration: 0.7, delay: 0.95 },
+                    x: { duration: 0.7, delay: 0.95 },
+                    scale: { type: 'spring', stiffness: 220, damping: 18, delay: 0.95 },
+                    y: { duration: 5.2, repeat: Infinity, ease: 'easeInOut', delay: 1.7 },
+                    rotate: { duration: 6.0, repeat: Infinity, ease: 'easeInOut', delay: 1.7 },
+                  }}
+                  whileHover={{ scale: 1.08, rotate: 0 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="absolute right-[-6px] sm:right-[-14px] md:right-[-20px] lg:right-[-26px] top-[60%] sm:top-[62%] z-30 pointer-events-auto cursor-pointer"
+                >
+                  <div className="bg-[#2B4734] dark:bg-[#31543A] text-white px-4 sm:px-6 md:px-7 py-1.5 sm:py-2 md:py-2.5 rounded-full border-[2.5px] border-white shadow-[0_10px_25px_-3px_rgba(43,71,52,0.5)] dark:shadow-[0_10px_25px_-3px_rgba(0,0,0,0.5)] flex items-center justify-center select-none transition-transform">
+                    <span className="font-display font-bold text-xs sm:text-sm md:text-base tracking-wide uppercase whitespace-nowrap drop-shadow-xs">
+                      Digital Maker
+                    </span>
+                  </div>
+                </motion.div>
+
                 {/* Instant Change / Upload Button for custom photo */}
                 <input
                   ref={fileInputRef}

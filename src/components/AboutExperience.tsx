@@ -131,11 +131,11 @@ export const AboutExperience: React.FC<AboutExperienceProps> = () => {
 
           {/* Narrative Bio & 3 Key Metric Columns */}
           <div className="max-w-4xl space-y-8">
-            <div className="font-body space-y-4 text-base sm:text-lg text-[#666666] dark:text-[#A3A3A3] leading-[1.65] font-normal text-justify">
-              <p className="text-justify">
+            <div className="font-body space-y-4 text-base sm:text-lg text-[#666666] dark:text-[#A3A3A3] leading-[1.65] font-normal text-refined-justify">
+              <p className="text-refined-justify">
                 Saya memiliki ketertarikan tinggi pada industri pelayanan retail dan operasional toko modern. Melalui pengalaman lebih dari 8 tahun membantu usaha keluarga, saya terlatih melayani berbagai karakter pembeli, mengelola transaksi kasir, menjaga stok barang, serta memastikan area penjualan selalu tertata rapi.
               </p>
-              <p className="text-justify">
+              <p className="text-refined-justify">
                 Selain pengalaman di toko fisik, saya juga menguasai keterampilan digital dan pengarsipan data yang dibuktikan melalui perancangan aplikasi berbasis website yang dikhususkan untuk membantu staf administrasi di sekolah—sebuah proyek milik mahasiswa yang seluruh perancangan dan pengembangannya saya garap secara mandiri—serta pelayanan puluhan mahasiswa di jasa digital. Bagi saya, pelayanan prima bukan sekadar menjual barang, melainkan menciptakan kepercayaan dan kepuasan bagi pelanggan.
               </p>
             </div>
@@ -402,7 +402,7 @@ export const AboutExperience: React.FC<AboutExperienceProps> = () => {
                   </div>
 
                   {/* Description */}
-                  <p className="font-body text-xs sm:text-sm text-[#555555] dark:text-[#A3A3A3] leading-relaxed font-normal text-justify">
+                  <p className="font-body text-xs sm:text-sm text-[#555555] dark:text-[#A3A3A3] leading-relaxed font-normal text-refined-justify">
                     {item.description}
                   </p>
                 </div>
