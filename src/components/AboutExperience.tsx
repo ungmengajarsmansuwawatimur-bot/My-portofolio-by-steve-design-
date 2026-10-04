@@ -119,7 +119,7 @@ export const AboutExperience: React.FC<AboutExperienceProps> = () => {
         <div className="space-y-12">
           {/* Section Kicker & Title */}
           <div className="space-y-3">
-            <div className="font-display inline-flex items-center gap-2 text-xs sm:text-sm font-semibold tracking-[0.08em] uppercase text-[#F9B51B]">
+            <div className="font-display inline-flex items-center gap-2 text-xs sm:text-sm font-semibold tracking-[0.08em] uppercase text-[#F9B51B] dark:text-[#d1fe17] transition-colors">
               <span aria-hidden="true">✦</span>
               <span>ABOUT</span>
               <span aria-hidden="true">✦</span>
@@ -178,7 +178,7 @@ export const AboutExperience: React.FC<AboutExperienceProps> = () => {
         <div id="credentials" className="space-y-8 pt-8 sm:pt-12 border-t border-[#171717]/15 dark:border-white/10">
           {/* Section Kicker & Title */}
           <div className="space-y-3 max-w-3xl">
-            <div className="font-display inline-flex items-center gap-2 text-xs sm:text-sm font-semibold tracking-[0.08em] uppercase text-[#F9B51B]">
+            <div className="font-display inline-flex items-center gap-2 text-xs sm:text-sm font-semibold tracking-[0.08em] uppercase text-[#F9B51B] dark:text-[#d1fe17] transition-colors">
               <span aria-hidden="true">✦</span>
               <span>CREDENTIALS</span>
               <span aria-hidden="true">✦</span>
@@ -197,7 +197,7 @@ export const AboutExperience: React.FC<AboutExperienceProps> = () => {
             <div className="py-7 sm:py-9 md:py-10 grid grid-cols-[1fr_auto_56px] sm:grid-cols-[1fr_180px_1fr] md:grid-cols-[1fr_210px_1fr] items-center gap-4 sm:gap-6 group transition-colors">
               {/* Left Column: Title & Subtitle */}
               <div className="space-y-1 min-w-0 pr-2">
-                <h3 className="font-display text-xl sm:text-3xl md:text-4xl font-semibold text-[#171717] dark:text-white tracking-[-0.015em] leading-tight group-hover:text-[#31543A] dark:group-hover:text-[#F9B51B] transition-colors">
+                <h3 className="font-display text-xl sm:text-3xl md:text-4xl font-semibold text-[#171717] dark:text-white tracking-[-0.015em] leading-tight group-hover:text-[#F9B51B] dark:group-hover:text-[#F9B51B] dark:text-[#d1fe17] transition-colors">
                   Universitas Negeri Gorontalo
                 </h3>
                 <p className="font-info text-xs sm:text-sm text-[#666666] dark:text-[#A3A3A3] font-normal">
@@ -241,7 +241,7 @@ export const AboutExperience: React.FC<AboutExperienceProps> = () => {
                   type="button"
                   onClick={() => setActiveCredential('university')}
                   onDoubleClick={(e) => e.stopPropagation()}
-                  className={`w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center font-bold text-xl sm:text-2xl shadow-sm shrink-0 transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-[#F9B51B] ${
+                  className={`w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center font-bold text-xl sm:text-2xl shadow-sm shrink-0 transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-[#F9B51B] dark:ring-[#d1fe17] ${
                     activeCredential === 'university'
                       ? 'bg-[#171717] dark:bg-white text-white dark:text-[#171717] ring-2 ring-black/20 dark:ring-white/40 scale-105'
                       : 'bg-[#171717]/80 dark:bg-white/80 text-white dark:text-[#171717] opacity-80 hover:opacity-100'
@@ -264,7 +264,7 @@ export const AboutExperience: React.FC<AboutExperienceProps> = () => {
             <div className="py-7 sm:py-9 md:py-10 grid grid-cols-[1fr_auto_56px] sm:grid-cols-[1fr_180px_1fr] md:grid-cols-[1fr_210px_1fr] items-center gap-4 sm:gap-6 group transition-colors">
               {/* Left Column: Title & Subtitle */}
               <div className="space-y-1 min-w-0 pr-2">
-                <h3 className="font-display text-xl sm:text-3xl md:text-4xl font-semibold text-[#171717] dark:text-white tracking-[-0.015em] leading-tight group-hover:text-[#31543A] dark:group-hover:text-[#F9B51B] transition-colors">
+                <h3 className="font-display text-xl sm:text-3xl md:text-4xl font-semibold text-[#171717] dark:text-white tracking-[-0.015em] leading-tight group-hover:text-[#F9B51B] dark:group-hover:text-[#F9B51B] dark:text-[#d1fe17] transition-colors">
                   Program Studi
                 </h3>
                 <p className="font-info text-xs sm:text-sm text-[#666666] dark:text-[#A3A3A3] font-normal">
@@ -330,16 +330,16 @@ export const AboutExperience: React.FC<AboutExperienceProps> = () => {
                 </AnimatePresence>
               </div>
 
-              {/* Right Column: Yellow Arrow Button (Diagonal arrow with click interaction) */}
+              {/* Right Column: Yellow/Green Arrow Button (Diagonal arrow with click interaction) */}
               <div className="flex items-center justify-end">
                 <button
                   type="button"
                   onClick={() => setActiveCredential('major')}
                   onDoubleClick={(e) => e.stopPropagation()}
-                  className={`w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center font-bold text-xl sm:text-2xl shadow-sm shrink-0 transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-[#F9B51B] ${
+                  className={`w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center font-bold text-xl sm:text-2xl shadow-sm shrink-0 transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-[#F9B51B] dark:focus:ring-[#F9B51B] dark:ring-[#d1fe17] ${
                     activeCredential === 'major'
-                      ? 'bg-[#F9B51B] text-[#171717] ring-2 ring-[#F9B51B]/50 scale-105'
-                      : 'bg-[#F9B51B]/75 text-[#171717] opacity-80 hover:opacity-100'
+                      ? 'bg-[#F9B51B] dark:bg-[#d1fe17] text-[#171717] ring-2 ring-[#F9B51B]/50 dark:ring-[#d1fe17]/50 scale-105'
+                      : 'bg-[#F9B51B]/80 dark:bg-[#d1fe17]/75 text-[#171717] opacity-80 hover:opacity-100'
                   }`}
                   title="Klik untuk memunculkan icon Jurusan (dan menyembunyikan icon Universitas)"
                   aria-label="Tampilkan icon Program Studi Bimbingan dan Konseling"
@@ -363,7 +363,7 @@ export const AboutExperience: React.FC<AboutExperienceProps> = () => {
         <div id="background" className="space-y-8 pt-10 border-t border-[#171717]/15 dark:border-white/10">
           {/* Section Kicker & Title */}
           <div className="text-center space-y-2 max-w-2xl mx-auto">
-            <div className="font-display inline-flex items-center gap-2 text-xs sm:text-sm font-semibold tracking-[0.08em] uppercase text-[#F9B51B]">
+            <div className="font-display inline-flex items-center gap-2 text-xs sm:text-sm font-semibold tracking-[0.08em] uppercase text-[#F9B51B] dark:text-[#d1fe17] transition-colors">
               <span aria-hidden="true">✦</span>
               <span>BACKGROUND</span>
               <span aria-hidden="true">✦</span>
@@ -373,50 +373,54 @@ export const AboutExperience: React.FC<AboutExperienceProps> = () => {
             </h2>
           </div>
 
-          {/* Full-width Stacked Horizontal Rows (Screenshot-identical layout) */}
-          <div className="border-t border-[#171717]/15 dark:border-white/10 divide-y divide-[#171717]/15 dark:divide-white/10">
+          {/* 3 Columns Vertical Cards Layout matching 01, 02, 03 positions below */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-12 items-stretch pt-2">
             {filteredItems.map((item) => (
               <div
                 key={item.id}
-                className="py-8 sm:py-10 md:py-12 group transition-colors hover:bg-black/[0.01] dark:hover:bg-white/[0.01]"
+                className="border-t-2 border-[#171717]/15 dark:border-white/10 pt-6 sm:pt-8 flex flex-col justify-between group transition-all duration-300 hover:border-[#F9B51B] dark:hover:border-[#F9B51B] dark:border-[#d1fe17]"
               >
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-start lg:items-center">
-                  {/* Left Column (col 1-4): Icon + Title & Category */}
-                  <div className="lg:col-span-4 flex items-start gap-4 sm:gap-5">
-                    <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-transparent flex items-center justify-center shrink-0 text-[#171717] dark:text-white transition-transform group-hover:scale-105">
+                <div className="space-y-4">
+                  {/* Top: Icon & Category */}
+                  <div className="flex items-center justify-between gap-3">
+                    <div className="w-12 h-12 rounded-xl bg-black/[0.04] dark:bg-white/[0.06] flex items-center justify-center shrink-0 text-[#171717] dark:text-white transition-transform group-hover:scale-110">
                       {item.icon}
                     </div>
-                    <div className="space-y-1">
-                      <span className="font-info text-[10px] sm:text-xs font-normal uppercase tracking-wider text-[#31543A] dark:text-[#F9B51B] block">
-                        {item.category}
-                      </span>
-                      <h3 className="font-display text-xl sm:text-2xl font-semibold text-[#171717] dark:text-white tracking-[-0.015em] leading-snug">
-                        {item.title}
-                      </h3>
-                      <p className="font-info text-xs sm:text-sm text-[#666666] dark:text-[#A3A3A3] font-normal">
-                        {item.subtitle}
-                      </p>
-                    </div>
+                    <span className="font-info text-[10px] sm:text-xs font-bold uppercase tracking-wider bg-[#171717] text-[#FFE500] dark:bg-[#d1fe17] dark:text-black px-2.5 py-1 rounded-full transition-colors duration-200">
+                      {item.category}
+                    </span>
                   </div>
 
-                  {/* Middle Column (col 5-12): Rich Description & Tags */}
-                  <div className="lg:col-span-8 space-y-3">
-                    <p className="font-body text-sm sm:text-base text-[#555555] dark:text-[#A3A3A3] leading-[1.65] font-normal text-justify">
-                      {item.description}
+                  {/* Title & Subtitle */}
+                  <div className="space-y-1">
+                    <h3 className="font-display text-lg sm:text-xl font-bold text-[#171717] dark:text-white tracking-tight leading-snug group-hover:text-[#F9B51B] dark:group-hover:text-[#F9B51B] dark:text-[#d1fe17] transition-colors">
+                      {item.title}
+                    </h3>
+                    <p className="font-info text-xs sm:text-sm text-[#666666] dark:text-[#A3A3A3] font-medium">
+                      {item.subtitle}
                     </p>
-                    <div className="flex flex-wrap items-center gap-2 pt-0.5">
-                      <span className="font-info text-xs font-normal text-[#31543A] dark:text-[#F9B51B]">
-                        {item.period}
+                  </div>
+
+                  {/* Description */}
+                  <p className="font-body text-xs sm:text-sm text-[#555555] dark:text-[#A3A3A3] leading-relaxed font-normal text-justify">
+                    {item.description}
+                  </p>
+                </div>
+
+                {/* Bottom: Period & Tags */}
+                <div className="pt-4 mt-6 border-t border-[#171717]/10 dark:border-white/10 space-y-2">
+                  <div className="font-info text-xs font-semibold text-[#F9B51B] dark:text-[#d1fe17]">
+                    {item.period}
+                  </div>
+                  <div className="flex flex-wrap items-center gap-1.5 pt-0.5">
+                    {item.tags.map((t, idx) => (
+                      <span
+                        key={idx}
+                        className="font-info text-[11px] bg-black/[0.04] dark:bg-white/[0.06] px-2 py-0.5 rounded text-[#555555] dark:text-[#A3A3A3]"
+                      >
+                        {t}
                       </span>
-                      {item.tags.map((t, idx) => (
-                        <span
-                          key={idx}
-                          className="font-info text-xs text-[#777777] dark:text-[#888888] font-normal"
-                        >
-                          &bull; {t}
-                        </span>
-                      ))}
-                    </div>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -434,7 +438,7 @@ export const AboutExperience: React.FC<AboutExperienceProps> = () => {
               className="border-t border-[#171717]/15 dark:border-white/10 pt-4 flex flex-col items-center text-center justify-between space-y-3"
             >
               <div className="flex flex-col items-center text-center">
-                <div className="font-display text-3xl sm:text-4xl font-semibold text-[#F9B51B] leading-none mb-2 tracking-tight text-center">
+                <div className="font-display text-3xl sm:text-4xl font-semibold text-[#F9B51B] dark:text-[#d1fe17] transition-colors leading-none mb-2 tracking-tight text-center">
                   {val.number}
                 </div>
                 <h4 className="font-display text-base sm:text-lg font-semibold text-[#171717] dark:text-white text-center">

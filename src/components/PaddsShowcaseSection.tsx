@@ -51,12 +51,12 @@ const PaddsShowcaseSectionComponent: React.FC = () => {
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
         <div className="space-y-3 max-w-3xl">
           <div className="flex items-center gap-3">
-            <span className="text-4xl sm:text-5xl font-black text-[#F9B51B]">02</span>
+            <span className="text-4xl sm:text-5xl font-black text-[#F9B51B] dark:text-[#d1fe17]">02</span>
             <span className="text-xs font-bold tracking-wider text-[#666666] dark:text-[#A3A3A3] uppercase">
               PADDS SMANSAT · 6 Modul Video Asli
             </span>
           </div>
-          <div className="text-xs font-black tracking-widest text-[#31543A] dark:text-[#F9B51B] uppercase">
+          <div className="text-xs font-black tracking-widest text-[#F9B51B] dark:text-[#d1fe17] uppercase">
             PENGEMBANGAN SISTEM ARSIP
           </div>
           <h3 className="text-3xl sm:text-4xl font-black text-[#171717] dark:text-white tracking-tight">
@@ -72,10 +72,10 @@ const PaddsShowcaseSectionComponent: React.FC = () => {
           <button
             type="button"
             onClick={() => setIsOpen((prev) => !prev)}
-            className="group inline-flex items-center gap-2.5 text-xs sm:text-sm font-black text-[#31543A] dark:text-[#F9B51B] hover:text-[#171717] dark:hover:text-white cursor-pointer transition-colors"
+            className="group inline-flex items-center gap-2.5 text-xs sm:text-sm font-black text-[#F9B51B] dark:text-[#d1fe17] hover:text-[#171717] dark:hover:text-white cursor-pointer transition-colors"
           >
             <span className="hover:underline">{isOpen ? 'Sembunyikan Modul Video' : 'Buka 6 Video Modul & Detail'}</span>
-            <span className="w-7 h-7 rounded-full bg-[#F9B51B] text-[#171717] flex items-center justify-center font-bold text-xs shrink-0 shadow-xs transition-transform group-hover:scale-105">
+            <span className="w-7 h-7 rounded-full bg-[#F9B51B] dark:bg-[#d1fe17] text-[#171717] flex items-center justify-center font-bold text-xs shrink-0 shadow-xs transition-transform group-hover:scale-105">
               {isOpen ? '↑' : '↓'}
             </span>
           </button>
@@ -114,7 +114,7 @@ const PaddsShowcaseSectionComponent: React.FC = () => {
                   onClick={handlePrev}
                   aria-label="Modul Sebelumnya"
                   title="Modul Sebelumnya"
-                  className="p-1 text-[#171717] dark:text-white hover:text-[#F9B51B] transition-colors cursor-pointer"
+                  className="p-1 text-[#171717] dark:text-white hover:text-[#F9B51B] dark:text-[#d1fe17] transition-colors cursor-pointer"
                 >
                   <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
@@ -128,7 +128,7 @@ const PaddsShowcaseSectionComponent: React.FC = () => {
                   onClick={handleNext}
                   aria-label="Modul Berikutnya"
                   title="Modul Berikutnya"
-                  className="p-1 text-[#171717] dark:text-white hover:text-[#F9B51B] transition-colors cursor-pointer"
+                  className="p-1 text-[#171717] dark:text-white hover:text-[#F9B51B] dark:text-[#d1fe17] transition-colors cursor-pointer"
                 >
                   <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
@@ -140,9 +140,9 @@ const PaddsShowcaseSectionComponent: React.FC = () => {
                 href={current.youtubeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-xs font-black text-[#31543A] dark:text-[#F9B51B] hover:underline"
+                className="inline-flex items-center gap-1.5 text-xs font-black text-[#F9B51B] dark:text-[#d1fe17] hover:underline"
               >
-                <svg className="w-4 h-4 fill-current text-[#F9B51B]" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 fill-current text-[#F9B51B] dark:text-[#d1fe17]" viewBox="0 0 24 24">
                   <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                 </svg>
                 <span>Buka di YouTube</span>
@@ -153,7 +153,7 @@ const PaddsShowcaseSectionComponent: React.FC = () => {
           {/* 4 Komponen Kotak Fokus & Kontribusi */}
           <div className="space-y-3 pt-2">
             <div className="flex items-center gap-2">
-              <span className="w-3 h-3 rounded-full bg-[#F9B51B]" />
+              <span className="w-3 h-3 rounded-full bg-[#F9B51B] dark:bg-[#d1fe17]" />
               <h4 className="text-xs sm:text-sm font-black text-[#171717] dark:text-white uppercase tracking-wider">
                 Fokus &amp; Kontribusi Pengembangan
               </h4>
@@ -165,7 +165,7 @@ const PaddsShowcaseSectionComponent: React.FC = () => {
                   key={idx}
                   className="p-5 bg-[#F5F5F5] dark:bg-[#1E1E1E] rounded-2xl border-2 border-[#171717] dark:border-[#333333] space-y-1.5 shadow-[3px_3px_0px_#171717]"
                 >
-                  <div className="flex items-center gap-1.5 font-black text-xs text-[#F9B51B]">
+                  <div className="flex items-center gap-1.5 font-black text-xs text-[#F9B51B] dark:text-[#d1fe17]">
                     <span>0{idx + 1}.</span>
                     <span className="text-[#171717] dark:text-white font-black text-xs">
                       {item.title}

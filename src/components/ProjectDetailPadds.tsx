@@ -57,12 +57,12 @@ export const ProjectDetailPadds: React.FC<ProjectDetailPaddsProps> = ({ onBack }
         {/* Main Header Information */}
         <div className="space-y-4 max-w-4xl">
           <div className="flex items-center gap-3">
-            <span className="font-display text-4xl sm:text-5xl font-semibold text-[#F9B51B] tracking-[-0.03em]">02</span>
+            <span className="font-display text-4xl sm:text-5xl font-semibold text-[#F9B51B] dark:text-[#d1fe17] tracking-[-0.03em]">02</span>
             <span className="font-info text-xs font-normal tracking-wider text-[#666666] dark:text-[#A3A3A3] uppercase">
               PADDS SMANSAT · 6 Modul Video Asli
             </span>
           </div>
-          <div className="font-info text-xs font-normal tracking-[0.08em] text-[#31543A] dark:text-[#F9B51B] uppercase">
+          <div className="font-info text-xs font-normal tracking-[0.08em] text-[#F9B51B] dark:text-[#d1fe17] uppercase">
             PENGEMBANGAN SISTEM ARSIP
           </div>
           <h1 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold text-[#171717] dark:text-white tracking-[-0.025em] leading-[1.08]">
@@ -85,7 +85,7 @@ export const ProjectDetailPadds: React.FC<ProjectDetailPaddsProps> = ({ onBack }
               </p>
             </div>
             <div className="flex items-center gap-2">
-              <span className="font-info text-xs font-normal text-[#31543A] dark:text-[#F9B51B]">
+              <span className="font-info text-xs font-normal text-[#F9B51B] dark:text-[#d1fe17]">
                 Modul {activeIndex + 1} dari {total}
               </span>
             </div>
@@ -127,7 +127,7 @@ export const ProjectDetailPadds: React.FC<ProjectDetailPaddsProps> = ({ onBack }
                     : 'bg-[#F5F5F5] dark:bg-[#1E1E1E] text-[#171717] dark:text-white border-[#171717]/15 dark:border-[#333333] hover:border-[#171717]'
                 }`}
               >
-                <span className={`font-display text-[11px] font-semibold ${activeIndex === idx ? 'text-[#F9B51B]' : 'text-[#31543A] dark:text-[#F9B51B]'}`}>
+                <span className={`font-display text-[11px] font-semibold ${activeIndex === idx ? 'text-[#F9B51B] dark:text-[#d1fe17]' : 'text-[#F9B51B] dark:text-[#d1fe17]'}`}>
                   {mod.number}
                 </span>
                 <span className="font-display text-xs font-semibold whitespace-nowrap">
@@ -141,7 +141,7 @@ export const ProjectDetailPadds: React.FC<ProjectDetailPaddsProps> = ({ onBack }
         {/* FOKUS & KONTRIBUSI PENGEMBANGAN (LINEAR FEATURE LIST) */}
         <div className="space-y-4 pt-6 border-t border-[#171717]/15 dark:border-white/10">
           <div className="flex items-center gap-2">
-            <span className="w-3 h-3 rounded-full bg-[#F9B51B]" />
+            <span className="w-3 h-3 rounded-full bg-[#F9B51B] dark:bg-[#d1fe17]" />
             <h3 className="font-display text-xs sm:text-sm font-semibold text-[#171717] dark:text-white uppercase tracking-wider">
               Fokus &amp; Kontribusi Pengembangan
             </h3>
@@ -153,7 +153,7 @@ export const ProjectDetailPadds: React.FC<ProjectDetailPaddsProps> = ({ onBack }
                 key={idx}
                 className="p-5 sm:p-6 flex flex-col sm:flex-row items-start gap-4 hover:bg-white dark:hover:bg-[#252528] transition-colors"
               >
-                <span className="font-display text-sm font-semibold text-[#F9B51B] shrink-0 pt-0.5">
+                <span className="font-display text-sm font-semibold text-[#F9B51B] dark:text-[#d1fe17] shrink-0 pt-0.5">
                   0{idx + 1}.
                 </span>
                 <div className="space-y-1">

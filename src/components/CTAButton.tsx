@@ -50,11 +50,11 @@ export const CTAButton: React.FC<CTAButtonProps> = ({
     'steve-split':
       'bg-[#31543A] text-white hover:bg-[#26432E] focus-visible:outline-[#31543A]',
     yellow:
-      'bg-[#F9B51B] text-[#171717] hover:bg-[#e0a012] focus-visible:outline-[#F9B51B]',
+      'bg-[#F9B51B] dark:bg-[#d1fe17] text-[#171717] hover:bg-[#e0a012] dark:hover:bg-[#bce610] focus-visible:outline-[#F9B51B] dark:focus-visible:outline-[#d1fe17]',
     cobalt:
       'bg-[#31543A] text-white hover:bg-[#26432E] focus-visible:outline-[#31543A]',
     vermilion:
-      'bg-[#F9B51B] text-[#171717] hover:bg-[#e0a012] focus-visible:outline-[#F9B51B]',
+      'bg-[#F9B51B] dark:bg-[#d1fe17] text-[#171717] hover:bg-[#e0a012] dark:hover:bg-[#bce610] focus-visible:outline-[#F9B51B] dark:focus-visible:outline-[#d1fe17]',
     secondary:
       'bg-white text-[#171717] dark:bg-[#1E1E1E] dark:text-white hover:bg-[#F5F5F5] dark:hover:bg-[#2A2A2A] focus-visible:outline-[#31543A]',
     outline:
@@ -70,7 +70,7 @@ export const CTAButton: React.FC<CTAButtonProps> = ({
       className={`rounded-full flex items-center justify-center shrink-0 font-bold transition-transform group-hover:translate-x-0.5 ${circleSizes[size]} ${
         computedVariant === 'yellow'
           ? 'bg-[#31543A] text-white'
-          : 'bg-[#F9B51B] text-[#171717]'
+          : 'bg-[#F9B51B] dark:bg-[#d1fe17] text-[#171717]'
       }`}
       aria-hidden="true"
     >

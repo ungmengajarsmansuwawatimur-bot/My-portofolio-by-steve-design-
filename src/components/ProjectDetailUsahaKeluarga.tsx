@@ -16,7 +16,7 @@ export const ProjectDetailUsahaKeluarga: React.FC<ProjectDetailUsahaKeluargaProp
       title: 'Pelayanan Pelanggan Langsung',
       desc: 'Menyapa pelanggan dengan ramah, mendengarkan kebutuhan barang harian, dan memberikan rekomendasi produk yang tepat.',
       icon: (
-        <svg className="w-5 h-5 text-[#31543A] dark:text-[#F9B51B]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+        <svg className="w-5 h-5 text-[#F9B51B] dark:text-[#d1fe17]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
           <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
         </svg>
       ),
@@ -25,7 +25,7 @@ export const ProjectDetailUsahaKeluarga: React.FC<ProjectDetailUsahaKeluargaProp
       title: 'Pengelolaan Stok & Cek Fisik',
       desc: 'Mencatat ketersediaan barang di etalase, memantau tanggal kadaluarsa, menyortir barang retur, dan mendata barang yang perlu diisi ulang.',
       icon: (
-        <svg className="w-5 h-5 text-[#31543A] dark:text-[#F9B51B]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+        <svg className="w-5 h-5 text-[#F9B51B] dark:text-[#d1fe17]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
           <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" />
         </svg>
       ),
@@ -34,7 +34,7 @@ export const ProjectDetailUsahaKeluarga: React.FC<ProjectDetailUsahaKeluargaProp
       title: 'Penataan Display & Kerapian Toko',
       desc: 'Menjaga kebersihan rak dan etalase, menyusun barang sesuai kategori agar mudah dijangkau pelanggan, dan mengelompokkan label harga.',
       icon: (
-        <svg className="w-5 h-5 text-[#31543A] dark:text-[#F9B51B]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+        <svg className="w-5 h-5 text-[#F9B51B] dark:text-[#d1fe17]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
           <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" />
         </svg>
       ),
@@ -43,7 +43,7 @@ export const ProjectDetailUsahaKeluarga: React.FC<ProjectDetailUsahaKeluargaProp
       title: 'Transaksi Tunai & Pembukuan Sederhana',
       desc: 'Melayani pembayaran tunai, menghitung uang kembalian secara teliti, serta mencatat rekap pemasukan kas harian keluarga.',
       icon: (
-        <svg className="w-5 h-5 text-[#31543A] dark:text-[#F9B51B]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+        <svg className="w-5 h-5 text-[#F9B51B] dark:text-[#d1fe17]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
           <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
       ),
@@ -63,12 +63,12 @@ export const ProjectDetailUsahaKeluarga: React.FC<ProjectDetailUsahaKeluargaProp
         {/* Main Header Information */}
         <div className="space-y-4 max-w-4xl">
           <div className="flex items-center gap-3">
-            <span className="font-display text-4xl sm:text-5xl font-semibold text-[#F9B51B]">03</span>
+            <span className="font-display text-4xl sm:text-5xl font-semibold text-[#F9B51B] dark:text-[#d1fe17]">03</span>
             <span className="font-info text-xs font-normal tracking-wider text-[#666666] dark:text-[#A3A3A3] uppercase">
               2016 — Sekarang (±8 Tahun)
             </span>
           </div>
-          <div className="font-info text-xs font-normal tracking-widest text-[#31543A] dark:text-[#F9B51B] uppercase">
+          <div className="font-info text-xs font-normal tracking-widest text-[#F9B51B] dark:text-[#d1fe17] uppercase">
             OPERASIONAL &amp; PELAYANAN LANGSUNG
           </div>
           <h1 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold text-[#171717] dark:text-white tracking-tight leading-[1.08]">
@@ -82,7 +82,7 @@ export const ProjectDetailUsahaKeluarga: React.FC<ProjectDetailUsahaKeluargaProp
         {/* PERAN & AKTIVITAS HARIAN TOKO (LINEAR WORKFLOW LIST) */}
         <div className="space-y-4 pt-6 border-t border-[#171717]/15 dark:border-white/10">
           <div className="flex items-center gap-2">
-            <span className="w-3 h-3 rounded-full bg-[#F9B51B]" />
+            <span className="w-3 h-3 rounded-full bg-[#F9B51B] dark:bg-[#d1fe17]" />
             <h3 className="font-display text-xs sm:text-sm font-semibold text-[#171717] dark:text-white uppercase tracking-wider">
               Peran &amp; Aktivitas Harian Toko
             </h3>
@@ -95,7 +95,7 @@ export const ProjectDetailUsahaKeluarga: React.FC<ProjectDetailUsahaKeluargaProp
                 className="p-5 sm:p-6 flex flex-col sm:flex-row items-start gap-4 hover:bg-white dark:hover:bg-[#252528] transition-colors"
               >
                 <div className="flex items-center gap-3 shrink-0">
-                  <span className="font-display text-sm font-semibold text-[#F9B51B]">
+                  <span className="font-display text-sm font-semibold text-[#F9B51B] dark:text-[#d1fe17]">
                     0{idx + 1}.
                   </span>
                   <div className="p-2 rounded-xl bg-white dark:bg-[#121212] border border-[#171717]/20 dark:border-white/10">
@@ -120,9 +120,9 @@ export const ProjectDetailUsahaKeluarga: React.FC<ProjectDetailUsahaKeluargaProp
           {/* Visual Store Box */}
           <div className="w-full lg:w-5/12 rounded-3xl overflow-hidden border-2 border-[#171717] dark:border-[#333333] bg-[#F5F5F5] dark:bg-[#1E1E1E] p-5 flex flex-col justify-between space-y-4 shadow-[4px_4px_0px_#171717]">
             <EditableImage
-              storageKey="family_business_visual"
+              storageKey="family_business_visual_v2"
               defaultSrc={portfolioImages.retailStoreInterior}
-              alt="Area Pelayanan Usaha Toko"
+              alt="Operasional Depot Air Minum Isi Ulang Keluarga"
               aspectRatioClass="aspect-4/3"
               containerClassName="rounded-2xl overflow-hidden bg-white dark:bg-black border border-[#171717]/10"
               imgClassName="w-full h-full object-cover"
@@ -130,10 +130,10 @@ export const ProjectDetailUsahaKeluarga: React.FC<ProjectDetailUsahaKeluargaProp
             />
             <div className="p-4 bg-white dark:bg-[#121212] border-2 border-[#171717] dark:border-[#333333] rounded-2xl text-xs space-y-1">
               <span className="font-display font-semibold text-[#171717] dark:text-white block">
-                Simulasi &amp; Praktik Langsung Area Penjualan
+                Operasional Depot Air Minum &amp; Pengisian Galon
               </span>
               <p className="font-body text-[#666666] dark:text-[#A3A3A3] text-xs leading-relaxed font-normal">
-                Membiasakan diri dengan atmosfer toko ritel, tata letak rak, kenyamanan lorong belanja, dan kesigapan melayani saat pelanggan membutuhkan bantuan.
+                Praktik langsung pengisian air minum isi ulang higienis, pengoperasian mesin dispenser reverse osmosis, pengecekan galon, dan kesigapan melayani saat pelanggan membutuhkan bantuan.
               </p>
             </div>
           </div>

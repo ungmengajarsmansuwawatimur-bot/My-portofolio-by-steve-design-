@@ -57,12 +57,12 @@ export const FamilyBusinessSection: React.FC = () => {
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
         <div className="space-y-3 max-w-3xl">
           <div className="flex items-center gap-3">
-            <span className="text-4xl sm:text-5xl font-black text-[#F9B51B]">03</span>
+            <span className="text-4xl sm:text-5xl font-black text-[#F9B51B] dark:text-[#d1fe17]">03</span>
             <span className="text-xs font-bold tracking-wider text-[#666666] dark:text-[#A3A3A3] uppercase">
               2016 — Sekarang (±8 Tahun)
             </span>
           </div>
-          <div className="text-xs font-black tracking-widest text-[#31543A] dark:text-[#F9B51B] uppercase">
+          <div className="text-xs font-black tracking-widest text-[#F9B51B] dark:text-[#d1fe17] uppercase">
             OPERASIONAL &amp; PELAYANAN LANGSUNG
           </div>
           <h3 className="text-3xl sm:text-4xl font-black text-[#171717] dark:text-white tracking-tight">
@@ -78,10 +78,10 @@ export const FamilyBusinessSection: React.FC = () => {
           <button
             type="button"
             onClick={() => setIsOpen((prev) => !prev)}
-            className="group inline-flex items-center gap-2.5 text-xs sm:text-sm font-black text-[#31543A] dark:text-[#F9B51B] hover:text-[#171717] dark:hover:text-white cursor-pointer transition-colors"
+            className="group inline-flex items-center gap-2.5 text-xs sm:text-sm font-black text-[#F9B51B] dark:text-[#d1fe17] hover:text-[#171717] dark:hover:text-white cursor-pointer transition-colors"
           >
             <span className="hover:underline">{isOpen ? 'Sembunyikan Detail Usaha' : 'Buka Detail Pengelolaan Usaha'}</span>
-            <span className="w-7 h-7 rounded-full bg-[#F9B51B] text-[#171717] flex items-center justify-center font-bold text-xs shrink-0 shadow-xs transition-transform group-hover:scale-105">
+            <span className="w-7 h-7 rounded-full bg-[#F9B51B] dark:bg-[#d1fe17] text-[#171717] flex items-center justify-center font-bold text-xs shrink-0 shadow-xs transition-transform group-hover:scale-105">
               {isOpen ? '↑' : '↓'}
             </span>
           </button>
@@ -94,7 +94,7 @@ export const FamilyBusinessSection: React.FC = () => {
           {/* 4 Komponen Kotak Peran & Aktivitas Lapangan */}
           <div className="space-y-3">
             <div className="flex items-center gap-2">
-              <span className="w-3 h-3 rounded-full bg-[#F9B51B]" />
+              <span className="w-3 h-3 rounded-full bg-[#F9B51B] dark:bg-[#d1fe17]" />
               <h4 className="text-xs sm:text-sm font-black text-[#171717] dark:text-white uppercase tracking-wider">
                 Peran &amp; Aktivitas Harian Toko
               </h4>
@@ -106,8 +106,8 @@ export const FamilyBusinessSection: React.FC = () => {
                   key={idx}
                   className="p-5 bg-[#F5F5F5] dark:bg-[#1E1E1E] rounded-2xl border-2 border-[#171717] dark:border-[#333333] space-y-2 shadow-[3px_3px_0px_#171717]"
                 >
-                  <div className="flex items-center gap-2 text-[#31543A] dark:text-[#F9B51B]">
-                    <span className="text-xs font-black text-[#F9B51B]">0{idx + 1}.</span>
+                  <div className="flex items-center gap-2 text-[#F9B51B] dark:text-[#d1fe17]">
+                    <span className="text-xs font-black text-[#F9B51B] dark:text-[#d1fe17]">0{idx + 1}.</span>
                     <h4 className="font-black text-[#171717] dark:text-white text-xs">
                       {role.title}
                     </h4>
@@ -125,9 +125,9 @@ export const FamilyBusinessSection: React.FC = () => {
             {/* Visual Store Box */}
             <div className="lg:col-span-5 rounded-3xl overflow-hidden border-2 border-[#171717] dark:border-[#333333] bg-[#F5F5F5] dark:bg-[#1E1E1E] p-4 flex flex-col justify-between space-y-4 shadow-[4px_4px_0px_#171717]">
               <EditableImage
-                storageKey="family_business_visual"
+                storageKey="family_business_visual_v2"
                 defaultSrc={portfolioImages.retailStoreInterior}
-                alt="Area Pelayanan Usaha Toko"
+                alt="Operasional Depot Air Minum Isi Ulang Keluarga"
                 aspectRatioClass="aspect-4/3"
                 containerClassName="rounded-2xl overflow-hidden bg-white dark:bg-black border border-[#171717]/10"
                 imgClassName="w-full h-full object-cover"
@@ -135,10 +135,10 @@ export const FamilyBusinessSection: React.FC = () => {
               />
               <div className="p-4 bg-white dark:bg-[#121212] border-2 border-[#171717] dark:border-[#333333] rounded-2xl text-xs space-y-1">
                 <span className="font-black text-[#171717] dark:text-white block">
-                  Simulasi &amp; Praktik Langsung Area Penjualan
+                  Operasional Depot Air Minum &amp; Pengisian Galon
                 </span>
                 <p className="text-[#666666] dark:text-[#A3A3A3] text-[11px] leading-relaxed">
-                  Membiasakan diri dengan atmosfer toko ritel, tata letak rak, kenyamanan lorong belanja, dan kesigapan melayani saat pelanggan membutuhkan bantuan.
+                  Praktik langsung pengisian air minum isi ulang higienis, pengoperasian kran mesin dispenser air, pengecekan galon, serta melayani konsumen secara langsung dengan ramah dan cekatan.
                 </p>
               </div>
             </div>

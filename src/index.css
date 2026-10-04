@@ -9,6 +9,7 @@
   --font-sans: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --color-warm-canvas: #FFFFFF;
   --color-steve-yellow: #F9B51B;
+  --brand: #F9B51B;
   --color-steve-darkgreen: #31543A;
   --color-steve-black: #171717;
   --color-steve-gray: #F5F5F5;
@@ -67,6 +68,7 @@
   --border-color: #171717;
   --border-subtle: #E9E9E9;
   --accent-yellow: #F9B51B;
+  --brand: #F9B51B;
   --accent-darkgreen: #31543A;
   --accent-darkgreen-hover: #26432E;
 }
@@ -166,7 +168,8 @@ button {
   --text-secondary: #A3A3A3;
   --border-color: #333333;
   --border-subtle: #2A2A2A;
-  --accent-yellow: #F9B51B;
+  --accent-yellow: #d1fe17;
+  --brand: #d1fe17;
   --accent-darkgreen: #31543A;
   --accent-darkgreen-hover: #3E6B4A;
 }

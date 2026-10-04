@@ -34,7 +34,7 @@ const RetailLearningComponent: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         {/* Top Header */}
         <div className="max-w-3xl space-y-4">
-          <div className="font-display inline-flex items-center gap-2 text-xs sm:text-sm font-semibold tracking-[0.08em] uppercase text-[#F9B51B]">
+          <div className="font-display inline-flex items-center gap-2 text-xs sm:text-sm font-semibold tracking-[0.08em] uppercase text-[#F9B51B] dark:text-[#d1fe17] transition-colors">
             <span aria-hidden="true">✦</span>
             <span>LEARNING</span>
             <span aria-hidden="true">✦</span>
@@ -42,7 +42,7 @@ const RetailLearningComponent: React.FC = () => {
 
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-[#171717] dark:text-white tracking-[-0.02em] leading-[1.12]">
             Pembelajaran Retail<br />
-            <span className="text-[#F9B51B]">&amp; Customer Service</span>
+            <span className="text-[#F9B51B] dark:text-[#d1fe17] transition-colors">&amp; Customer Service</span>
           </h2>
 
           <p className="font-body text-base sm:text-lg text-[#666666] dark:text-[#A3A3A3] leading-[1.65] max-w-2xl font-normal">
@@ -76,7 +76,7 @@ const RetailLearningComponent: React.FC = () => {
         {/* Section: Daftar Materi Pembelajaran */}
         <div className="pt-2 space-y-6">
           <div className="flex items-center gap-3">
-            <span className="w-2.5 h-2.5 rounded-full bg-[#F9B51B]" />
+            <span className="w-2.5 h-2.5 rounded-full bg-[#F9B51B] dark:bg-[#d1fe17]" />
             <h3 className="font-display text-xl sm:text-2xl font-semibold text-[#171717] dark:text-white tracking-[-0.015em]">
               Daftar Modul Pembelajaran
             </h3>
@@ -94,7 +94,7 @@ const RetailLearningComponent: React.FC = () => {
                   {/* Thumbnail Image (Clean, Minimalist, Interactive Hover) */}
                   <div className="rounded-xl overflow-hidden shadow-xs transition-transform duration-200 group-hover:scale-[1.015]">
                     <EditableImage
-                      storageKey={`learning_material_v2_${item.id}`}
+                      storageKey={`learning_material_v8_${item.id}`}
                       defaultSrc={item.image}
                       alt={item.title}
                       aspectRatioClass="aspect-16/9"
@@ -107,7 +107,7 @@ const RetailLearningComponent: React.FC = () => {
 
                   {/* Kicker & Platform */}
                   <div className="flex items-center justify-between text-[11px] pt-1">
-                    <span className="font-info font-normal tracking-[0.08em] text-[#31543A] dark:text-[#F9B51B] uppercase">
+                    <span className="font-info font-normal tracking-[0.08em] text-[#F9B51B] dark:text-[#d1fe17] uppercase">
                       {item.code} &bull; {item.category}
                     </span>
                     <span className="font-info text-[#888888] dark:text-[#A3A3A3] font-normal">
@@ -116,7 +116,7 @@ const RetailLearningComponent: React.FC = () => {
                   </div>
 
                   {/* Title */}
-                  <h4 className="font-display text-base sm:text-lg font-semibold text-[#171717] dark:text-white leading-snug group-hover:text-[#31543A] dark:group-hover:text-[#F9B51B] transition-colors">
+                  <h4 className="font-display text-base sm:text-lg font-semibold text-[#171717] dark:text-white leading-snug group-hover:text-[#F9B51B] dark:group-hover:text-[#F9B51B] dark:text-[#d1fe17] transition-colors">
                     {item.title}
                   </h4>
 
@@ -128,7 +128,7 @@ const RetailLearningComponent: React.FC = () => {
 
                 {/* Minimalist Action CTA */}
                 <div className="pt-1 flex items-center justify-between gap-2">
-                  <span className="font-display inline-flex items-center gap-1.5 text-xs font-semibold text-[#31543A] dark:text-[#F9B51B] group-hover:translate-x-1 transition-transform">
+                  <span className="font-display inline-flex items-center gap-1.5 text-xs font-semibold text-[#F9B51B] dark:text-[#d1fe17] group-hover:translate-x-1 transition-transform">
                     <span>Lihat Rincian Modul</span>
                     <span aria-hidden="true">&rarr;</span>
                   </span>
@@ -138,7 +138,7 @@ const RetailLearningComponent: React.FC = () => {
                       target="_blank"
                       rel="noreferrer"
                       onClick={(e) => e.stopPropagation()}
-                      className="font-display inline-flex items-center gap-1 text-xs font-semibold text-[#666666] dark:text-[#A3A3A3] hover:text-[#31543A] dark:hover:text-[#F9B51B] transition-colors"
+                      className="font-display inline-flex items-center gap-1 text-xs font-semibold text-[#666666] dark:text-[#A3A3A3] hover:text-[#31543A] dark:hover:text-[#F9B51B] dark:text-[#d1fe17] transition-colors"
                       title="Pelajari materi di tautan sumber asli"
                     >
                       <span>Pelajari Materi</span>
@@ -191,7 +191,7 @@ const RetailLearningComponent: React.FC = () => {
                 className="group inline-flex items-center gap-3 pl-6 pr-2 py-2 rounded-full text-xs font-black bg-[#31543A] text-white hover:bg-[#26432E] border-2 border-[#171717] transition-all duration-150 shadow-[3px_3px_0px_#171717] active:scale-95"
               >
                 <span>Pelajari Materi (Sumber Asli)</span>
-                <span className="w-6 h-6 rounded-full bg-[#F9B51B] text-[#171717] flex items-center justify-center font-bold text-xs shrink-0">
+                <span className="w-6 h-6 rounded-full bg-[#F9B51B] dark:bg-[#d1fe17] text-[#171717] flex items-center justify-center font-bold text-xs shrink-0">
                   &rarr;
                 </span>
               </a>

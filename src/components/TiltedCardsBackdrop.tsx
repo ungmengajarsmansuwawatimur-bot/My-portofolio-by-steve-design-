@@ -34,8 +34,9 @@ export const TiltedCardsBackdrop: React.FC<TiltedCardsBackdropProps> = ({ classN
         </g>
 
         {/* ============================================================
-            LAYER 2 (KARTU TAMBAHAN SISI KIRI TERLUAR): Light Yellow (#FEF08A)
-            Kemiringan ke kiri -29° (geser -124px), warna kuning muda cerah
+            LAYER 2 (KARTU SISI KIRI TERLUAR):
+            Light Mode: Light Yellow (#FEF08A) | Dark Mode: Emerald Green (#3E8A56)
+            Kemiringan ke kiri -29° (geser -124px)
             ============================================================ */}
         <g transform="rotate(-29 320 370) translate(-124, -8)">
           <rect
@@ -45,12 +46,13 @@ export const TiltedCardsBackdrop: React.FC<TiltedCardsBackdropProps> = ({ classN
             height="640"
             rx="50"
             ry="50"
-            fill="#FEF08A"
+            className="fill-[#FEF08A] dark:fill-[#3E8A56] transition-colors duration-300"
           />
         </g>
 
         {/* ============================================================
-            LAYER 3: Deep Golden Amber Card (#F3A615) - Sisi Kiri Tengah
+            LAYER 3 (SISI KIRI TENGAH):
+            Light Mode: Deep Golden Amber (#F3A615) | Dark Mode: Deep Forest Green (#31543A)
             Mekar di sisi kiri (-16°, geser -65px)
             ============================================================ */}
         <g transform="rotate(-16 320 370) translate(-65, -16)">
@@ -61,13 +63,14 @@ export const TiltedCardsBackdrop: React.FC<TiltedCardsBackdropProps> = ({ classN
             height="640"
             rx="50"
             ry="50"
-            fill="#F3A615"
+            className="fill-[#F3A615] dark:fill-[#31543A] transition-colors duration-300"
           />
         </g>
 
         {/* ============================================================
-            LAYER 4 (KARTU TAMBAHAN SISI KANAN TERLUAR): Warm Golden Sand (#FED34D)
-            Kemiringan ke kanan DITAMBAH dari +19° menjadi +24° (geser +120px)
+            LAYER 4 (KARTU SISI KANAN TERLUAR):
+            Light Mode: Warm Golden Sand (#FED34D) | Dark Mode: Deep Forest Green (#31543A)
+            Kemiringan ke kanan (+24°, geser +120px)
             ============================================================ */}
         <g transform="rotate(24 320 370) translate(120, 24)">
           <rect
@@ -77,12 +80,13 @@ export const TiltedCardsBackdrop: React.FC<TiltedCardsBackdropProps> = ({ classN
             height="640"
             rx="50"
             ry="50"
-            fill="#FED34D"
+            className="fill-[#FED34D] dark:fill-[#31543A] transition-colors duration-300"
           />
         </g>
 
         {/* ============================================================
-            LAYER 5: Pale Buttery Cream Card (#FFF1D2) - Sisi Kanan Tengah
+            LAYER 5 (SISI KANAN TENGAH):
+            Light Mode: Pale Buttery Cream (#FFF1D2) | Dark Mode: Emerald Green (#3E8A56)
             Mekar di sisi kanan (+11°, geser +60px)
             ============================================================ */}
         <g transform="rotate(11 320 370) translate(60, 24)">
@@ -93,12 +97,13 @@ export const TiltedCardsBackdrop: React.FC<TiltedCardsBackdropProps> = ({ classN
             height="640"
             rx="50"
             ry="50"
-            fill="#FFF1D2"
+            className="fill-[#FFF1D2] dark:fill-[#3E8A56] transition-colors duration-300"
           />
         </g>
 
         {/* ============================================================
-            LAYER 6 (Paling Depan): Main Vibrant Sunny Yellow Card (#FFCA00)
+            LAYER 6 (KARTU UTAMA SENTRAL / PALING DEPAN):
+            Light Mode: Sunny Yellow (#FFCA00) | Dark Mode: Electric Lime (#d1fe17)
             Kartu utama di posisi sentral (-3°, tepat di balik bahu & foto)
             ============================================================ */}
         <g transform="rotate(-3 320 370) translate(0, 0)">
@@ -109,7 +114,7 @@ export const TiltedCardsBackdrop: React.FC<TiltedCardsBackdropProps> = ({ classN
             height="640"
             rx="50"
             ry="50"
-            fill="#FFCA00"
+            className="fill-[#FFCA00] dark:fill-[#d1fe17] transition-colors duration-300"
           />
         </g>
       </svg>

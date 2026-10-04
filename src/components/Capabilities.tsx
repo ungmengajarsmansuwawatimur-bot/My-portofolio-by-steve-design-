@@ -63,7 +63,7 @@ export const Capabilities: React.FC<CapabilitiesProps> = ({ className = '' }) =>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header (Steve Mengelkoch Signature Layout) */}
         <div className="text-center space-y-2 mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 text-xs sm:text-sm font-black tracking-widest uppercase text-[#F9B51B]">
+          <div className="inline-flex items-center gap-2 text-xs sm:text-sm font-black tracking-widest uppercase text-[#F9B51B] dark:text-[#d1fe17] transition-colors">
             <span aria-hidden="true">✦</span>
             <span>WHAT I DO</span>
             <span aria-hidden="true">✦</span>
@@ -83,11 +83,11 @@ export const Capabilities: React.FC<CapabilitiesProps> = ({ className = '' }) =>
               <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
                 {/* Col 1-5: Icon + Title */}
                 <div className="md:col-span-5 flex items-center gap-4 sm:gap-5">
-                  <div className="w-14 h-14 rounded-2xl bg-[#F5F5F5] dark:bg-[#1E1E1E] border-2 border-[#171717] dark:border-[#333333] flex items-center justify-center shrink-0 shadow-sm group-hover:bg-[#F9B51B] transition-colors">
+                  <div className="w-14 h-14 rounded-2xl bg-[#F5F5F5] dark:bg-[#1E1E1E] border-2 border-[#171717] dark:border-[#333333] flex items-center justify-center shrink-0 shadow-sm group-hover:bg-[#F9B51B] dark:bg-[#d1fe17] transition-colors">
                     {item.icon}
                   </div>
                   <div>
-                    <span className="text-[11px] font-mono font-bold text-[#F9B51B] block">0{idx + 1}</span>
+                    <span className="text-[11px] font-mono font-bold text-[#F9B51B] dark:text-[#d1fe17] block">0{idx + 1}</span>
                     <h3 className="text-xl sm:text-2xl font-black text-[#171717] dark:text-white tracking-tight">
                       {item.title}
                     </h3>
@@ -114,7 +114,7 @@ export const Capabilities: React.FC<CapabilitiesProps> = ({ className = '' }) =>
                 <div className="md:col-span-1 flex justify-end">
                   <a
                     href="#work"
-                    className="w-12 h-12 rounded-full border-2 border-[#171717] dark:border-white bg-white dark:bg-[#1E1E1E] group-hover:bg-[#F9B51B] dark:group-hover:bg-[#F9B51B] group-hover:text-[#171717] text-[#171717] dark:text-white flex items-center justify-center transition-all shadow-sm active:scale-90"
+                    className="w-12 h-12 rounded-full border-2 border-[#171717] dark:border-white bg-white dark:bg-[#1E1E1E] group-hover:bg-[#F9B51B] dark:bg-[#d1fe17] dark:group-hover:bg-[#F9B51B] dark:bg-[#d1fe17] group-hover:text-[#171717] text-[#171717] dark:text-white flex items-center justify-center transition-all shadow-sm active:scale-90"
                     aria-label={`Lihat karya terkait ${item.title}`}
                   >
                     <svg className="w-5 h-5 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">

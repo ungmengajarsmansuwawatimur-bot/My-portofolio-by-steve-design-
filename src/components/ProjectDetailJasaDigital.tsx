@@ -33,12 +33,12 @@ export const ProjectDetailJasaDigital: React.FC<ProjectDetailJasaDigitalProps> =
         {/* Main Header Information */}
         <div className="space-y-4 max-w-4xl">
           <div className="flex items-center gap-3">
-            <span className="font-display text-4xl sm:text-5xl font-semibold text-[#F9B51B] tracking-[-0.03em]">01</span>
+            <span className="font-display text-4xl sm:text-5xl font-semibold text-[#F9B51B] dark:text-[#d1fe17] tracking-[-0.03em]">01</span>
             <span className="font-info text-xs font-normal tracking-wider text-[#666666] dark:text-[#A3A3A3] uppercase">
               Desember 2024 — Sekarang
             </span>
           </div>
-          <div className="font-info text-xs font-normal tracking-[0.08em] text-[#31543A] dark:text-[#F9B51B] uppercase">
+          <div className="font-info text-xs font-normal tracking-[0.08em] text-[#F9B51B] dark:text-[#d1fe17] uppercase">
             PELAYANAN &amp; PENGELOLAAN
           </div>
           <h1 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold text-[#171717] dark:text-white tracking-[-0.025em] leading-[1.08]">
@@ -69,7 +69,7 @@ export const ProjectDetailJasaDigital: React.FC<ProjectDetailJasaDigitalProps> =
                 key={idx}
                 className="inline-flex items-center gap-2 px-4 py-2 bg-[#F5F5F5] dark:bg-[#1E1E1E] rounded-full border border-[#171717]/20 dark:border-[#333333] shadow-xs"
               >
-                <span className="font-display text-[11px] font-semibold text-[#F9B51B]">
+                <span className="font-display text-[11px] font-semibold text-[#F9B51B] dark:text-[#d1fe17]">
                   0{idx + 1}.
                 </span>
                 <span className="font-info text-xs font-normal text-[#171717] dark:text-white">
@@ -91,7 +91,7 @@ export const ProjectDetailJasaDigital: React.FC<ProjectDetailJasaDigitalProps> =
                 Dokumentasi alur komunikasi WhatsApp nyata dari pemesanan hingga artikel berhasil dipublikasikan.
               </p>
             </div>
-            <span className="font-info text-xs font-normal text-[#31543A] dark:text-[#F9B51B]">
+            <span className="font-info text-xs font-normal text-[#F9B51B] dark:text-[#d1fe17]">
               Total 5 Studi Alur Nyata
             </span>
           </div>
@@ -111,7 +111,7 @@ export const ProjectDetailJasaDigital: React.FC<ProjectDetailJasaDigitalProps> =
         {/* EVALUASI & ANALISIS LAYANAN (LINEAR SCORECARD LIST) */}
         <div className="space-y-6 pt-6 border-t border-[#171717]/15 dark:border-white/10">
           <div className="flex items-center gap-2">
-            <span className="w-3 h-3 rounded-full bg-[#F9B51B]" />
+            <span className="w-3 h-3 rounded-full bg-[#F9B51B] dark:bg-[#d1fe17]" />
             <h3 className="font-display text-xs sm:text-sm font-semibold text-[#171717] dark:text-white uppercase tracking-wider">
               Evaluasi &amp; Analisis Kinerja Layanan
             </h3>
@@ -160,7 +160,7 @@ export const ProjectDetailJasaDigital: React.FC<ProjectDetailJasaDigitalProps> =
                 className="p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:bg-white dark:hover:bg-[#252528] transition-colors"
               >
                 <div className="flex items-start gap-4">
-                  <span className="font-display text-sm font-semibold text-[#F9B51B] shrink-0 pt-0.5">
+                  <span className="font-display text-sm font-semibold text-[#F9B51B] dark:text-[#d1fe17] shrink-0 pt-0.5">
                     {card.no}.
                   </span>
                   <div className="space-y-1">
@@ -177,7 +177,7 @@ export const ProjectDetailJasaDigital: React.FC<ProjectDetailJasaDigitalProps> =
                     </p>
                   </div>
                 </div>
-                <span className="font-info text-xs font-normal text-[#31543A] dark:text-[#F9B51B] shrink-0 self-start sm:self-center">
+                <span className="font-info text-xs font-normal text-[#F9B51B] dark:text-[#d1fe17] shrink-0 self-start sm:self-center">
                   &bull; {card.tag}
                 </span>
               </div>

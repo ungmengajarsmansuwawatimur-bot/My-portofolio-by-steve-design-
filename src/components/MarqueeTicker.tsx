@@ -55,7 +55,7 @@ export const MarqueeTicker: React.FC<MarqueeTickerProps> = ({
           </svg>
 
           {/* Marquee Strip with running text - slightly larger size */}
-          <div className="w-full overflow-hidden bg-[#F9B51B] py-4.5 sm:py-5 select-none relative z-10 border-y-2 border-[#171717] shadow-sm">
+          <div className="w-full overflow-hidden bg-[#F9B51B] dark:bg-[#d1fe17] py-4.5 sm:py-5 select-none relative z-10 border-y-2 border-[#171717] shadow-sm">
             <div
               className="animate-ticker flex items-center"
               style={{ animationDuration: `${animationDuration}s` }}
@@ -83,7 +83,7 @@ export const MarqueeTicker: React.FC<MarqueeTickerProps> = ({
 
   return (
     <div
-      className={`w-full overflow-hidden bg-[#F9B51B] py-4.5 sm:py-5 select-none border-y-2 border-[#171717] relative z-20 ${className}`}
+      className={`w-full overflow-hidden bg-[#F9B51B] dark:bg-[#d1fe17] py-4.5 sm:py-5 select-none border-y-2 border-[#171717] relative z-20 ${className}`}
       aria-label="Keterampilan & Layanan Berjalan"
     >
       <div

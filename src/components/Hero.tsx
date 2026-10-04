@@ -5,6 +5,7 @@ import { MarqueeTicker } from './MarqueeTicker';
 import { EditableImage } from './EditableImage';
 import { portfolioImages } from '../assets/images';
 import { TiltedCardsBackdrop } from './TiltedCardsBackdrop';
+import { downloadCv } from '../utils/downloadCv';
 
 interface HeroProps {
   onOpenCvModal: () => void;
@@ -69,24 +70,25 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
       {/* Full-Bleed Rectangular Banner Photo */}
       <div className="w-full mb-10 sm:mb-14 relative">
         <EditableImage
-          storageKey="hero_creative_banner"
+          storageKey="hero_banner_theme_v2"
           defaultSrc={portfolioImages.creativeDeskBanner}
-          alt="Aktivitas Meja Kerja & Perencanaan Profesional"
+          darkSrc={portfolioImages.retailBannerDark}
+          alt="Banner Pelayanan &amp; Operasional Retail Taufik Hidayat"
           containerClassName="w-full h-60 sm:h-76 md:h-96 lg:h-[420px] relative overflow-hidden border-y-2 border-[#171717]/10 dark:border-white/10"
           imgClassName="w-full h-full object-cover object-center"
           buttonPosition="top-right"
         />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-2 pb-0">
-        {/* Modern Split-Screen Layout: ~45% Content (Left) + ~55% Portrait (Right) aligned to bottom */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 xl:gap-12 items-end">
+      <div className="max-w-7xl 2xl:max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 pt-2 pb-0">
+        {/* Modern Split-Screen Layout: Balanced Left Content + Right Corner Portrait */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 xl:gap-8 items-end">
           
-          {/* AREA KIRI — CONTENT (Col 1-5, ~45% width on desktop) */}
-          <div className="lg:col-span-5 flex flex-col justify-center space-y-6 sm:space-y-7 z-10 pb-8 sm:pb-12 lg:pb-16 pt-4">
+          {/* AREA KIRI — CONTENT (Col 1-6) Geser ke arah kiri dan ke arah bawah */}
+          <div className="lg:col-span-6 flex flex-col justify-end items-start text-left space-y-6 sm:space-y-7 z-10 pb-4 sm:pb-6 lg:pb-8 pt-4 lg:pt-12 self-end lg:-translate-x-2 xl:-translate-x-4">
             {/* Small Official Label */}
             <div>
-              <div className="font-display inline-flex items-center gap-2 text-xs sm:text-sm font-semibold tracking-[0.08em] uppercase text-[#F9B51B]">
+              <div className="font-display inline-flex items-center gap-2 text-xs sm:text-sm font-semibold tracking-[0.08em] uppercase text-[#F9B51B] dark:text-[#d1fe17] transition-colors">
                 <span aria-hidden="true">✦</span>
                 <span>MY PORTFOLIO • PROFIL RESMI</span>
                 <span aria-hidden="true">✦</span>
@@ -95,7 +97,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
 
             {/* Main Headline: Focal Point 1 */}
             <div>
-              <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-[3.75rem] xl:text-[4.5rem] font-semibold tracking-[-0.025em] text-[#171717] dark:text-white leading-[1.05] uppercase break-words">
+              <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-[3.5rem] xl:text-[4.25rem] font-semibold tracking-[-0.025em] text-[#171717] dark:text-white leading-[1.05] uppercase break-words">
                 {candidateProfile.fullName}
               </h1>
             </div>
@@ -110,7 +112,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
                 className={`group inline-flex items-center gap-1.5 sm:gap-2 p-1.5 sm:p-2 rounded-full cursor-pointer select-none transition-colors duration-300 shadow-md hover:shadow-lg active:scale-95 ${
                   isWorkActive
                     ? 'flex-row-reverse bg-[#2B4734] dark:bg-[#31543A]'
-                    : 'flex-row bg-[#F5A61D] dark:bg-[#F9B51B]'
+                    : 'flex-row bg-[#F9B51B] dark:bg-[#d1fe17]'
                 }`}
                 title="Klik untuk menganimasikan perpindahan panah dan perubahan warna"
                 aria-label="View My Work Button"
@@ -121,7 +123,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
                   transition={{ type: 'spring', stiffness: 320, damping: 26 }}
                   className={`w-9 h-9 sm:w-11 sm:h-11 rounded-full flex items-center justify-center shrink-0 shadow-sm transition-colors duration-300 ${
                     isWorkActive
-                      ? 'bg-[#F9B51B] text-[#171717]'
+                      ? 'bg-[#F9B51B] dark:bg-[#d1fe17] text-[#171717]'
                       : 'bg-white text-[#171717]'
                   }`}
                 >
@@ -157,18 +159,20 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
 
               <button
                 type="button"
-                onClick={onOpenCvModal}
-                className="font-display group inline-flex items-center gap-3 pl-6 pr-2.5 py-2.5 rounded-full text-xs sm:text-sm font-semibold tracking-wider uppercase bg-white dark:bg-[#1E1E1E] text-[#171717] dark:text-white hover:bg-[#171717] hover:text-white dark:hover:bg-white dark:hover:text-[#171717] border-2 border-[#171717] dark:border-white transition-all duration-200 active:scale-95 cursor-pointer"
+                onClick={onOpenCvModal || downloadCv}
+                title="Unduh CV Resmi Taufik Hidayat Malii (PDF)"
+                aria-label="Unduh CV Resmi PDF"
+                className="font-display group inline-flex items-center gap-3 pl-6 pr-2.5 py-2.5 rounded-full text-xs sm:text-sm font-semibold tracking-wider uppercase bg-white dark:bg-[#1E1E1E] text-[#171717] dark:text-white hover:bg-[#171717] hover:text-white dark:hover:bg-white dark:hover:text-[#171717] border-2 border-[#171717] dark:border-white transition-all duration-200 active:scale-95 cursor-pointer shadow-sm"
               >
                 <span>UNDUH CV RESMI</span>
-                <span className="w-9 h-9 rounded-full bg-[#171717] dark:bg-white text-white dark:text-[#171717] group-hover:bg-[#F9B51B] group-hover:text-[#171717] dark:group-hover:bg-[#F9B51B] dark:group-hover:text-[#171717] flex items-center justify-center font-bold text-sm shrink-0 transition-transform group-hover:translate-x-1">
+                <span className="w-9 h-9 rounded-full bg-[#171717] dark:bg-white text-white dark:text-[#171717] group-hover:bg-[#F9B51B] dark:group-hover:bg-[#d1fe17] group-hover:text-[#171717] dark:group-hover:text-[#171717] flex items-center justify-center font-bold text-sm shrink-0 transition-transform group-hover:translate-y-0.5">
                   ↓
                 </span>
               </button>
             </div>
 
             {/* Teks Penyeimbang Sisi Kiri Tepat di Bawah Tombol Aksi */}
-            <div className="pt-2 sm:pt-3 max-w-lg">
+            <div className="pt-2 sm:pt-3 max-w-xl">
               <motion.p
                 initial={{ opacity: 0, y: 18 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -180,10 +184,10 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
             </div>
           </div>
 
-          {/* AREA KANAN — FOTO PORTRAIT (Col 6-12, ~55% width on desktop) Digeser ke Kanan Menempel di Atas Garis Running Text */}
-          <div className="lg:col-span-7 flex justify-center lg:justify-end items-end relative select-none pt-6 lg:pt-0 self-end overflow-visible">
-            {/* Visual Container: Responsif terhadap ukuran device (mobile, tablet, desktop) */}
-            <div className="relative w-full max-w-[420px] sm:max-w-[480px] lg:max-w-[560px] xl:max-w-[620px] 2xl:max-w-[660px] h-[480px] sm:h-[560px] md:h-[620px] lg:h-[680px] xl:h-[720px] flex items-end justify-center lg:translate-x-10 xl:translate-x-16 translate-y-[11px] sm:translate-y-[15px] transition-transform duration-300 overflow-visible">
+          {/* AREA KANAN — FOTO PORTRAIT & BACKGROUND (Col 7-12) Digeser ke sudut kanan */}
+          <div className="lg:col-span-6 flex justify-center lg:justify-end items-end relative select-none pt-6 lg:pt-0 self-end overflow-visible">
+            {/* Visual Container: Digeser ke sudut kanan */}
+            <div className="relative w-full max-w-[420px] sm:max-w-[480px] lg:max-w-[560px] xl:max-w-[620px] 2xl:max-w-[660px] h-[480px] sm:h-[560px] md:h-[620px] lg:h-[680px] xl:h-[720px] flex items-end justify-center lg:justify-end lg:translate-x-12 xl:translate-x-20 2xl:translate-x-24 translate-y-[11px] sm:translate-y-[15px] transition-transform duration-300 overflow-visible">
               
               {/* Decorative Accent 1: Stylized Pop-Art Lightning Thunderbolt (Top Right, pointing towards the left) */}
               <motion.div
@@ -221,10 +225,10 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   />
-                  {/* Layer 2: Main Front Warm Golden Amber Thunderbolt pointing towards the left */}
+                  {/* Layer 2: Main Front Thunderbolt pointing towards the left */}
                   <path
                     d="M 71 27 L 47 16 L 32 54 L 50 62 L 36 88 L 74 56 L 54 48 Z"
-                    fill="#F6A618"
+                    className="fill-[#F6A618] dark:fill-[#d1fe17] transition-colors"
                     stroke="#171717"
                     strokeWidth="3.6"
                     strokeLinecap="round"
@@ -248,7 +252,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
                   rotate: { duration: 7.0, repeat: Infinity, ease: 'easeInOut', delay: 1.4 },
                   y: { duration: 5.0, repeat: Infinity, ease: 'easeInOut', delay: 1.4 },
                 }}
-                className="absolute top-4 sm:top-6 left-0 sm:left-2 z-20 text-[#171717] dark:text-[#F9B51B] text-4xl sm:text-5xl lg:text-6xl font-black drop-shadow-[3px_3px_0px_#F9B51B] dark:drop-shadow-[3px_3px_0px_#171717] will-change-transform transform-gpu"
+                className="absolute top-4 sm:top-6 left-0 sm:left-2 z-20 text-[#F9B51B] dark:text-[#d1fe17] text-4xl sm:text-5xl lg:text-6xl font-black drop-shadow-[3px_3px_0px_#171717] dark:drop-shadow-[3px_3px_0px_#171717] transition-colors will-change-transform transform-gpu"
                 aria-hidden="true"
               >
                 ✦

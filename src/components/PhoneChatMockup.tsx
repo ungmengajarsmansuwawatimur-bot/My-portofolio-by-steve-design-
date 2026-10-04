@@ -213,9 +213,9 @@ const PhoneChatMockupComponent: React.FC<PhoneChatMockupProps> = ({ item, onClic
           <button
             type="button"
             onClick={() => handleTriggerOpen(activeSrc)}
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white dark:bg-[#1E1E1E] border-2 border-[#171717] dark:border-[#333333] hover:border-[#F9B51B] text-[11px] font-bold text-[#171717] dark:text-white transition-colors cursor-pointer shadow-[2px_2px_0px_#171717]"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white dark:bg-[#1E1E1E] border-2 border-[#171717] dark:border-[#333333] hover:border-[#F9B51B] dark:border-[#d1fe17] text-[11px] font-bold text-[#171717] dark:text-white transition-colors cursor-pointer shadow-[2px_2px_0px_#171717]"
           >
-            <svg className="w-3.5 h-3.5 text-[#F9B51B]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+            <svg className="w-3.5 h-3.5 text-[#F9B51B] dark:text-[#d1fe17]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
               <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607zM10.5 7.5v6m3-3h-6" />
             </svg>
             <span>Perbesar Bukti ({currentIndex + 1}/{screenshots.length})</span>

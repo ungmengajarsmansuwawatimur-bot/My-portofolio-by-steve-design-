@@ -6,9 +6,9 @@ import { RealWork } from './components/RealWork';
 import { RetailLearning } from './components/RetailLearning';
 import { SkillsContact } from './components/SkillsContact';
 import { ThemeTransitionOverlay } from './components/ThemeTransitionOverlay';
+import { downloadCv } from './utils/downloadCv';
 
 // Code-split heavy below-the-fold detail pages and modals to slash initial bundle size
-const CvModal = lazy(() => import('./components/CvModal').then(m => ({ default: m.CvModal })));
 const PhotoGuideModal = lazy(() => import('./components/PhotoGuideModal').then(m => ({ default: m.PhotoGuideModal })));
 const ProjectDetailJasaDigital = lazy(() => import('./components/ProjectDetailJasaDigital').then(m => ({ default: m.ProjectDetailJasaDigital })));
 const ProjectDetailPadds = lazy(() => import('./components/ProjectDetailPadds').then(m => ({ default: m.ProjectDetailPadds })));
@@ -28,7 +28,6 @@ export default function App() {
     return 'home';
   });
 
-  const [isCvModalOpen, setIsCvModalOpen] = useState(false);
   const [photoModalTarget, setPhotoModalTarget] = useState<string | null>(null);
 
   // Synchronize routing with browser history and hash navigation
@@ -107,7 +106,7 @@ export default function App() {
   const isHirePage = currentRoute === 'hire-me';
 
   return (
-    <div className="min-h-screen bg-white dark:bg-[#121212] text-[#171717] dark:text-[#F5F5F5] flex flex-col selection:bg-[#F9B51B] selection:text-[#171717] transition-colors duration-200 relative">
+    <div className="min-h-screen bg-white dark:bg-[#121212] text-[#171717] dark:text-[#F5F5F5] flex flex-col selection:bg-[#F9B51B] dark:selection:bg-[#F9B51B] dark:bg-[#d1fe17] selection:text-[#171717] transition-colors duration-200 relative">
       {/* Theme Transition Ambience Overlay */}
       <ThemeTransitionOverlay />
 
@@ -121,7 +120,7 @@ export default function App() {
 
       {/* Persistent Responsive Navbar */}
       <Navbar
-        onOpenCvModal={() => setIsCvModalOpen(true)}
+        onOpenCvModal={downloadCv}
         isDetailPage={isDetailPage}
         isHirePage={isHirePage}
         onNavigateHire={handleNavigateHire}
@@ -134,7 +133,7 @@ export default function App() {
           {currentRoute === 'hire-me' ? (
             <HireMePage
               onBackToHome={handleBackToHome}
-              onOpenCvModal={() => setIsCvModalOpen(true)}
+              onOpenCvModal={downloadCv}
             />
           ) : currentRoute === 'jasa-digital' ? (
             <ProjectDetailJasaDigital onBack={handleBackToWorkSection} />
@@ -146,7 +145,7 @@ export default function App() {
             /* Home Page View */
             <>
               {/* 01 HOME */}
-              <Hero onOpenCvModal={() => setIsCvModalOpen(true)} />
+              <Hero onOpenCvModal={downloadCv} />
 
               {/* 02 ABOUT & EXPERIENCE */}
               <AboutExperience
@@ -160,24 +159,17 @@ export default function App() {
               <RetailLearning />
 
               {/* 05 SKILLS / CV / CONTACT */}
-              <SkillsContact onOpenCvModal={() => setIsCvModalOpen(true)} />
+              <SkillsContact onOpenCvModal={downloadCv} />
             </>
           )}
         </Suspense>
       </main>
 
       {/* Global Consistent Footer */}
-      <Footer onOpenCvModal={() => setIsCvModalOpen(true)} />
+      <Footer onOpenCvModal={downloadCv} />
 
       {/* Interactive Global Modals */}
       <Suspense fallback={null}>
-        {isCvModalOpen && (
-          <CvModal
-            isOpen={isCvModalOpen}
-            onClose={() => setIsCvModalOpen(false)}
-          />
-        )}
-
         {Boolean(photoModalTarget) && (
           <PhotoGuideModal
             isOpen={Boolean(photoModalTarget)}

@@ -65,7 +65,7 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
         <div className="flex items-start justify-between p-5 md:p-6 border-b border-[#171717]/15 dark:border-[#2A2A2A] bg-[#F5F5F5] dark:bg-[#1E1E1E]">
           <div>
             {badge && (
-              <span className="text-[11px] font-black tracking-widest text-[#F9B51B] uppercase mb-1 block">
+              <span className="text-[11px] font-black tracking-widest text-[#F9B51B] dark:text-[#d1fe17] uppercase mb-1 block">
                 ✦ {badge} ✦
               </span>
             )}
