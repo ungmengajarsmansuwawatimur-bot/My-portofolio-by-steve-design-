@@ -1,6 +1,5 @@
 import retailStoreInterior from './images/family_water_depot_1791096046723.webp';
 import alfamartCashierHero from './images/alfamart_cashier_hero_1790370848596.webp';
-import heroPortrait from './images/taufik_asli_cutout.webp';
 import heroTaufikFullwidthBg from './images/hero_taufik_fullwidth_bg.webp';
 import retailMinisoTeamHd from './images/retail_miniso_team_hd.webp';
 import retailBooksStack from './images/retail_books_stack_1790151386373.webp';
@@ -16,7 +15,7 @@ import thumbStockManagement from './images/warehouse_stock_pexels_4484073.webp';
 import thumbCommunication from './images/retail_communication_pexels_8101567.webp';
 
 export const portfolioImages = {
-  heroPortrait,
+  heroPortrait: '',
   heroTaufikFullwidthBg,
   creativeDeskBanner,
   retailBannerDark,

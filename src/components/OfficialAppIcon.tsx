@@ -335,7 +335,9 @@ export const OfficialAppIcon: React.FC<OfficialAppIconProps> = ({ name, classNam
         </svg>
       );
 
-    // 12. OFFICIAL LUMA DREAM MACHINE (LUMA AI) - Sunset Striped Disk
+    // 12. OFFICIAL BASE44 TOOLS / LUMA - Sunset Striped Disk (Restored previous authentic logo)
+    case 'base44':
+    case 'base44 tools':
     case 'luma':
     case 'luma ai':
     case 'luma dream machine':
@@ -355,7 +357,7 @@ export const OfficialAppIcon: React.FC<OfficialAppIconProps> = ({ name, classNam
               <rect x="0" y="83.6" width="100" height="4.4" fill="#000000" />
             </mask>
           </defs>
-          {/* Authentic Vibrant Luma Sunset Orange Circular Badge */}
+          {/* Authentic Vibrant Sunset Orange Circular Badge */}
           <circle
             cx="50"
             cy="50"

@@ -31,7 +31,7 @@ export const InteractiveToolIndex: React.FC = () => {
             </div>
 
             {/* Nama Aplikasi di Luar Kartu (Teks Putih) */}
-            <span className="font-display text-xs sm:text-sm font-semibold text-white text-center mt-2.5 sm:mt-3 leading-snug px-1">
+            <span className="font-display text-xs sm:text-sm md:text-base font-semibold text-white text-center mt-2.5 sm:mt-3 leading-snug px-1">
               {tool.name}
             </span>
           </div>

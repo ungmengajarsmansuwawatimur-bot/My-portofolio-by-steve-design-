@@ -613,10 +613,10 @@ export const toolsData: ToolItem[] = [
     percentage: '95%',
   },
   {
-    name: 'Luma Dream Machine',
-    role: '(AI video generator)',
+    name: 'Base44 Tools',
+    role: '(AI Tools Platform)',
     category: 'Multimedia',
-    iconName: 'luma',
+    iconName: 'base44',
     percentage: '88%',
   },
   {

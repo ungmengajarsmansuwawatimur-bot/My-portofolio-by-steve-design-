@@ -59,7 +59,7 @@ export const SkillsContact: React.FC<SkillsContactProps> = ({ onOpenCvModal }) =
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 sm:space-y-14">
           {/* Section Kicker & Title - Centered matching screenshot */}
           <div className="space-y-3 max-w-3xl mx-auto text-center flex flex-col items-center">
-            <span className="font-display inline-flex items-center justify-center text-xs sm:text-sm font-semibold tracking-[0.14em] uppercase text-[#F9B51B]">
+            <span className="font-display inline-flex items-center justify-center text-base sm:text-lg md:text-xl lg:text-2xl font-bold tracking-[0.18em] uppercase text-[#F9B51B]">
               SKILLS
             </span>
             <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-[-0.025em] text-white leading-tight text-center">

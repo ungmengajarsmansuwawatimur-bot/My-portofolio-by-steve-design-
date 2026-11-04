@@ -65,6 +65,23 @@ export const TiltedCardsBackdrop: React.FC<TiltedCardsBackdropProps> = ({ classN
             ry="50"
             className="fill-[#F3A615] dark:fill-[#31543A] transition-colors duration-300"
           />
+          {/* Playful Eyebrow/Face Expression Accent on Amber Card */}
+          <path
+            d="M 125 140 Q 140 155 155 140"
+            stroke="#171717"
+            strokeWidth="4"
+            strokeLinecap="round"
+            fill="none"
+            className="stroke-[#171717] dark:stroke-white/80"
+          />
+          <path
+            d="M 175 140 Q 190 155 205 140"
+            stroke="#171717"
+            strokeWidth="4"
+            strokeLinecap="round"
+            fill="none"
+            className="stroke-[#171717] dark:stroke-white/80"
+          />
         </g>
 
         {/* ============================================================
@@ -81,6 +98,18 @@ export const TiltedCardsBackdrop: React.FC<TiltedCardsBackdropProps> = ({ classN
             rx="50"
             ry="50"
             className="fill-[#FED34D] dark:fill-[#31543A] transition-colors duration-300"
+          />
+        </g>
+
+        {/* Lightning Bolt Graphic Accent (Right Flank) */}
+        <g transform="translate(640, 110) rotate(12)">
+          <polygon
+            points="24,0 0,38 18,38 4,78 48,28 28,28"
+            fill="#FFCA00"
+            stroke="#171717"
+            strokeWidth="3.2"
+            strokeLinejoin="round"
+            className="fill-[#FFCA00] dark:fill-[#d1fe17] stroke-[#171717] dark:stroke-white"
           />
         </g>
 

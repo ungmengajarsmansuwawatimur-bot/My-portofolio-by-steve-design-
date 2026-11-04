@@ -25,7 +25,7 @@ export const MarqueeTicker: React.FC<MarqueeTickerProps> = ({
   className = '',
   speed = 'slow',
   durationSeconds,
-  hasDiagonalFrame = true,
+  hasDiagonalFrame = false,
 }) => {
   // Comfortable reading pace: calculate smooth duration based on number of items
   const animationDuration =
