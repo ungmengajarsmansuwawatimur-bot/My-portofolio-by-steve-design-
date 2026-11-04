@@ -47,6 +47,35 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
     }, 420);
   };
 
+  const [isCvSwapped, setIsCvSwapped] = React.useState(false);
+  const [isCvDownloading, setIsCvDownloading] = React.useState(false);
+
+  const handleCvSwap = (e?: React.MouseEvent) => {
+    if (e) {
+      e.preventDefault();
+    }
+    if (isCvSwapped || isCvDownloading) return;
+
+    setIsCvSwapped(true);
+    setIsCvDownloading(true);
+
+    // Animasi smooth spring swap (~420ms), lalu unduh / buka CV modal resmi
+    setTimeout(() => {
+      if (onOpenCvModal) {
+        onOpenCvModal();
+      } else {
+        downloadCv();
+      }
+
+      // Pertahankan status download sebentar lalu kembalikan posisi tombol secara halus
+      setTimeout(() => {
+        setIsCvSwapped(false);
+        setIsCvDownloading(false);
+      }, 2500);
+    }, 420);
+  };
+
+
   return (
     <section id="home" className="pt-24 sm:pt-28 md:pt-32 bg-white dark:bg-[#121212] transition-colors duration-200 overflow-x-clip overflow-y-visible relative z-20">
       {/* Full-Bleed Rectangular Banner Photo */}
@@ -70,7 +99,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
           <div className="col-span-7 lg:col-span-6 flex flex-col justify-center items-start text-left space-y-3 sm:space-y-6 lg:space-y-7 z-10 py-1 sm:py-4 lg:py-8 pr-1 sm:pr-0">
             {/* Small Official Label */}
             <div>
-              <div className="font-display inline-flex items-center gap-1 sm:gap-1.5 text-[9px] sm:text-xs md:text-sm font-bold tracking-[0.06em] sm:tracking-[0.1em] uppercase text-[#DD9B08] transition-colors">
+              <div className="font-body inline-flex items-center gap-1 sm:gap-1.5 text-[9px] sm:text-xs md:text-sm font-bold tracking-[0.06em] sm:tracking-[0.1em] uppercase text-[#DD9B08] transition-colors">
                 <span aria-hidden="true">✦</span>
                 <span>MY PORTFOLIO • PROFIL RESMI</span>
                 <span aria-hidden="true">✦</span>
@@ -79,7 +108,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
 
             {/* Main Headline: Focal Point 1 */}
             <div>
-              <h1 className="font-display text-xl sm:text-4xl md:text-5xl lg:text-[3.25rem] xl:text-[4rem] font-bold tracking-[-0.025em] leading-[1.12] sm:leading-[1.08] break-words">
+              <h1 className="font-heading text-xl sm:text-4xl md:text-5xl lg:text-[3.25rem] xl:text-[4rem] font-bold tracking-[-0.025em] leading-[1.12] sm:leading-[1.08] break-words">
                 <span className="block text-[#171717]">
                   Taufik Hidayat Malii
                 </span>
@@ -148,7 +177,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
                 <motion.span
                   layout
                   transition={{ type: 'spring', stiffness: 320, damping: 26 }}
-                  className={`font-display px-3 sm:px-7 py-1.5 sm:py-3 rounded-full text-[10px] sm:text-sm font-semibold tracking-wider uppercase flex items-center justify-center transition-colors duration-300 ${
+                  className={`font-body px-3 sm:px-7 py-1.5 sm:py-3 rounded-full text-[10px] sm:text-sm font-semibold tracking-wider uppercase flex items-center justify-center transition-colors duration-300 ${
                     isWorkActive
                       ? 'bg-white text-[#171717]'
                       : 'bg-[#2B4734] text-white'
@@ -158,18 +187,82 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
                 </motion.span>
               </motion.a>
 
-              <button
+              <motion.button
                 type="button"
-                onClick={onOpenCvModal || downloadCv}
-                title="Unduh CV Resmi Taufik Hidayat Malii (PDF)"
-                aria-label="Unduh CV Resmi PDF"
-                className="font-display group inline-flex items-center gap-2 sm:gap-3 pl-3.5 sm:pl-6 pr-1.5 sm:pr-2.5 py-1.5 sm:py-2.5 rounded-full text-[10px] sm:text-sm font-semibold tracking-wider uppercase bg-white dark:bg-[#1E1E1E] text-[#171717] dark:text-white hover:bg-[#171717] hover:text-white dark:hover:bg-white dark:hover:text-[#171717] border-2 border-[#171717] dark:border-white transition-all duration-200 active:scale-95 cursor-pointer shadow-sm"
+                layout
+                transition={{ type: 'spring', stiffness: 320, damping: 26 }}
+                onClick={handleCvSwap}
+                title="Geser ke kanan atau klik untuk swap & unduh CV resmi"
+                aria-label="Unduh CV Resmi PDF via Swap Manual ke Kanan"
+                className={`font-body group inline-flex items-center gap-2 sm:gap-3 py-1.5 sm:py-2.5 rounded-full text-[10px] sm:text-sm font-semibold tracking-wider uppercase select-none cursor-pointer transition-colors duration-300 shadow-sm active:scale-95 ${
+                  isCvSwapped
+                    ? 'flex-row bg-[#2B4734] dark:bg-[#31543A] text-white border-2 border-[#2B4734] dark:border-[#31543A] pr-1.5 sm:pr-2.5 pl-4 sm:pl-6'
+                    : 'flex-row-reverse bg-white dark:bg-[#1E1E1E] text-[#171717] dark:text-white border-2 border-[#171717] dark:border-white hover:border-[#F9B51B] dark:hover:border-[#d1fe17] pl-1.5 sm:pl-2.5 pr-4 sm:pr-6'
+                }`}
               >
-                <span>UNDUH CV RESMI</span>
-                <span className="w-6 h-6 sm:w-9 sm:h-9 rounded-full bg-[#171717] dark:bg-white text-white dark:text-[#171717] group-hover:bg-[#F9B51B] dark:group-hover:bg-[#d1fe17] group-hover:text-[#171717] dark:group-hover:text-[#171717] flex items-center justify-center font-bold text-xs sm:text-sm shrink-0 transition-transform group-hover:translate-y-0.5">
-                  ↓
-                </span>
-              </button>
+                <motion.span
+                  layout
+                  transition={{ type: 'spring', stiffness: 320, damping: 26 }}
+                  className="font-bold tracking-wider"
+                >
+                  {isCvDownloading ? 'MENGUNDUH CV...' : 'UNDUH CV RESMI'}
+                </motion.span>
+                <motion.span
+                  layout
+                  transition={{ type: 'spring', stiffness: 320, damping: 26 }}
+                  drag={!isCvSwapped ? 'x' : false}
+                  dragConstraints={{ left: 0, right: 100 }}
+                  dragElastic={{ top: 0, bottom: 0, left: 0, right: 0.2 }}
+                  onDragEnd={(_, info) => {
+                    if (info.offset.x > 25 || info.velocity.x > 100) {
+                      handleCvSwap();
+                    }
+                  }}
+                  className={`w-7 h-7 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-bold text-xs sm:text-sm shrink-0 transition-colors duration-300 shadow-sm ${
+                    isCvSwapped
+                      ? 'bg-[#F9B51B] dark:bg-[#d1fe17] text-[#171717]'
+                      : 'bg-[#171717] dark:bg-white text-white dark:text-[#171717] group-hover:bg-[#F9B51B] dark:group-hover:bg-[#d1fe17] group-hover:text-[#171717]'
+                  }`}
+                >
+                  <motion.span
+                    animate={{
+                      rotate: isCvDownloading ? [0, 360] : 0,
+                      scale: isCvDownloading ? [1, 1.2, 1] : 1,
+                    }}
+                    transition={{ duration: 0.35 }}
+                    className="flex items-center justify-center"
+                  >
+                    {isCvDownloading ? (
+                      <svg
+                        className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#171717]"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.4"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        aria-hidden="true"
+                      >
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                    ) : (
+                      <svg
+                        className="w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform group-hover:translate-x-0.5"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.4"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        aria-hidden="true"
+                      >
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                        <polyline points="12 5 19 12 12 19" />
+                      </svg>
+                    )}
+                  </motion.span>
+                </motion.span>
+              </motion.button>
             </div>
           </div>
 
@@ -178,8 +271,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
             {/* Visual Container: Mockup Background Versi 2 Circular Orbit */}
             <div className="relative w-full max-w-[280px] sm:max-w-[440px] md:max-w-[520px] lg:max-w-[600px] xl:max-w-[670px] 2xl:max-w-[720px] h-[260px] sm:h-[440px] md:h-[540px] lg:h-[700px] xl:h-[740px] flex items-center justify-end transition-all duration-300 overflow-visible translate-x-3 sm:translate-x-5 lg:translate-x-6 xl:translate-x-10 2xl:translate-x-12">
               
-              {/* Circular Orbit Composition (Versi 2) */}
-              <CircularOrbitBackdrop />
+              {/* Circular Orbit Composition (Versi 2) dengan Foto Resmi Permanen Taufik Hidayat Malii */}
+              <CircularOrbitBackdrop photoSrc="/assets/taufik_official_portrait.png" />
             </div>
           </div>
 

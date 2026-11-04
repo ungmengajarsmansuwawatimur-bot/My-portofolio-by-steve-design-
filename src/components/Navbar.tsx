@@ -146,7 +146,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                       onNavigateHome(link.id);
                     }
                   }}
-                  className={`font-display relative py-2 text-[15px] xl:text-[16px] font-bold uppercase tracking-[0.05em] transition-colors duration-200 select-none ${
+                  className={`font-body relative py-2 text-[15px] xl:text-[16px] font-bold uppercase tracking-[0.05em] transition-colors duration-200 select-none ${
                     isActive
                       ? 'text-[#E59700] dark:text-[#F9B51B]'
                       : 'text-[#171717] dark:text-[#F5F5F5] hover:text-[#E59700] dark:hover:text-[#F9B51B]'
@@ -172,7 +172,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               onClick={handleHireClick}
               layout
               transition={{ type: 'spring', stiffness: 320, damping: 26 }}
-              className={`font-display group inline-flex items-center gap-1.5 p-1 rounded-full cursor-pointer select-none transition-colors duration-300 shadow-sm border border-[#171717]/20 active:scale-95 ${
+              className={`font-body group inline-flex items-center gap-1.5 p-1 rounded-full cursor-pointer select-none transition-colors duration-300 shadow-sm border border-[#171717]/20 active:scale-95 ${
                 isHireButtonActive
                   ? 'flex-row-reverse bg-[#F9B51B] dark:bg-[#d1fe17]'
                   : 'flex-row bg-[#31543A]'
@@ -228,7 +228,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               onClick={handleHireClick}
               layout
               transition={{ type: 'spring', stiffness: 320, damping: 26 }}
-              className={`font-display inline-flex items-center gap-1 p-0.5 rounded-full cursor-pointer select-none transition-colors duration-300 border border-[#171717]/20 active:scale-95 ${
+              className={`font-body inline-flex items-center gap-1 p-0.5 rounded-full cursor-pointer select-none transition-colors duration-300 border border-[#171717]/20 active:scale-95 ${
                 isHireButtonActive
                   ? 'flex-row-reverse bg-[#F9B51B] dark:bg-[#d1fe17]'
                   : 'flex-row bg-[#31543A]'
@@ -314,7 +314,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                     onNavigateHome(link.id);
                   }
                 }}
-                className={`font-display flex items-center justify-between px-4 py-3 rounded-2xl text-sm font-semibold tracking-wide transition-all ${
+                className={`font-body flex items-center justify-between px-4 py-3 rounded-2xl text-sm font-semibold tracking-wide transition-all ${
                   isActive
                     ? 'bg-[#F9B51B] dark:bg-[#d1fe17] text-[#171717] border-2 border-[#171717]'
                     : 'text-[#171717] dark:text-[#F9FAFB] hover:bg-[#F5F5F5] dark:hover:bg-[#1E1E1E]'

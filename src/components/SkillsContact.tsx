@@ -59,10 +59,10 @@ export const SkillsContact: React.FC<SkillsContactProps> = ({ onOpenCvModal }) =
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 sm:space-y-14">
           {/* Section Kicker & Title - Centered matching screenshot */}
           <div className="space-y-3 max-w-3xl mx-auto text-center flex flex-col items-center">
-            <span className="font-display inline-flex items-center justify-center text-base sm:text-lg md:text-xl lg:text-2xl font-bold tracking-[0.18em] uppercase text-[#F9B51B]">
+            <span className="font-body inline-flex items-center justify-center text-base sm:text-lg md:text-xl lg:text-2xl font-bold tracking-[0.18em] uppercase text-[#F9B51B]">
               SKILLS
             </span>
-            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-[-0.025em] text-white leading-tight text-center">
+            <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-[-0.025em] text-white leading-tight text-center">
               Skills &amp; Technical Experience
             </h2>
           </div>
@@ -90,12 +90,12 @@ export const SkillsContact: React.FC<SkillsContactProps> = ({ onOpenCvModal }) =
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 sm:space-y-16">
           {/* Section Kicker & Title */}
           <div className="text-center space-y-3 max-w-2xl mx-auto">
-            <div className="font-display inline-flex items-center gap-2 text-xs sm:text-sm font-semibold tracking-[0.08em] uppercase text-[#A86200]">
+            <div className="font-body inline-flex items-center gap-2 text-xs sm:text-sm font-semibold tracking-[0.08em] uppercase text-[#A86200]">
               <span aria-hidden="true">✦</span>
               <span>TESTIMONIALS</span>
               <span aria-hidden="true">✦</span>
             </div>
-            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold tracking-[-0.02em] text-[#171717] leading-[1.12]">
+            <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-semibold tracking-[-0.02em] text-[#171717] leading-[1.12]">
               What Clients &amp; Colleagues Say
             </h2>
           </div>
@@ -149,7 +149,7 @@ export const SkillsContact: React.FC<SkillsContactProps> = ({ onOpenCvModal }) =
 
                   {/* Author Information below the speech bubble */}
                   <div className="mt-5 sm:mt-6 pl-7 sm:pl-9 text-left">
-                    <h4 className="font-display font-bold text-base sm:text-lg text-[#111827] leading-tight tracking-[-0.01em]">
+                    <h4 className="font-heading font-bold text-base sm:text-lg text-[#111827] leading-tight tracking-[-0.01em]">
                       {testi.name}
                     </h4>
                     <p className="font-body font-semibold text-sm sm:text-base text-[#A86200] mt-1 leading-snug">
@@ -181,22 +181,22 @@ export const SkillsContact: React.FC<SkillsContactProps> = ({ onOpenCvModal }) =
       </section>
 
       {/* ========================================================================= */}
-      {/* 3. LET'S WORK TOGETHER & CONTACT CHANNELS (Steve Mengelkoch style)        */}
+      {/* 3. LET'S WORK TOGETHER & CONTACT CHANNELS (Clean White Canvas)             */}
       {/* ========================================================================= */}
       <section
         id="contact"
-        className="py-20 md:py-28 bg-[#171717] text-white transition-colors duration-200"
+        className="py-20 md:py-28 bg-white dark:bg-[#121212] text-[#171717] dark:text-white transition-colors duration-200 border-t border-[#171717]/10 dark:border-white/10"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
           {/* Top Banner Headline */}
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
             <div className="space-y-3 max-w-2xl">
-              <div className="font-display inline-flex items-center gap-2 text-xs font-semibold tracking-[0.08em] uppercase text-[#F9B51B] dark:text-[#d1fe17]">
+              <div className="font-body inline-flex items-center gap-2 text-xs font-semibold tracking-[0.08em] uppercase text-[#DD9B08] dark:text-[#F9B51B]">
                 <span aria-hidden="true">✦</span>
                 <span>LET'S WORK TOGETHER</span>
                 <span aria-hidden="true">✦</span>
               </div>
-              <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-[-0.02em] text-white leading-[1.12]">
+              <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-[-0.02em] text-[#171717] dark:text-white leading-[1.12]">
                 Tertarik Bekerja Sama atau Rekrutmen?
               </h2>
             </div>
@@ -207,7 +207,7 @@ export const SkillsContact: React.FC<SkillsContactProps> = ({ onOpenCvModal }) =
                 href="https://api.whatsapp.com/send?phone=6285656381485"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-display group inline-flex items-center gap-3 pl-6 pr-2 py-2.5 rounded-full text-xs sm:text-sm font-semibold tracking-wider uppercase bg-[#F9B51B] dark:bg-[#d1fe17] text-[#171717] hover:bg-[#E5A417] transition-all duration-150 shadow-md active:scale-95 cursor-pointer"
+                className="font-body group inline-flex items-center gap-3 pl-6 pr-2 py-2.5 rounded-full text-xs sm:text-sm font-semibold tracking-wider uppercase bg-[#F9B51B] dark:bg-[#d1fe17] text-[#171717] hover:bg-[#E5A417] transition-all duration-150 shadow-md active:scale-95 cursor-pointer border border-[#171717]/10"
               >
                 <span>HUBUNGI VIA WHATSAPP</span>
                 <span className="w-9 h-9 rounded-full bg-[#171717] text-white flex items-center justify-center font-bold text-sm shrink-0 transition-transform group-hover:translate-x-1">
@@ -217,7 +217,7 @@ export const SkillsContact: React.FC<SkillsContactProps> = ({ onOpenCvModal }) =
             </div>
           </div>
 
-          {/* 4 Contact Channels (Clean Open Editorial Columns, Zero Lines) */}
+          {/* 4 Contact Channels (Clean Open Editorial Columns) */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {contactData.map((contact) => (
               <a
@@ -228,19 +228,19 @@ export const SkillsContact: React.FC<SkillsContactProps> = ({ onOpenCvModal }) =
                 className="space-y-2 group cursor-pointer block"
               >
                 <div className="flex items-center justify-between">
-                  <span className="font-display text-xs font-semibold tracking-[0.08em] text-[#F9B51B] dark:text-[#d1fe17] uppercase">
+                  <span className="font-body text-xs font-semibold tracking-[0.08em] text-[#A2680A] dark:text-[#F9B51B] uppercase">
                     {contact.label}
                   </span>
-                  <span className="text-white/60 group-hover:text-[#F9B51B] dark:text-[#d1fe17] text-sm font-bold transition-colors">
+                  <span className="text-[#171717]/40 group-hover:text-[#171717] dark:text-white/60 dark:group-hover:text-[#d1fe17] text-sm font-bold transition-colors">
                     &rarr;
                   </span>
                 </div>
 
                 <div>
-                  <h4 className="font-display text-base sm:text-lg font-semibold text-white group-hover:text-[#F9B51B] dark:text-[#d1fe17] transition-colors break-words">
+                  <h4 className="font-heading text-base sm:text-lg font-semibold text-[#171717] dark:text-white group-hover:text-[#A2680A] dark:group-hover:text-[#F9B51B] transition-colors break-words">
                     {contact.value}
                   </h4>
-                  <p className="font-info text-xs text-white/60 mt-1 font-normal">
+                  <p className="font-info text-xs text-[#666666] dark:text-[#A3A3A3] mt-1 font-normal">
                     {contact.placeholderText}
                   </p>
                 </div>

@@ -54,8 +54,8 @@ export const MarqueeTicker: React.FC<MarqueeTickerProps> = ({
             />
           </svg>
 
-          {/* Foreground Horizontal Yellow Marquee Strip */}
-          <div className="w-full overflow-hidden bg-[#F9B51B] py-4.5 sm:py-5 md:py-6 select-none relative z-10 border-y-2 sm:border-y-[2.5px] border-[#171717] shadow-sm">
+          {/* Foreground Horizontal Yellow Marquee Strip (Seamless borderless) */}
+          <div className="w-full overflow-hidden bg-[#F9B51B] py-4.5 sm:py-5 md:py-6 select-none relative z-10">
             <div
               className="animate-ticker flex items-center"
               style={{ animationDuration: `${animationDuration}s` }}
@@ -64,7 +64,7 @@ export const MarqueeTicker: React.FC<MarqueeTickerProps> = ({
                 <div key={loopIdx} className="flex items-center shrink-0">
                   {items.map((item, idx) => (
                     <div key={idx} className="flex items-center shrink-0">
-                      <span className="font-display text-xl sm:text-2xl md:text-3xl lg:text-[2rem] font-bold tracking-tight text-[#171717] px-4 sm:px-6 md:px-8 whitespace-nowrap">
+                      <span className="font-heading text-xl sm:text-2xl md:text-3xl lg:text-[2rem] font-bold tracking-tight text-[#171717] px-4 sm:px-6 md:px-8 whitespace-nowrap">
                         {item}
                       </span>
                       <span
@@ -86,7 +86,7 @@ export const MarqueeTicker: React.FC<MarqueeTickerProps> = ({
 
   return (
     <div
-      className={`w-full overflow-hidden bg-[#F9B51B] py-4.5 sm:py-5 md:py-6 select-none border-y-2 sm:border-y-[2.5px] border-[#171717] relative z-20 ${className}`}
+      className={`w-full overflow-hidden bg-[#F9B51B] py-4.5 sm:py-5 md:py-6 select-none relative z-20 ${className}`}
       aria-label="Keterampilan & Layanan Berjalan"
     >
       <div
@@ -97,7 +97,7 @@ export const MarqueeTicker: React.FC<MarqueeTickerProps> = ({
           <div key={loopIdx} className="flex items-center shrink-0">
             {items.map((item, idx) => (
               <div key={idx} className="flex items-center shrink-0">
-                <span className="font-display text-xl sm:text-2xl md:text-3xl lg:text-[2rem] font-bold tracking-tight text-[#171717] px-4 sm:px-6 md:px-8 whitespace-nowrap">
+                <span className="font-heading text-xl sm:text-2xl md:text-3xl lg:text-[2rem] font-bold tracking-tight text-[#171717] px-4 sm:px-6 md:px-8 whitespace-nowrap">
                   {item}
                 </span>
                 <span

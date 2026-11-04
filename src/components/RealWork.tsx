@@ -56,13 +56,13 @@ export const RealWork: React.FC<RealWorkProps> = ({ onSelectProject }) => {
       {/* Top Header Typography (Editorial Center-Aligned Hierarchy matching reference) */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 sm:mb-16">
         <div className="text-center max-w-3xl mx-auto space-y-3 sm:space-y-4">
-          <div className="font-display inline-flex items-center gap-2 text-xs sm:text-sm font-semibold tracking-[0.12em] uppercase text-[#F9B51B] dark:text-[#d1fe17] transition-colors">
+          <div className="font-body inline-flex items-center gap-2 text-xs sm:text-sm font-semibold tracking-[0.12em] uppercase text-[#F9B51B] dark:text-[#d1fe17] transition-colors">
             <span aria-hidden="true">✦</span>
             <span>PORTFOLIO</span>
             <span aria-hidden="true">✦</span>
           </div>
 
-          <h2 className="font-display text-3xl sm:text-5xl lg:text-6xl font-bold text-[#171717] tracking-tight leading-[1.12]">
+          <h2 className="font-heading text-3xl sm:text-5xl lg:text-6xl font-bold text-[#171717] tracking-tight leading-[1.12]">
             Selected Projects &amp; <span className="text-[#F9B51B] transition-colors">Real Evidence</span>
           </h2>
         </div>
@@ -116,7 +116,7 @@ export const RealWork: React.FC<RealWorkProps> = ({ onSelectProject }) => {
 
               {/* [ 2. PROJECT TITLE & 3. PROJECT CATEGORY / TYPE ] */}
               <div className="mt-2.5 sm:mt-3.5 space-y-1 text-center w-full">
-                <h3 className="font-display text-xl sm:text-2xl lg:text-[28px] font-bold text-[#171717] dark:text-white tracking-tight leading-snug group-hover:text-[#F9B51B] dark:text-[#d1fe17] transition-colors duration-200 text-center">
+                <h3 className="font-heading text-xl sm:text-2xl lg:text-[28px] font-bold text-[#171717] dark:text-white tracking-tight leading-snug group-hover:text-[#F9B51B] dark:text-[#d1fe17] transition-colors duration-200 text-center">
                   {entry.title}
                 </h3>
 
@@ -159,7 +159,7 @@ export const RealWork: React.FC<RealWorkProps> = ({ onSelectProject }) => {
 
                 {/* [ 2. PROJECT TITLE & 3. PROJECT CATEGORY / TYPE ] */}
                 <div className="mt-2.5 sm:mt-3.5 space-y-1 text-center w-full">
-                  <h3 className="font-display text-xl sm:text-2xl lg:text-[28px] font-bold text-[#171717] dark:text-white tracking-tight leading-snug group-hover:text-[#F9B51B] dark:text-[#d1fe17] transition-colors duration-200 text-center">
+                  <h3 className="font-heading text-xl sm:text-2xl lg:text-[28px] font-bold text-[#171717] dark:text-white tracking-tight leading-snug group-hover:text-[#F9B51B] dark:text-[#d1fe17] transition-colors duration-200 text-center">
                     {projectEntries[2].title}
                   </h3>
 

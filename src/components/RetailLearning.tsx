@@ -1,33 +1,15 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState } from 'react';
 import {
   candidateProfile,
   learningMaterialsData,
 } from '../data/portfolioData';
-import { LearningCategory, LearningItem } from '../types';
+import { LearningItem } from '../types';
 import { EditableImage } from './EditableImage';
 import { LightboxModal } from './LightboxModal';
 
-const CATEGORIES: readonly LearningCategory[] = [
-  'Semua',
-  'Customer Service',
-  'Retail',
-  'Display',
-  'Planogram',
-  'Stock',
-  'Komunikasi',
-] as const;
-
 const RetailLearningComponent: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState<LearningCategory>('Semua');
   const [selectedItem, setSelectedItem] = useState<LearningItem | null>(null);
-
-  const filteredMaterials = useMemo(
-    () =>
-      activeCategory === 'Semua'
-        ? learningMaterialsData
-        : learningMaterialsData.filter((item) => item.category === activeCategory),
-    [activeCategory]
-  );
+  const filteredMaterials = learningMaterialsData;
 
   return (
     <section id="learning" className="py-20 md:py-28 bg-[#FFFFFF] dark:bg-[#121212] transition-colors duration-200">
@@ -49,28 +31,7 @@ const RetailLearningComponent: React.FC = () => {
             Modul dan keterampilan operasional ritel yang saya pelajari secara mandiri untuk kesiapan kerja di lingkungan retail modern.
           </p>
 
-          {/* Editorial Category Navigation (Minimalist Clean Tabs) */}
-          <div className="flex flex-wrap items-center gap-2 pt-2" role="tablist" aria-label="Kategori Pembelajaran">
-            {CATEGORIES.map((cat) => {
-              const isActive = activeCategory === cat;
-              return (
-                <button
-                  key={cat}
-                  type="button"
-                  role="tab"
-                  aria-selected={isActive}
-                  onClick={() => setActiveCategory(cat)}
-                  className={`font-display text-xs font-semibold tracking-wider uppercase transition-all duration-150 cursor-pointer px-3.5 py-1.5 rounded-xs border select-none ${
-                    isActive
-                      ? 'bg-[#171717] dark:bg-white text-white dark:text-[#171717] border-[#171717] dark:border-white shadow-xs'
-                      : 'bg-transparent text-[#666666] dark:text-[#A3A3A3] border-transparent hover:border-[#171717]/20 dark:hover:border-white/20 hover:text-[#171717] dark:hover:text-white'
-                  }`}
-                >
-                  {cat}
-                </button>
-              );
-            })}
-          </div>
+
         </div>
 
         {/* Section: Daftar Materi Pembelajaran */}

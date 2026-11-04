@@ -8,10 +8,12 @@ interface CircularOrbitBackdropProps {
 }
 
 export const CircularOrbitBackdrop: React.FC<CircularOrbitBackdropProps> = ({
-  photoSrc,
-  altText = 'Taufik Hidayat Malii',
+  photoSrc = '/assets/taufik_official_portrait.png',
+  altText = 'Taufik Hidayat Malii - Operasional & Pelayanan Retail',
   className = '',
 }) => {
+  const activePhotoSrc = photoSrc || '/assets/taufik_official_portrait.png';
+
   return (
     <div className={`relative w-full h-full flex items-center justify-end select-none overflow-visible ${className}`}>
 
@@ -84,21 +86,19 @@ export const CircularOrbitBackdrop: React.FC<CircularOrbitBackdropProps> = ({
           className="stroke-[#F2EBE3] dark:stroke-[#34302C] transition-colors duration-300"
         />
 
-        {/* 4. LAYER SUBJEK: Authentic Portrait Photo (only rendered if a valid photo is provided) */}
-        {photoSrc && (
-          <g clipPath="url(#popOutCircleClip)">
-            <image
-              href={photoSrc}
-              x="115"
-              y="44"
-              width="372"
-              height="444"
-              preserveAspectRatio="xMidYMax meet"
-              className="transition-transform duration-300 hover:scale-[1.015] origin-bottom cursor-pointer pointer-events-auto"
-              aria-label={altText}
-            />
-          </g>
-        )}
+        {/* 4. LAYER SUBJEK: Foto Resmi Permanen Taufik Hidayat Malii (Cutout Pop-Out Effect) */}
+        <g clipPath="url(#popOutCircleClip)">
+          <image
+            href={activePhotoSrc}
+            x="115"
+            y="42"
+            width="372"
+            height="446"
+            preserveAspectRatio="xMidYMax meet"
+            className="transition-transform duration-300 hover:scale-[1.015] origin-bottom pointer-events-none select-none"
+            aria-label={altText}
+          />
+        </g>
 
         {/* 5. LAYER ORBIT: Dark Green Orbit Arc on Left with Terminus Node */}
         <path

@@ -4,10 +4,13 @@
 @custom-variant dark (&:where(.dark, .dark *, [data-theme="dark"], [data-theme="dark"] *));
 
 @theme {
-  --font-display: "Jost", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-body: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-info: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-sans: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Baloo 2", cursive, sans-serif;
+  --font-heading: "Baloo 2", cursive, sans-serif;
+  --font-baloo: "Baloo 2", cursive, sans-serif;
+  --font-body: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-info: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-sans: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-nunito: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --color-warm-canvas: #FFFFFF;
   --color-steve-yellow: #F9B51B;
   --brand: #F9B51B;
@@ -27,9 +30,13 @@
 }
 
 :root {
-  --font-display: "Jost", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-body: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-info: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Baloo 2", cursive, sans-serif;
+  --font-heading: "Baloo 2", cursive, sans-serif;
+  --font-baloo: "Baloo 2", cursive, sans-serif;
+  --font-body: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-info: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-sans: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-nunito: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
   /* Responsive typography scale tokens using fluid clamp */
   --type-size-display: clamp(2.5rem, 5.5vw + 1rem, 5rem);
@@ -74,39 +81,37 @@
   --accent-darkgreen-hover: #26432E;
 }
 
-/* 3-Typeface System Utility Classes & Tokens */
-.font-display {
-  font-family: var(--font-display) !important;
-  font-weight: 600;
+/* Strict 2-Typeface System Utility Classes & Tokens */
+.font-display,
+.font-heading,
+.font-baloo {
+  font-family: var(--font-heading) !important;
 }
 
-.font-body {
+.font-body,
+.font-info,
+.font-sans,
+.font-nunito {
   font-family: var(--font-body) !important;
-  font-weight: 400;
-}
-
-.font-info {
-  font-family: var(--font-info) !important;
-  font-weight: 400;
 }
 
 /* Global Typography Design Token Classes */
 .type-display {
-  font-family: var(--font-display) !important;
+  font-family: var(--font-heading) !important;
   font-weight: 600 !important;
   letter-spacing: var(--type-track-display);
   line-height: var(--type-lh-display);
 }
 
 .type-section-heading {
-  font-family: var(--font-display) !important;
+  font-family: var(--font-heading) !important;
   font-weight: 600 !important;
   letter-spacing: var(--type-track-heading);
   line-height: var(--type-lh-h2);
 }
 
 .type-project-title {
-  font-family: var(--font-display) !important;
+  font-family: var(--font-heading) !important;
   font-weight: 600 !important;
   letter-spacing: var(--type-track-subheading);
   line-height: var(--type-lh-h3);
@@ -120,44 +125,79 @@
 }
 
 .type-meta {
-  font-family: var(--font-info) !important;
+  font-family: var(--font-body) !important;
   font-weight: 400 !important;
   letter-spacing: var(--type-track-normal);
   line-height: var(--type-lh-meta);
 }
 
 .type-label {
-  font-family: var(--font-display) !important;
+  font-family: var(--font-body) !important;
   font-weight: 600 !important;
   letter-spacing: var(--type-track-label);
   text-transform: uppercase;
 }
 
 .type-nav {
-  font-family: var(--font-display) !important;
+  font-family: var(--font-body) !important;
   font-weight: 600 !important;
   letter-spacing: var(--type-track-nav);
 }
 
 .type-button {
-  font-family: var(--font-display) !important;
+  font-family: var(--font-body) !important;
   font-weight: 600 !important;
   letter-spacing: 0.04em;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-display);
-  font-weight: 600;
+/* 1. Base default font: Nunito for all text, paragraphs, buttons, labels, inputs */
+body,
+p,
+button,
+button *,
+a,
+label,
+input,
+textarea,
+select,
+nav,
+nav *,
+.type-body,
+.type-meta,
+.type-label,
+.type-nav,
+.type-button,
+.font-body,
+.font-info,
+.font-sans,
+.font-nunito {
+  font-family: var(--font-body) !important;
 }
 
-p {
-  font-family: var(--font-body);
-  font-weight: 400;
+/* Ensure buttons, nav links, and labels even if decorated with .font-display use Nunito */
+button.font-display,
+button.font-display *,
+a.font-display,
+nav a.font-display,
+nav span.font-display,
+label.font-display,
+span.font-display:not(h1 span):not(h2 span):not(h3 span):not(h4 span):not(h5 span):not(h6 span):not(.animate-ticker span),
+div.font-display:not(h1 div):not(h2 div):not(h3 div):not(h4 div):not(h5 div):not(h6 div):not(.animate-ticker div) {
+  font-family: var(--font-body) !important;
 }
 
-button {
-  font-family: var(--font-display);
-  font-weight: 600;
+/* 2. All titles, headings (h1, h2, h3, h4, h5, h6) and running marquee text: Baloo 2 */
+h1, h2, h3, h4, h5, h6,
+h1 *, h2 *, h3 *, h4 *, h5 *, h6 *,
+.type-display,
+.type-section-heading,
+.type-project-title,
+.font-heading,
+.font-baloo,
+.animate-ticker,
+.animate-ticker span,
+.animate-ticker * {
+  font-family: var(--font-heading) !important;
 }
 
 :root.dark, html.dark {
