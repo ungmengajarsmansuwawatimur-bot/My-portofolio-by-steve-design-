@@ -40,7 +40,7 @@ const AnimatedCounter: React.FC<{
   }, [target, duration]);
 
   return (
-    <span className="tabular-nums">
+    <span className="tabular-nums font-bold">
       {count}
       {suffix}
     </span>
@@ -142,28 +142,28 @@ export const AboutExperience: React.FC<AboutExperienceProps> = () => {
             {/* 3 Steve Mengelkoch Signature Stat Columns - Centered & Animated */}
             <div className="grid grid-cols-3 divide-x divide-[#171717]/10 dark:divide-white/10 py-6 sm:py-8 border-y border-[#171717]/15 dark:border-white/10 text-center">
               <div className="flex flex-col items-center justify-center text-center px-2 sm:px-4">
-                <span className="font-info text-xs sm:text-sm font-normal text-[#666666] dark:text-[#A3A3A3] block uppercase tracking-wide text-center">
+                <span className="font-info text-xs sm:text-sm font-bold text-[#666666] dark:text-[#A3A3A3] block uppercase tracking-wide text-center">
                   Pelanggan &amp; Transaksi
                 </span>
-                <span className="font-info text-3xl sm:text-4xl md:text-5xl font-normal text-[#171717] dark:text-white tracking-tight mt-1.5 block text-center tabular-nums">
+                <span className="font-info text-3xl sm:text-4xl md:text-5xl font-bold text-[#171717] dark:text-white tracking-tight mt-1.5 block text-center tabular-nums">
                   <AnimatedCounter target={250} suffix="+" duration={2400} />
                 </span>
               </div>
 
               <div className="flex flex-col items-center justify-center text-center px-2 sm:px-4">
-                <span className="font-info text-xs sm:text-sm font-normal text-[#666666] dark:text-[#A3A3A3] block uppercase tracking-wide text-center">
+                <span className="font-info text-xs sm:text-sm font-bold text-[#666666] dark:text-[#A3A3A3] block uppercase tracking-wide text-center">
                   Modul Web Administrasi
                 </span>
-                <span className="font-info text-3xl sm:text-4xl md:text-5xl font-normal text-[#171717] dark:text-white tracking-tight mt-1.5 block text-center tabular-nums">
+                <span className="font-info text-3xl sm:text-4xl md:text-5xl font-bold text-[#171717] dark:text-white tracking-tight mt-1.5 block text-center tabular-nums">
                   <AnimatedCounter target={24} duration={2000} />
                 </span>
               </div>
 
               <div className="flex flex-col items-center justify-center text-center px-2 sm:px-4">
-                <span className="font-info text-xs sm:text-sm font-normal text-[#666666] dark:text-[#A3A3A3] block uppercase tracking-wide text-center">
+                <span className="font-info text-xs sm:text-sm font-bold text-[#666666] dark:text-[#A3A3A3] block uppercase tracking-wide text-center">
                   Kesiapan Kerja
                 </span>
-                <span className="font-info text-3xl sm:text-4xl md:text-5xl font-normal text-[#171717] dark:text-white tracking-tight mt-1.5 block text-center tabular-nums">
+                <span className="font-info text-3xl sm:text-4xl md:text-5xl font-bold text-[#171717] dark:text-white tracking-tight mt-1.5 block text-center tabular-nums">
                   <AnimatedCounter target={100} suffix="%" duration={2200} />
                 </span>
               </div>

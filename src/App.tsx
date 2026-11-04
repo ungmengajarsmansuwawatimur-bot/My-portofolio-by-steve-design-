@@ -5,7 +5,6 @@ import { AboutExperience } from './components/AboutExperience';
 import { RealWork } from './components/RealWork';
 import { RetailLearning } from './components/RetailLearning';
 import { SkillsContact } from './components/SkillsContact';
-import { ThemeTransitionOverlay } from './components/ThemeTransitionOverlay';
 import { downloadCv } from './utils/downloadCv';
 
 // Code-split heavy below-the-fold detail pages and modals to slash initial bundle size
@@ -106,14 +105,11 @@ export default function App() {
   const isHirePage = currentRoute === 'hire-me';
 
   return (
-    <div className="min-h-screen bg-white dark:bg-[#121212] text-[#171717] dark:text-[#F5F5F5] flex flex-col selection:bg-[#F9B51B] dark:selection:bg-[#F9B51B] dark:bg-[#d1fe17] selection:text-[#171717] transition-colors duration-200 relative">
-      {/* Theme Transition Ambience Overlay */}
-      <ThemeTransitionOverlay />
-
+    <div className="min-h-screen bg-white text-[#171717] flex flex-col selection:bg-[#F9B51B] selection:text-[#171717] relative">
       {/* Top Accessible Skip Link */}
       <a
         href="#home"
-        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-[#111111] dark:focus:bg-[#242424] focus:text-white focus:rounded-md focus:font-bold focus:shadow-lg"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-[#111111] focus:text-white focus:rounded-md focus:font-bold focus:shadow-lg"
       >
         Lewati ke Konten Utama
       </a>

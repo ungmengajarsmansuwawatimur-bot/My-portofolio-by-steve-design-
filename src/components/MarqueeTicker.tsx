@@ -9,15 +9,15 @@ interface MarqueeTickerProps {
 }
 
 const DEFAULT_ITEMS = [
-  'PRAMUNIAGA',
-  'OPERASIONAL TOKO',
-  'KASIR & SISTEM POS',
-  'PENATAAN DISPLAY PRODUK',
-  'PELAYANAN KONSUMEN PRIMA',
-  'MANAJEMEN STOK & INVENTARIS',
-  'ADMINISTRASI DOKUMEN DIGITAL',
-  'KOMUNIKASI EFEKTIF',
-  'DISIPLIN & TANGGUNG JAWAB',
+  'Pramuniaga',
+  'Operasional Toko',
+  'Kasir & Sistem POS',
+  'Penataan Display Produk',
+  'Pelayanan Konsumen Prima',
+  'Manajemen Stok & Inventaris',
+  'Administrasi Dokumen Digital',
+  'Komunikasi Efektif',
+  'Disiplin & Tanggung Jawab',
 ];
 
 export const MarqueeTicker: React.FC<MarqueeTickerProps> = ({
@@ -25,37 +25,37 @@ export const MarqueeTicker: React.FC<MarqueeTickerProps> = ({
   className = '',
   speed = 'slow',
   durationSeconds,
-  hasDiagonalFrame = false,
+  hasDiagonalFrame = true,
 }) => {
   // Comfortable reading pace: calculate smooth duration based on number of items
   const animationDuration =
-    durationSeconds ?? (speed === 'slow' ? Math.max(65, items.length * 2.4) : 40);
+    durationSeconds ?? (speed === 'slow' ? Math.max(70, items.length * 3.2) : 45);
 
   if (hasDiagonalFrame) {
     return (
       <div
-        className={`w-full relative z-20 select-none pt-1.5 sm:pt-2 pb-2.5 sm:pb-3.5 overflow-x-clip overflow-y-visible ${className}`}
+        className={`w-full relative z-20 select-none py-5 sm:py-6 md:py-7 overflow-x-clip overflow-y-visible ${className}`}
         aria-label="Keterampilan & Layanan Berjalan"
       >
         <div className="relative w-full">
-          {/* Green Diagonal Ribbon/Band behind the marquee - perfectly balanced & symmetrical left and right */}
+          {/* Dark Green Diagonal Ribbon Band behind the yellow marquee (visible and well-proportioned) */}
           <svg
-            className="absolute -top-4 sm:-top-5.5 -bottom-4 sm:-bottom-5.5 inset-x-0 w-full h-[calc(100%+32px)] sm:h-[calc(100%+44px)] pointer-events-none z-0 overflow-visible"
-            viewBox="0 0 1000 120"
+            className="absolute -top-5 sm:-top-6 md:-top-7 -bottom-5 sm:-bottom-6 md:-bottom-7 inset-x-0 w-full h-[calc(100%+40px)] sm:h-[calc(100%+48px)] md:h-[calc(100%+56px)] pointer-events-none z-0 overflow-visible"
+            viewBox="0 0 1000 100"
             preserveAspectRatio="none"
             aria-hidden="true"
           >
             <polygon
-              points="0,42 1000,6 1000,78 0,114"
-              fill="#26492F"
-              stroke="#1A3320"
-              strokeWidth="2"
+              points="0,0 1000,35 1000,100 0,65"
+              fill="#31543A"
+              stroke="#171717"
+              strokeWidth="2.5"
               vectorEffect="non-scaling-stroke"
             />
           </svg>
 
-          {/* Marquee Strip with running text - slightly larger size */}
-          <div className="w-full overflow-hidden bg-[#F9B51B] dark:bg-[#d1fe17] py-4.5 sm:py-5 select-none relative z-10 border-y-2 border-[#171717] shadow-sm">
+          {/* Foreground Horizontal Yellow Marquee Strip */}
+          <div className="w-full overflow-hidden bg-[#F9B51B] py-4.5 sm:py-5 md:py-6 select-none relative z-10 border-y-2 sm:border-y-[2.5px] border-[#171717] shadow-sm">
             <div
               className="animate-ticker flex items-center"
               style={{ animationDuration: `${animationDuration}s` }}
@@ -64,10 +64,13 @@ export const MarqueeTicker: React.FC<MarqueeTickerProps> = ({
                 <div key={loopIdx} className="flex items-center shrink-0">
                   {items.map((item, idx) => (
                     <div key={idx} className="flex items-center shrink-0">
-                      <span className="font-display text-sm sm:text-base font-semibold tracking-wider text-[#171717] px-4 sm:px-5 uppercase whitespace-nowrap">
+                      <span className="font-display text-xl sm:text-2xl md:text-3xl lg:text-[2rem] font-bold tracking-tight text-[#171717] px-4 sm:px-6 md:px-8 whitespace-nowrap">
                         {item}
                       </span>
-                      <span className="text-xl sm:text-2xl font-black text-[#171717] shrink-0 inline-flex items-center justify-center leading-none" aria-hidden="true">
+                      <span
+                        className="text-xl sm:text-2xl md:text-3xl font-black text-[#171717] shrink-0 inline-flex items-center justify-center leading-none"
+                        aria-hidden="true"
+                      >
                         ✦
                       </span>
                     </div>
@@ -83,22 +86,24 @@ export const MarqueeTicker: React.FC<MarqueeTickerProps> = ({
 
   return (
     <div
-      className={`w-full overflow-hidden bg-[#F9B51B] dark:bg-[#d1fe17] py-4.5 sm:py-5 select-none border-y-2 border-[#171717] relative z-20 ${className}`}
+      className={`w-full overflow-hidden bg-[#F9B51B] py-4.5 sm:py-5 md:py-6 select-none border-y-2 sm:border-y-[2.5px] border-[#171717] relative z-20 ${className}`}
       aria-label="Keterampilan & Layanan Berjalan"
     >
       <div
         className="animate-ticker flex items-center"
         style={{ animationDuration: `${animationDuration}s` }}
       >
-        {/* Repeating segments for seamless loop */}
         {[...Array(4)].map((_, loopIdx) => (
           <div key={loopIdx} className="flex items-center shrink-0">
             {items.map((item, idx) => (
               <div key={idx} className="flex items-center shrink-0">
-                <span className="font-display text-sm sm:text-base font-semibold tracking-wider text-[#171717] px-4 sm:px-5 uppercase whitespace-nowrap">
+                <span className="font-display text-xl sm:text-2xl md:text-3xl lg:text-[2rem] font-bold tracking-tight text-[#171717] px-4 sm:px-6 md:px-8 whitespace-nowrap">
                   {item}
                 </span>
-                <span className="text-xl sm:text-2xl font-black text-[#171717] shrink-0 inline-flex items-center justify-center leading-none" aria-hidden="true">
+                <span
+                  className="text-xl sm:text-2xl md:text-3xl font-black text-[#171717] shrink-0 inline-flex items-center justify-center leading-none"
+                  aria-hidden="true"
+                >
                   ✦
                 </span>
               </div>

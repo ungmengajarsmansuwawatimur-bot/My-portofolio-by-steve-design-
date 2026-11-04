@@ -12,12 +12,24 @@ interface SkillsContactProps {
 }
 
 export const SkillsContact: React.FC<SkillsContactProps> = ({ onOpenCvModal }) => {
-  // Interactive state: single active comment box (switches mutually on clicking other boxes, toggles off on re-click)
-  const [activeCommentId, setActiveCommentId] = React.useState<string | null>(null);
+  // Testimonials carousel page state (3 pages matching reference 3 pagination dots)
+  const [currentTestiPage, setCurrentTestiPage] = React.useState(0);
+  const totalTestiPages = 3;
 
-  const toggleComment = (id: string) => {
-    setActiveCommentId((prev) => (prev === id ? null : id));
+  const handlePrevTesti = () => {
+    setCurrentTestiPage((prev) => (prev > 0 ? prev - 1 : totalTestiPages - 1));
   };
+
+  const handleNextTesti = () => {
+    setCurrentTestiPage((prev) => (prev < totalTestiPages - 1 ? prev + 1 : 0));
+  };
+
+  const currentTestimonials = useMemo(() => {
+    // Sliding window of 2 testimonials across 3 dots: [0,1], [1,2], [2,3]
+    const first = testimonialsData[currentTestiPage] || testimonialsData[0];
+    const second = testimonialsData[currentTestiPage + 1] || testimonialsData[1] || testimonialsData[0];
+    return [first, second];
+  }, [currentTestiPage]);
 
   // Generate running text items automatically matching section content
   const skillsTickerItems = useMemo(() => {
@@ -42,12 +54,12 @@ export const SkillsContact: React.FC<SkillsContactProps> = ({ onOpenCvModal }) =
       {/* ========================================================================= */}
       <section
         id="skills"
-        className="pt-20 md:pt-28 pb-0 bg-[#31543A] text-white transition-colors duration-200 overflow-hidden"
+        className="py-20 md:py-28 bg-[#31543A] text-white transition-colors duration-200"
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 sm:space-y-14 pb-16 md:pb-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 sm:space-y-14">
           {/* Section Kicker & Title - Centered matching screenshot */}
           <div className="space-y-3 max-w-3xl mx-auto text-center flex flex-col items-center">
-            <span className="font-display inline-flex items-center justify-center text-xs sm:text-sm font-semibold tracking-[0.14em] uppercase text-[#F9B51B] dark:text-[#d1fe17]">
+            <span className="font-display inline-flex items-center justify-center text-xs sm:text-sm font-semibold tracking-[0.14em] uppercase text-[#F9B51B]">
               SKILLS
             </span>
             <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-[-0.025em] text-white leading-tight text-center">
@@ -58,103 +70,112 @@ export const SkillsContact: React.FC<SkillsContactProps> = ({ onOpenCvModal }) =
           {/* 12 Digital Tools & Applications in 2x6 Format matching screenshot */}
           <InteractiveToolIndex />
         </div>
-
-        {/* Marquee Ticker at the bottom of section#skills */}
-        <MarqueeTicker items={skillsTickerItems} speed="slow" durationSeconds={85} />
       </section>
 
+      {/* Marquee Ticker: Berada di luar kotak hijau section#skills & tanpa latar belakang pita hijau */}
+      <MarqueeTicker
+        items={skillsTickerItems}
+        speed="slow"
+        durationSeconds={85}
+        hasDiagonalFrame={false}
+      />
+
       {/* ========================================================================= */}
-      {/* 2. TESTIMONIALS SECTION (Steve Mengelkoch Screenshots 6 & 7)               */}
+      {/* 2. TESTIMONIALS SECTION (Matching reference image_ad79956f.png)             */}
       {/* ========================================================================= */}
       <section
         id="testimonials"
-        className="py-20 md:py-28 bg-[#F5F5F5] dark:bg-[#18181B] text-[#171717] dark:text-white transition-colors duration-200 border-t border-[#171717]/15 dark:border-white/10"
+        className="py-20 md:py-28 bg-[#FFFFFF] text-[#171717] transition-colors duration-200 border-t border-[#171717]/10"
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 sm:space-y-16">
           {/* Section Kicker & Title */}
           <div className="text-center space-y-3 max-w-2xl mx-auto">
-            <div className="font-display inline-flex items-center gap-2 text-xs sm:text-sm font-semibold tracking-[0.08em] uppercase text-[#F9B51B] dark:text-[#d1fe17] transition-colors">
+            <div className="font-display inline-flex items-center gap-2 text-xs sm:text-sm font-semibold tracking-[0.08em] uppercase text-[#A86200]">
               <span aria-hidden="true">✦</span>
               <span>TESTIMONIALS</span>
               <span aria-hidden="true">✦</span>
             </div>
-            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold tracking-[-0.02em] text-[#171717] dark:text-white leading-[1.12]">
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold tracking-[-0.02em] text-[#171717] leading-[1.12]">
               What Clients &amp; Colleagues Say
             </h2>
           </div>
 
-          {/* 4 Testimonials dalam bentuk bubble komentar 2x2 */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 items-stretch">
-            {testimonialsData.map((testi) => {
-              const isSelected = activeCommentId === testi.id;
+          {/* Carousel Container matching reference image (2 cards side by side, subtle chevrons & 3 pagination dots) */}
+          <div className="relative max-w-6xl mx-auto">
+            {/* Left Chevron Button */}
+            <button
+              type="button"
+              onClick={handlePrevTesti}
+              aria-label="Previous testimonials"
+              className="absolute -left-3 sm:-left-8 lg:-left-12 top-[38%] -translate-y-1/2 z-10 p-2 text-gray-300 hover:text-[#111827] transition-colors duration-200 cursor-pointer"
+            >
+              <svg className="w-5 h-5 sm:w-6 sm:h-6 stroke-current" fill="none" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.2" d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
 
-              return (
+            {/* Right Chevron Button */}
+            <button
+              type="button"
+              onClick={handleNextTesti}
+              aria-label="Next testimonials"
+              className="absolute -right-3 sm:-right-8 lg:-right-12 top-[38%] -translate-y-1/2 z-10 p-2 text-gray-300 hover:text-[#111827] transition-colors duration-200 cursor-pointer"
+            >
+              <svg className="w-5 h-5 sm:w-6 sm:h-6 stroke-current" fill="none" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.2" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+
+            {/* Testimonials 2-Column Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-7 sm:gap-9 lg:gap-11 items-stretch">
+              {currentTestimonials.map((testi) => (
                 <div
                   key={testi.id}
-                  className="flex flex-col justify-between h-full group"
+                  className="flex flex-col justify-between h-full transition-all duration-300 ease-out"
                 >
-                  {/* Speech / Comment Bubble Card with Mutual Click Animation */}
-                  <div
-                    role="button"
-                    tabIndex={0}
-                    aria-pressed={isSelected}
-                    onClick={() => toggleComment(testi.id)}
-                    onKeyDown={(e) => {
-                      if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault();
-                        toggleComment(testi.id);
-                      }
-                    }}
-                    title={isSelected ? 'Klik untuk melepas sorotan komentar' : 'Klik untuk menyorot komentar ini'}
-                    className={`testimonial-bubble relative rounded-3xl p-6 sm:p-7 border-2 sm:border-[2.5px] flex-1 flex flex-col justify-between cursor-pointer select-none transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] active:scale-[0.985] ${
-                      isSelected
-                        ? 'is-selected shadow-[0_10px_30px_-4px_rgba(23,23,23,0.18)] dark:shadow-[0_10px_30px_-4px_rgba(255,255,255,0.18)] scale-[1.015]'
-                        : 'shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] dark:shadow-[0_4px_20px_-4px_rgba(0,0,0,0.3)] hover:shadow-md'
-                    }`}
-                  >
-                    {/* Bubble Pointer / Ekor Balon Komentar */}
+                  {/* Speech Bubble Card Box */}
+                  <div className="relative bg-[#F8F9FA] rounded-2xl p-7 sm:p-9 md:p-10 flex-1 flex flex-col justify-between shadow-[0_1px_3px_rgba(0,0,0,0.03)] border border-[#EEEEEE]/70">
+                    {/* Downward Triangular Speech Tail pointing directly down towards author name */}
                     <div
                       aria-hidden="true"
-                      className={`testimonial-bubble-tail absolute -bottom-2.5 left-9 w-5 h-5 rotate-45 transform transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] border-r-2 border-b-2 sm:border-r-[2.5px] sm:border-b-[2.5px] ${
-                        isSelected ? 'is-selected' : ''
-                      }`}
+                      className="absolute -bottom-3 left-9 sm:left-11 w-0 h-0 border-l-[9px] border-l-transparent border-r-[9px] border-r-transparent border-t-[12px] border-t-[#F8F9FA]"
                     />
 
-                    <div className="space-y-4">
-                      {/* Header inside Bubble: Rating + Category Pill */}
-                      <div className="flex items-center justify-between gap-3">
-                        <div className="flex items-center gap-1 text-[#F9B51B] dark:text-[#d1fe17] text-base select-none transition-colors">
-                          {'★'.repeat(testi.stars)}
-                        </div>
-                        <span className="testimonial-category-pill font-info text-[11px] font-semibold uppercase tracking-wider px-3 py-1 rounded-full transition-colors duration-200">
-                          {testi.category}
-                        </span>
-                      </div>
-
-                      {/* Quote / Isi Komentar */}
-                      <p className="testimonial-quote-text font-body text-sm sm:text-base leading-[1.65] italic font-normal text-refined-justify">
-                        &ldquo;{testi.quote}&rdquo;
-                      </p>
-                    </div>
+                    {/* Testimonial Quote in Italic matching reference */}
+                    <p className="font-body text-[15px] sm:text-[16px] md:text-[16.5px] text-[#333333] leading-[1.75] italic font-normal text-left">
+                      {testi.quote}
+                    </p>
                   </div>
 
-                  {/* Author Meta connected to bubble tail */}
-                  <div className="mt-5 pl-5 flex items-center gap-3.5">
-                    <div className="font-display w-10 h-10 rounded-full bg-[#F9B51B] dark:bg-[#d1fe17] text-[#171717] flex items-center justify-center font-bold text-xs shrink-0 shadow-sm ring-2 ring-white dark:ring-[#18181B]">
-                      {testi.name.slice(0, 2).toUpperCase()}
-                    </div>
-                    <div>
-                      <h4 className="font-display text-sm font-semibold text-[#171717] dark:text-white leading-snug">
-                        {testi.name}
-                      </h4>
-                      <p className="font-info text-xs text-[#666666] dark:text-[#A3A3A3] font-normal">
-                        {testi.role}
-                      </p>
-                    </div>
+                  {/* Author Information below the speech bubble */}
+                  <div className="mt-5 sm:mt-6 pl-7 sm:pl-9 text-left">
+                    <h4 className="font-display font-bold text-base sm:text-lg text-[#111827] leading-tight tracking-[-0.01em]">
+                      {testi.name}
+                    </h4>
+                    <p className="font-body font-semibold text-sm sm:text-base text-[#A86200] mt-1 leading-snug">
+                      {testi.role}
+                    </p>
                   </div>
                 </div>
-              );
-            })}
+              ))}
+            </div>
+
+            {/* 3 Centered Pagination Dots matching reference image */}
+            <div className="flex items-center justify-center gap-3 pt-10 sm:pt-12">
+              {[0, 1, 2].map((page) => (
+                <button
+                  key={page}
+                  type="button"
+                  onClick={() => setCurrentTestiPage(page)}
+                  aria-label={`Pindah ke halaman testimoni ${page + 1}`}
+                  className={`transition-all duration-200 rounded-full cursor-pointer ${
+                    currentTestiPage === page
+                      ? 'w-2.5 h-2.5 bg-[#111827] scale-110'
+                      : 'w-2.5 h-2.5 bg-[#D1D5DB] hover:bg-gray-400'
+                  }`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>

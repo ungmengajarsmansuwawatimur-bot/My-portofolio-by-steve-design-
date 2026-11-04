@@ -62,13 +62,9 @@ export const RealWork: React.FC<RealWorkProps> = ({ onSelectProject }) => {
             <span aria-hidden="true">✦</span>
           </div>
 
-          <h2 className="font-display text-3xl sm:text-5xl lg:text-6xl font-bold text-[#171717] dark:text-white tracking-tight leading-[1.12]">
-            Selected Projects &amp; <span className="text-[#F9B51B] dark:text-[#d1fe17] transition-colors">Real Evidence</span>
+          <h2 className="font-display text-3xl sm:text-5xl lg:text-6xl font-bold text-[#171717] tracking-tight leading-[1.12]">
+            Selected Projects &amp; <span className="text-[#F9B51B] transition-colors">Real Evidence</span>
           </h2>
-
-          <p className="font-body text-base sm:text-lg text-[#666666] dark:text-[#A3A3A3] leading-relaxed max-w-2xl mx-auto font-normal">
-            Representasi visual dari 3 bidang portofolio utama: Layanan Jasa Digital, Pusat Arsip Sekolah (PADDS), dan Pengelolaan Usaha Keluarga. Klik pada setiap proyek untuk membuka dokumentasi dan studi kasus lengkap.
-          </p>
         </div>
       </div>
 

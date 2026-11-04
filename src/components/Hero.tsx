@@ -88,7 +88,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
           <div className="lg:col-span-6 flex flex-col justify-end items-start text-left space-y-6 sm:space-y-7 z-10 pb-4 sm:pb-6 lg:pb-8 pt-4 lg:pt-12 self-end lg:-translate-x-2 xl:-translate-x-4">
             {/* Small Official Label */}
             <div>
-              <div className="font-display inline-flex items-center gap-2 text-xs sm:text-sm font-semibold tracking-[0.08em] uppercase text-[#F9B51B] dark:text-[#d1fe17] transition-colors">
+              <div className="font-display inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold tracking-[0.1em] uppercase text-[#DD9B08] transition-colors">
                 <span aria-hidden="true">✦</span>
                 <span>MY PORTFOLIO • PROFIL RESMI</span>
                 <span aria-hidden="true">✦</span>
@@ -97,8 +97,15 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
 
             {/* Main Headline: Focal Point 1 */}
             <div>
-              <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-[3.5rem] xl:text-[4.25rem] font-semibold tracking-[-0.025em] text-[#171717] dark:text-white leading-[1.05] uppercase break-words">
-                {candidateProfile.fullName}
+              <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-[3.25rem] xl:text-[4rem] font-bold tracking-[-0.025em] leading-[1.08] break-words">
+                <span className="block text-[#171717]">
+                  Taufik Hidayat Malii
+                </span>
+                <span className="block text-[#A2680A] mt-1 sm:mt-1.5">
+                  Operasional &amp; Pelayanan
+                  <br className="hidden sm:inline" />
+                  {' '}Retail Professional.
+                </span>
               </h1>
             </div>
 
@@ -368,8 +375,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
         </div>
       </div>
 
-      {/* Signature Horizontal Yellow Marquee Ticker Strip (Clean, without green diagonal frame) */}
-      <MarqueeTicker hasDiagonalFrame={false} />
+      {/* Signature Dual-Ribbon Marquee Ticker Strip (Yellow horizontal strip with dark green diagonal ribbon) */}
+      <MarqueeTicker hasDiagonalFrame={true} />
     </section>
   );
 };

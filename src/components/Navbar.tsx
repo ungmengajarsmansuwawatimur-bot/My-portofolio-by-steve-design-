@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { ThemeToggle } from './ThemeToggle';
 
 interface NavbarProps {
   onOpenCvModal?: () => void;
@@ -124,17 +123,17 @@ export const Navbar: React.FC<NavbarProps> = ({
             className="group flex items-center select-none"
             aria-label="Taufik Malii - Kembali ke Beranda"
           >
-            <div className="flex items-center dark:bg-white dark:px-2.5 dark:py-1 dark:rounded-xl dark:shadow-xs transition-all">
+            <div className="flex items-center">
               <img
-                src="/assets/aistudio/1793724557585_addf32d6.jpg"
+                src="/assets/aistudio/d1966f85-30a4-42a2-a204-bb1333c65433_a9b1e3d4.png"
                 alt="Taufik Malii"
-                className="h-8 sm:h-9 md:h-10 w-auto object-contain mix-blend-multiply transition-transform duration-200 group-hover:scale-105"
+                className="h-6 sm:h-7 lg:h-8 w-auto object-contain -ml-2 sm:-ml-3 lg:-ml-4 mr-3 sm:mr-4 lg:mr-6 transition-transform duration-200 group-hover:scale-105 dark:brightness-125"
               />
             </div>
           </a>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-1 bg-[#F5F5F5] dark:bg-[#1E1E1E] p-1.5 rounded-full border border-[#171717]/20 dark:border-[#333333]" aria-label="Navigasi Utama">
+          {/* Desktop Navigation - Clean Unwrapped Typographic Menu */}
+          <nav className="hidden lg:flex items-center gap-5 xl:gap-7 2xl:gap-8" aria-label="Navigasi Utama">
             {NAV_LINKS.map((link) => {
               const isActive = !isDetailPage && activeSection === link.id;
               return (
@@ -147,13 +146,20 @@ export const Navbar: React.FC<NavbarProps> = ({
                       onNavigateHome(link.id);
                     }
                   }}
-                  className={`font-display relative px-4 py-2 text-xs font-semibold tracking-[0.02em] rounded-full transition-all duration-150 ${
+                  className={`font-display relative py-2 text-[15px] xl:text-[16px] font-bold uppercase tracking-[0.05em] transition-colors duration-200 select-none ${
                     isActive
-                      ? 'bg-[#171717] text-white dark:bg-white dark:text-[#171717] shadow-sm'
-                      : 'text-[#666666] dark:text-[#A3A3A3] hover:text-[#171717] dark:hover:text-white hover:bg-white dark:hover:bg-[#2A2A2A]'
+                      ? 'text-[#E59700] dark:text-[#F9B51B]'
+                      : 'text-[#171717] dark:text-[#F5F5F5] hover:text-[#E59700] dark:hover:text-[#F9B51B]'
                   }`}
                 >
-                  {link.label}
+                  <span>{link.label}</span>
+                  {isActive && (
+                    <motion.span
+                      layoutId="navActiveIndicator"
+                      className="absolute -bottom-1 left-0 right-0 h-[3.5px] bg-[#E59700] dark:bg-[#F9B51B] rounded-full"
+                      transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+                    />
+                  )}
                 </a>
               );
             })}
@@ -213,8 +219,6 @@ export const Navbar: React.FC<NavbarProps> = ({
                 HIRE ME
               </motion.span>
             </motion.button>
-
-            <ThemeToggle />
           </div>
 
           {/* Mobile quick controls: Split Pill + Theme Toggle + Yellow Hamburger */}
@@ -271,8 +275,6 @@ export const Navbar: React.FC<NavbarProps> = ({
                 HIRE ME
               </motion.span>
             </motion.button>
-
-            <ThemeToggle />
 
             {/* Steve Mengelkoch signature Yellow Circular Hamburger Button */}
             <button
