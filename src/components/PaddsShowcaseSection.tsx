@@ -104,7 +104,7 @@ const PaddsShowcaseSectionComponent: React.FC = () => {
               <span className="font-black text-[#171717] dark:text-white">
                 Modul {current.number}: {current.name}
               </span>
-              <span className="text-[#666666] dark:text-[#A3A3A3] hidden sm:inline">— {current.tag}</span>
+              <span className="text-[#666666] dark:text-[#A3A3A3] hidden sm:inline">• {current.tag}</span>
             </div>
 
             <div className="flex items-center gap-3">

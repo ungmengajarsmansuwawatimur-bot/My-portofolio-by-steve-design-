@@ -65,7 +65,7 @@ export const ProjectDetailUsahaKeluarga: React.FC<ProjectDetailUsahaKeluargaProp
           <div className="flex items-center gap-3">
             <span className="font-display text-4xl sm:text-5xl font-semibold text-[#F9B51B] dark:text-[#d1fe17]">03</span>
             <span className="font-info text-xs font-normal tracking-wider text-[#666666] dark:text-[#A3A3A3] uppercase">
-              2016 — Sekarang (±8 Tahun)
+              2016 s.d. Sekarang (±8 Tahun)
             </span>
           </div>
           <div className="font-info text-xs font-normal tracking-widest text-[#F9B51B] dark:text-[#d1fe17] uppercase">

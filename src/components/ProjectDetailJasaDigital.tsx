@@ -35,7 +35,7 @@ export const ProjectDetailJasaDigital: React.FC<ProjectDetailJasaDigitalProps> =
           <div className="flex items-center gap-3">
             <span className="font-display text-4xl sm:text-5xl font-semibold text-[#F9B51B] dark:text-[#d1fe17] tracking-[-0.03em]">01</span>
             <span className="font-info text-xs font-normal tracking-wider text-[#666666] dark:text-[#A3A3A3] uppercase">
-              Desember 2024 — Sekarang
+              Desember 2024 s.d. Sekarang
             </span>
           </div>
           <div className="font-info text-xs font-normal tracking-[0.08em] text-[#F9B51B] dark:text-[#d1fe17] uppercase">
@@ -137,14 +137,14 @@ export const ProjectDetailJasaDigital: React.FC<ProjectDetailJasaDigitalProps> =
                 no: '03',
                 title: 'Ketepatan Waktu',
                 score: 'Cepat & Tepat',
-                desc: 'Rata-rata pengerjaan tuntas dalam 1–2 jam sejak naskah dan data dikonfirmasi lengkap oleh pelanggan.',
+                desc: 'Rata-rata pengerjaan tuntas dalam 1 hingga 2 jam sejak naskah dan data dikonfirmasi lengkap oleh pelanggan.',
                 tag: 'Kecepatan Proses',
               },
               {
                 no: '04',
                 title: 'Transparansi Tarif',
                 score: 'Konsisten',
-                desc: 'Biaya jasa (Rp 50.000 – 100.000) disampaikan di awal percakapan tanpa pungutan tersembunyi.',
+                desc: 'Biaya jasa (Rp 50.000 s.d. Rp 100.000) disampaikan di awal percakapan tanpa pungutan tersembunyi.',
                 tag: 'Kejujuran Biaya',
               },
               {
@@ -256,7 +256,7 @@ export const ProjectDetailJasaDigital: React.FC<ProjectDetailJasaDigitalProps> =
         <LightboxModal
           isOpen={Boolean(selectedEvidence)}
           onClose={() => setSelectedEvidence(null)}
-          title={`${selectedEvidence.sequence} — ${selectedEvidence.title}`}
+          title={`${selectedEvidence.sequence} : ${selectedEvidence.title}`}
           subtitle={selectedEvidence.subtitle}
           badge="Bukti Tangkapan Layar Smartphone"
         >

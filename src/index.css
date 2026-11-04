@@ -548,20 +548,25 @@ p.text-justify,
 .text-refined-justify {
   text-align: justify !important;
   text-justify: inter-word !important;
+  text-align-last: left !important;
   text-wrap: pretty !important;
-  hyphens: auto !important;
-  -webkit-hyphens: auto !important;
-  -ms-hyphens: auto !important;
-  word-spacing: -0.02em;
+  hyphens: none !important;
+  -webkit-hyphens: none !important;
+  -ms-hyphens: none !important;
+  word-spacing: -0.01em;
   letter-spacing: -0.005em;
+  overflow-wrap: break-word;
 }
 
 @media (max-width: 640px) {
   p.text-justify,
   .text-justify,
   .text-refined-justify {
-    word-spacing: -0.03em;
-    text-align-last: left;
+    text-align: justify !important;
+    text-justify: inter-word !important;
+    text-align-last: left !important;
+    word-spacing: -0.015em;
+    letter-spacing: -0.008em;
   }
 }
 

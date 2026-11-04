@@ -11,7 +11,7 @@ export const RealWork: React.FC<RealWorkProps> = ({ onSelectProject }) => {
     {
       id: 'jasa-digital' as const,
       number: '01',
-      period: 'Desember 2024 — Sekarang',
+      period: 'Desember 2024 s.d. Sekarang',
       category: 'PELAYANAN & PENGELOLAAN',
       title: 'Jasa Digital & Publikasi',
       teaser: 'Layanan koordinasi naskah publikasi artikel tugas mahasiswa via WhatsApp, transparansi tarif, dan penanganan revisi cepat.',
@@ -33,7 +33,7 @@ export const RealWork: React.FC<RealWorkProps> = ({ onSelectProject }) => {
     {
       id: 'usaha-keluarga' as const,
       number: '03',
-      period: '2016 — Sekarang (±8 Tahun)',
+      period: '2016 s.d. Sekarang (±8 Tahun)',
       category: 'OPERASIONAL & PELAYANAN LANGSUNG',
       title: 'Pengelolaan Usaha Keluarga',
       teaser: 'Praktik nyata melayani pembeli toko, penataan rak metode FIFO, pengecekan stok fisik, hingga ketelitian transaksi kasir tunai.',

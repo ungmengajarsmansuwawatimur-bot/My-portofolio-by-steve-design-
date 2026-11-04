@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from 'motion/react';
 import {
   candidateProfile,
   experienceData,
-  coreValues,
 } from '../data/portfolioData';
 
 interface AboutExperienceProps {
@@ -56,17 +55,17 @@ export const AboutExperience: React.FC<AboutExperienceProps> = () => {
       id: 'bg-1',
       type: 'experience' as const,
       category: 'Pengalaman Kerja',
-      period: '2016 – Sekarang (± 8 Tahun)',
+      period: '2016 s.d. Sekarang (± 8 Tahun)',
       periodBadge: 'Paruh Waktu',
       title: 'Pengelolaan Usaha Keluarga',
       subtitle: 'Operasional Usaha Mandiri',
       description:
-        'Membantu operasional toko fisik keluarga sejak 2016, menangani interaksi langsung dengan konsumen, penjelasan produk, penerimaan pembayaran tunai, serta menjaga kerapian stok barang secara konsisten.',
+        'Membantu operasional toko fisik keluarga sejak 2016, melayani pembeli secara langsung, menjelaskan informasi produk, mengelola transaksi kasir tunai, serta menjaga ketersediaan barang.',
       tags: ['Pelayanan Langsung', 'Kasir POS', 'Penataan Barang', 'Manajemen Stok'],
       isFeatured: false,
       icon: (
-        <svg className="w-10 h-10 sm:w-11 sm:h-11" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.75">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.25A2.25 2.25 0 010 18.75V10.5m13.5 10.5h7.5A2.25 2.25 0 0023.25 18.75V10.5M3 10.5l9-7.5 9 7.5M3 10.5v8.25A2.25 2.25 0 005.25 21h3" />
+        <svg className="w-10 h-10 sm:w-12 sm:h-12 fill-[#26492F] dark:fill-[#d1fe17] transition-colors" viewBox="0 0 24 24">
+          <path d="M4 4h16l1 4v12a1 1 0 01-1 1H4a1 1 0 01-1-1V8l1-4zm1 5v10h14V9H5zm2-3l-.5 2h15l-.5-2H7zm2 6h2v3H9v-3zm4 0h2v3h-2v-3z" />
         </svg>
       ),
     },
@@ -74,17 +73,17 @@ export const AboutExperience: React.FC<AboutExperienceProps> = () => {
       id: 'bg-2',
       type: 'experience' as const,
       category: 'Pengalaman Kerja',
-      period: 'Desember 2024 – Sekarang',
+      period: 'Desember 2024 s.d. Sekarang',
       periodBadge: 'Layanan Mandiri',
       title: 'Pelayanan & Pengelolaan Jasa Digital',
       subtitle: 'Komunikasi Klien & Publikasi Naskah',
       description:
-        'Memberikan layanan langsung kepada pelanggan melalui WhatsApp dalam memahami kebutuhan publikasi naskah/berita tugas, koordinasi pengerjaan, transparansi tarif, penanganan revisi, hingga follow-up kepuasan klien.',
+        'Melayani pelanggan melalui komunikasi WhatsApp untuk pemenuhan kebutuhan naskah tugas kuliah, koordinasi proses pengerjaan, transparansi tarif, serta penanganan revisi hingga tuntas.',
       tags: ['Komunikasi Konsumen', 'Publikasi Media', 'Manajemen Revisi', 'Pelayanan Cepat'],
-      isFeatured: true, // Yellow circular arrow matching row 2 of the example screenshot
+      isFeatured: true,
       icon: (
-        <svg className="w-10 h-10 sm:w-11 sm:h-11" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.75">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" />
+        <svg className="w-10 h-10 sm:w-12 sm:h-12 fill-[#26492F] dark:fill-[#d1fe17] transition-colors" viewBox="0 0 24 24">
+          <path d="M20 18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6zm5.5 2.5l-2.5 2.5 2.5 2.5 1.41-1.41L9.33 11l1.58-1.09L9.5 8.5zm5 0l-1.41 1.41L14.67 11l-1.58 1.09L14.5 13.5l2.5-2.5-2.5-2.5z" />
         </svg>
       ),
     },
@@ -92,17 +91,17 @@ export const AboutExperience: React.FC<AboutExperienceProps> = () => {
       id: 'bg-3',
       type: 'experience' as const,
       category: 'Pengalaman Kerja & Pembelajaran',
-      period: 'Februari 2025 – Sekarang',
+      period: 'Februari 2025 s.d. Sekarang',
       periodBadge: 'Pengembangan Mandiri',
       title: 'Pembelajaran Retail & Operasional Toko',
       subtitle: 'Standar Ritel Modern & Penataan Rak',
       description:
-        'Mendalami prinsip operasional ritel modern secara intensif, mencakup pelayanan ramah konsumen, display barang metode FIFO, pemahaman planogram rak, sistem kasir POS, dan komunikasi pelayanan pembeli.',
+        'Mendalami operasional ritel modern secara terarah, meliputi pelayanan ramah pembeli, penataan display produk sistem FIFO, pemahaman planogram rak, dan pengoperasian mesin kasir POS.',
       tags: ['Customer Service', 'Display FIFO', 'Planogram Rak', 'Kasir POS'],
       isFeatured: false,
       icon: (
-        <svg className="w-10 h-10 sm:w-11 sm:h-11" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.75">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+        <svg className="w-10 h-10 sm:w-12 sm:h-12 fill-[#26492F] dark:fill-[#d1fe17] transition-colors" viewBox="0 0 24 24">
+          <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
         </svg>
       ),
     },
@@ -133,10 +132,10 @@ export const AboutExperience: React.FC<AboutExperienceProps> = () => {
           <div className="max-w-4xl space-y-8">
             <div className="font-body space-y-4 text-base sm:text-lg text-[#666666] dark:text-[#A3A3A3] leading-[1.65] font-normal text-refined-justify">
               <p className="text-refined-justify">
-                Saya memiliki ketertarikan tinggi pada industri pelayanan retail dan operasional toko modern. Melalui pengalaman lebih dari 8 tahun membantu usaha keluarga, saya terlatih melayani berbagai karakter pembeli, mengelola transaksi kasir, menjaga stok barang, serta memastikan area penjualan selalu tertata rapi.
+                Saya memiliki ketertarikan tinggi pada industri pelayanan ritel dan operasional toko modern. Melalui pengalaman lebih dari 8 tahun membantu usaha keluarga, saya terlatih melayani berbagai karakter pembeli, mengelola transaksi kasir, menjaga stok barang, serta memastikan area penjualan selalu tertata rapi.
               </p>
               <p className="text-refined-justify">
-                Selain pengalaman di toko fisik, saya juga menguasai keterampilan digital dan pengarsipan data yang dibuktikan melalui perancangan aplikasi berbasis website yang dikhususkan untuk membantu staf administrasi di sekolah—sebuah proyek milik mahasiswa yang seluruh perancangan dan pengembangannya saya garap secara mandiri—serta pelayanan puluhan mahasiswa di jasa digital. Bagi saya, pelayanan prima bukan sekadar menjual barang, melainkan menciptakan kepercayaan dan kepuasan bagi pelanggan.
+                Selain pengalaman di toko fisik, saya juga menguasai keterampilan digital dan pengarsipan data yang dibuktikan melalui perancangan aplikasi website untuk membantu staf administrasi sekolah, yakni sebuah sistem informasi arsip yang seluruh tahapannya saya rancang secara mandiri, serta pelayanan puluhan mahasiswa pada jasa digital. Bagi saya, pelayanan prima bukan sekadar menjual barang, melainkan menciptakan kepercayaan dan kepuasan bagi pelanggan.
               </p>
             </div>
 
@@ -187,7 +186,7 @@ export const AboutExperience: React.FC<AboutExperienceProps> = () => {
               Academic Background
             </h2>
             <p className="font-body text-sm sm:text-base text-[#666666] dark:text-[#A3A3A3] leading-[1.6] font-normal">
-              Certifications across web development, design and paid media — including Google Ads and a Google Partners badge.
+              Riwayat pendidikan dan pengembangan kompetensi di bidang administrasi data, perancangan antarmuka digital, dan operasional layanan.
             </p>
           </div>
 
@@ -358,98 +357,70 @@ export const AboutExperience: React.FC<AboutExperienceProps> = () => {
         </div>
 
         {/* ========================================================================= */}
-        {/* PART 2: EXPERIENCE & EDUCATION (Steve Mengelkoch Editorial Row Layout)    */}
+        {/* PART 2: EXPERIENCE & EDUCATION (Rebranded Editorial Row Layout matching screenshot) */}
         {/* ========================================================================= */}
-        <div id="background" className="space-y-8 pt-10 border-t border-[#171717]/15 dark:border-white/10">
-          {/* Section Kicker & Title */}
+        <div id="background" className="space-y-10 sm:space-y-14 pt-10 sm:pt-14 border-t border-[#171717]/15 dark:border-white/10">
+          {/* Section Kicker & Title - Centered matching screenshot */}
           <div className="text-center space-y-2 max-w-2xl mx-auto">
-            <div className="font-display inline-flex items-center gap-2 text-xs sm:text-sm font-semibold tracking-[0.08em] uppercase text-[#F9B51B] dark:text-[#d1fe17] transition-colors">
-              <span aria-hidden="true">✦</span>
-              <span>BACKGROUND</span>
-              <span aria-hidden="true">✦</span>
-            </div>
-            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold tracking-[-0.02em] text-[#171717] dark:text-white leading-[1.12]">
+            <span className="font-display text-xs sm:text-sm font-semibold tracking-[0.14em] uppercase text-[#B48220] dark:text-[#d1fe17] block">
+              WHAT I DO
+            </span>
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-[-0.025em] text-[#171717] dark:text-white leading-[1.12]">
               Experience &amp; Education
             </h2>
           </div>
 
-          {/* 3 Columns Vertical Cards Layout matching 01, 02, 03 positions below */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-12 items-stretch pt-2">
+          {/* Editorial Row-Based Layout matching screenshot */}
+          <div className="border-t border-b border-[#171717]/15 dark:border-white/10 divide-y divide-[#171717]/15 dark:divide-white/10">
             {filteredItems.map((item) => (
-              <div
+              <a
                 key={item.id}
-                className="border-t-2 border-[#171717]/15 dark:border-white/10 pt-6 sm:pt-8 flex flex-col justify-between group transition-all duration-300 hover:border-[#F9B51B] dark:hover:border-[#F9B51B] dark:border-[#d1fe17]"
+                href={item.id === 'bg-3' ? '#skills' : '#work'}
+                className="group py-8 sm:py-10 md:py-12 px-2 sm:px-4 -mx-2 sm:-mx-4 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-6 md:gap-8 lg:gap-10 transition-all duration-300 hover:bg-black/[0.02] dark:hover:bg-white/[0.02] cursor-pointer block"
               >
-                <div className="space-y-4">
-                  {/* Top: Icon & Category */}
-                  <div className="flex items-center justify-between gap-3">
-                    <div className="w-12 h-12 rounded-xl bg-black/[0.04] dark:bg-white/[0.06] flex items-center justify-center shrink-0 text-[#171717] dark:text-white transition-transform group-hover:scale-110">
-                      {item.icon}
-                    </div>
-                    <span className="font-info text-[10px] sm:text-xs font-bold uppercase tracking-wider bg-[#171717] text-[#FFE500] dark:bg-[#d1fe17] dark:text-black px-2.5 py-1 rounded-full transition-colors duration-200">
-                      {item.category}
-                    </span>
+                {/* Left Part: Solid Icon + Bold Title */}
+                <div className="flex items-start md:items-center gap-5 sm:gap-6 md:w-[280px] lg:w-[340px] xl:w-[380px] shrink-0">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 shrink-0 flex items-center justify-center text-[#26492F] dark:text-[#d1fe17] transition-transform duration-300 group-hover:scale-110">
+                    {item.icon}
                   </div>
-
-                  {/* Title & Subtitle */}
-                  <div className="space-y-1">
-                    <h3 className="font-display text-lg sm:text-xl font-bold text-[#171717] dark:text-white tracking-tight leading-snug group-hover:text-[#F9B51B] dark:group-hover:text-[#F9B51B] dark:text-[#d1fe17] transition-colors">
+                  <div className="space-y-1.5 min-w-0">
+                    <h3 className="font-display text-xl sm:text-2xl lg:text-[1.65rem] font-bold tracking-tight text-[#171717] dark:text-white leading-[1.15] group-hover:text-[#F9B51B] dark:group-hover:text-[#d1fe17] transition-colors">
                       {item.title}
                     </h3>
-                    <p className="font-info text-xs sm:text-sm text-[#666666] dark:text-[#A3A3A3] font-medium">
-                      {item.subtitle}
+                    <p className="font-info text-xs sm:text-sm font-medium text-[#666666] dark:text-[#A3A3A3] pt-0.5">
+                      {item.period}
                     </p>
                   </div>
+                </div>
 
-                  {/* Description */}
-                  <p className="font-body text-xs sm:text-sm text-[#555555] dark:text-[#A3A3A3] leading-relaxed font-normal text-refined-justify">
+                {/* Middle Part: Descriptive Paragraph */}
+                <div className="flex-1 min-w-0 md:px-2 lg:px-4">
+                  <p className="font-body text-sm sm:text-[0.95rem] md:text-base text-[#555555] dark:text-[#A3A3A3] leading-[1.65] font-normal text-refined-justify">
                     {item.description}
                   </p>
                 </div>
 
-                {/* Bottom: Period & Tags */}
-                <div className="pt-4 mt-6 border-t border-[#171717]/10 dark:border-white/10 space-y-2">
-                  <div className="font-info text-xs font-semibold text-[#F9B51B] dark:text-[#d1fe17]">
-                    {item.period}
-                  </div>
-                  <div className="flex flex-wrap items-center gap-1.5 pt-0.5">
-                    {item.tags.map((t, idx) => (
-                      <span
-                        key={idx}
-                        className="font-info text-[11px] bg-black/[0.04] dark:bg-white/[0.06] px-2 py-0.5 rounded text-[#555555] dark:text-[#A3A3A3]"
-                      >
-                        {t}
-                      </span>
-                    ))}
+                {/* Right Part: Circular Arrow Button */}
+                <div className="flex items-center justify-end md:justify-center shrink-0">
+                  <div className="w-11 h-11 sm:w-12 sm:h-12 lg:w-14 lg:h-14 rounded-full border border-[#171717]/70 dark:border-white/40 flex items-center justify-center text-[#171717] dark:text-white transition-all duration-300 group-hover:bg-[#171717] group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-black group-hover:scale-110 active:scale-95 shadow-xs">
+                    <svg
+                      className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-0.5"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      aria-hidden="true"
+                    >
+                      <line x1="5" y1="12" x2="19" y2="12" />
+                      <polyline points="12 5 19 12 12 19" />
+                    </svg>
                   </div>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
-        </div>
-
-        {/* ========================================================================= */}
-        {/* PART 3: 3 CORE VALUES (Clean Open Layout - Center Aligned)                */}
-        {/* ========================================================================= */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-12 text-center">
-          {coreValues.map((val) => (
-            <div
-              key={val.number}
-              className="border-t border-[#171717]/15 dark:border-white/10 pt-4 flex flex-col items-center text-center justify-between space-y-3"
-            >
-              <div className="flex flex-col items-center text-center">
-                <div className="font-display text-3xl sm:text-4xl font-semibold text-[#F9B51B] dark:text-[#d1fe17] transition-colors leading-none mb-2 tracking-tight text-center">
-                  {val.number}
-                </div>
-                <h4 className="font-display text-base sm:text-lg font-semibold text-[#171717] dark:text-white text-center">
-                  {val.title}
-                </h4>
-              </div>
-              <p className="font-body text-xs sm:text-sm text-[#666666] dark:text-[#A3A3A3] leading-[1.6] font-normal text-center">
-                {val.description}
-              </p>
-            </div>
-          ))}
         </div>
       </div>
     </section>

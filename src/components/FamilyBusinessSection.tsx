@@ -59,7 +59,7 @@ export const FamilyBusinessSection: React.FC = () => {
           <div className="flex items-center gap-3">
             <span className="text-4xl sm:text-5xl font-black text-[#F9B51B] dark:text-[#d1fe17]">03</span>
             <span className="text-xs font-bold tracking-wider text-[#666666] dark:text-[#A3A3A3] uppercase">
-              2016 — Sekarang (±8 Tahun)
+              2016 s.d. Sekarang (±8 Tahun)
             </span>
           </div>
           <div className="text-xs font-black tracking-widest text-[#F9B51B] dark:text-[#d1fe17] uppercase">

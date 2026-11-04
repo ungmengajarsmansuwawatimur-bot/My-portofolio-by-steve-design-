@@ -23,7 +23,7 @@ export const candidateProfile = {
   eyebrow: 'SIAP BERKONTRIBUSI DI DUNIA RETAIL',
   role: 'Operasional & Pelayanan Retail',
   location: 'Gorontalo, Indonesia',
-  lastEducation: 'SMA Negeri 1 Kabila (2020 – 2022)',
+  lastEducation: 'SMA Negeri 1 Kabila (2020 s.d. 2022)',
   currentFocus: 'Operasional retail, pelayanan pelanggan, & pengembangan profesional',
   summary:
     'Berpengalaman dalam pelayanan pelanggan, pengelolaan usaha, serta memiliki kemampuan digital yang dapat mendukung pekerjaan di lingkungan retail.',
@@ -94,7 +94,7 @@ export const experienceData: ExperienceItem[] = [
     id: 'exp-1',
     orderNumber: '01',
     title: 'Pengelolaan Usaha Keluarga',
-    period: '2016 – Sekarang (Paruh Waktu)',
+    period: '2016 s.d. Sekarang (Paruh Waktu)',
     durationLabel: '± 8 Tahun',
     type: 'Operasional Usaha Mandiri',
     responsibilities: [
@@ -112,7 +112,7 @@ export const experienceData: ExperienceItem[] = [
     id: 'exp-2',
     orderNumber: '02',
     title: 'Pelayanan & Pengelolaan Jasa Digital',
-    period: 'Januari 2025 – Sekarang',
+    period: 'Januari 2025 s.d. Sekarang',
     durationLabel: 'Aktif',
     type: 'Layanan Mandiri',
     responsibilities: [
@@ -131,7 +131,7 @@ export const experienceData: ExperienceItem[] = [
     id: 'exp-3',
     orderNumber: '03',
     title: 'Pembelajaran Retail',
-    period: 'Februari 2025 – Sekarang',
+    period: 'Februari 2025 s.d. Sekarang',
     durationLabel: 'Pengembangan Mandiri',
     type: 'Persiapan Karir Retail',
     isLearningFocus: true,
@@ -156,7 +156,7 @@ export const workflowEvidenceData: WorkflowEvidenceItem[] = [
     title: 'Tanya Jasa & Penawaran Tarif',
     subtitle: 'Alur Chat Nyata',
     shortDescription:
-      'Menerima pesan awal dari pelanggan mengenai biaya publikasi berita kegiatan sosialisasi di media portal, dilayani secara cepat dengan transparansi tarif Rp 50.000 – 100.000.',
+      'Menerima pesan awal dari pelanggan mengenai biaya publikasi berita kegiatan sosialisasi di media portal, dilayani secara cepat dengan transparansi tarif Rp 50.000 s.d. Rp 100.000.',
     privacyNote:
       'Identitas dan nomor telepon disamarkan demi privasi pelanggan sesuai etika profesional.',
     replacementGuide:
@@ -333,11 +333,11 @@ export const realWorkBadges = {
     'Rekomendasi pelanggan',
   ],
   outcomesAndImpact: [
-    'Periode layanan aktif: Desember 2024 — Sekarang',
-    'Total pelanggan terlayani: ±48 mahasiswa selama periode 2024–2025',
-    '2024: Melayani sekitar ±30 mahasiswa dengan total pendapatan Rp2,3 juta, dengan tarif Rp50.000–Rp100.000 per artikel sesuai isi dan kebutuhan.',
+    'Periode layanan aktif: Desember 2024 s.d. Sekarang',
+    'Total pelanggan terlayani: ±48 mahasiswa selama periode 2024 sampai 2025',
+    '2024: Melayani sekitar ±30 mahasiswa dengan total pendapatan Rp2,3 juta, dengan tarif Rp50.000 s.d. Rp100.000 per artikel sesuai isi dan kebutuhan.',
     '2025: Melayani 18 mahasiswa dari 5 jurusan di Fakultas Ilmu Pendidikan Universitas Negeri Gorontalo, dengan tarif Rp100.000 per artikel dan total pendapatan Rp1,8 juta.',
-    'Total pendapatan: Rp4,1 juta selama periode 2024–2025.',
+    'Total pendapatan: Rp4,1 juta selama periode 2024 sampai 2025.',
     'Akuisisi pelanggan: Mengembangkan layanan melalui promosi organik dan rekomendasi pelanggan (word of mouth).',
     'Pelayanan pelanggan: Memahami kebutuhan, berkomunikasi selama proses, dan menindaklanjuti permintaan hingga layanan selesai.',
     'Pengelolaan layanan: Menyesuaikan tarif dan proses pengerjaan berdasarkan kebutuhan masing-masing pelanggan.',
@@ -655,17 +655,17 @@ export const toolsData: ToolItem[] = [
     percentage: '85%',
   },
   {
-    name: 'Lovable',
-    role: '(AI app builder)',
+    name: 'Google AI Studio',
+    role: '(AI & pengembangan)',
     category: 'Development',
-    iconName: 'lovable',
-    percentage: '82%',
+    iconName: 'aistudio',
+    percentage: '88%',
   },
   {
-    name: 'Base44',
-    role: '(no-code platform)',
-    category: 'Systems',
-    iconName: 'base44',
+    name: 'Higgsfield',
+    role: '(AI creative tools)',
+    category: 'Multimedia',
+    iconName: 'higgsfield',
     percentage: '80%',
   },
 ];
@@ -724,7 +724,7 @@ export const testimonialsData: TestimonialItem[] = [
     role: 'Klien Jasa Digital & Publikasi Artikel UAS',
     category: 'JASA DIGITAL',
     quote:
-      'Tanggapannya sangat cepat dan komunikatif. Saat kami mengajukan revisi urutan nama dosen pembimbing untuk keperluan penilaian UAS, langsung diperbaiki hanya dalam beberapa menit dan sistemnya pun terupdate dengan cepat.',
+      'Tanggapannya sangat cepat dan komunikatif saat kami mengajukan revisi urutan nama dosen pembimbing untuk keperluan penilaian UAS. Perbaikan diselesaikan dalam hitungan menit dan pembaruan sistem langsung aktif secara tepat waktu.',
     stars: 5,
   },
   {
@@ -733,7 +733,7 @@ export const testimonialsData: TestimonialItem[] = [
     role: 'Klien Publikasi Artikel & Tugas Kuliah',
     category: 'PUBLIKASI DIGITAL',
     quote:
-      'Pelayanannya sangat ramah dan sangat membantu kami yang sedang kejar deadline tugas kuliah. Penjelasannya transparan, proses publikasinya cepat, dan ketika butuh penyesuaian susunan penulis naskah langsung direspons dengan tanggap dan teliti. Sangat profesional!',
+      'Pelayanannya sangat ramah dan membantu kami yang sedang mengejar tenggat tugas kuliah. Penjelasannya transparan, proses publikasi cepat, serta setiap penyesuaian susunan penulis naskah selalu ditanggapi dengan teliti dan profesional.',
     stars: 5,
   },
   {
@@ -742,7 +742,7 @@ export const testimonialsData: TestimonialItem[] = [
     role: 'Staf Administrasi & Tata Usaha Sekolah',
     category: 'ARSIP DIGITAL',
     quote:
-      'Aplikasi berbasis website yang digarap oleh Taufik sangat mempermudah pencarian arsip dan pengelolaan dokumen administrasi sekolah. Tata letak menu dan formulir inputnya sangat ramah pengguna, bahkan bagi staf yang belum terbiasa dengan sistem komputer rumit.',
+      'Aplikasi berbasis website yang dikembangkan oleh Taufik mempermudah pencarian arsip dan pengelolaan dokumen administrasi sekolah. Susunan menu dan formulir inputnya mudah dipahami, termasuk bagi staf yang baru beradaptasi dengan sistem digital.',
     stars: 5,
   },
   {
@@ -751,7 +751,7 @@ export const testimonialsData: TestimonialItem[] = [
     role: 'Klien Kolaborasi Publikasi Mandiri',
     category: 'INTEGRITAS & TANGGUNG JAWAB',
     quote:
-      'Sangat bertanggung jawab dan bisa dipercaya. Setiap tahapan mulai dari cek naskah, konfirmasi revisi, hingga pengiriman bukti transfer dan link hasil publikasi dijalankan dengan transparan.',
+      'Sangat bertanggung jawab dan tepercaya. Setiap proses mulai dari pengecekan naskah, konfirmasi revisi, hingga pengiriman bukti transfer dan tautan publikasi selalu dijalankan secara transparan.',
     stars: 5,
   },
 ];

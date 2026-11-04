@@ -109,10 +109,10 @@ export const Navbar: React.FC<NavbarProps> = ({
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-40 transform-gpu bg-white/95 dark:bg-[#121212]/95 backdrop-blur-xl border-b border-[#171717]/15 dark:border-white/10 transition-all duration-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          {/* Brand Logo (Steve Mengelkoch style: First name Black, Last name Yellow) */}
+    <header className="fixed top-0 left-0 right-0 z-40 transform-gpu bg-white dark:bg-[#121212] border-b border-[#171717]/15 dark:border-white/10 transition-all duration-200 shadow-xs">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-white dark:bg-[#121212]">
+        <div className="flex items-center justify-between h-20 bg-white dark:bg-[#121212]">
+          {/* Brand Logo Image (Uploaded official logo asset) */}
           <a
             href="#home"
             onClick={(e) => {
@@ -121,12 +121,16 @@ export const Navbar: React.FC<NavbarProps> = ({
                 onNavigateHome('home');
               }
             }}
-            className="group flex items-center gap-2 select-none"
-            aria-label="Taufik Hidayat Malii - Kembali ke Beranda"
+            className="group flex items-center select-none"
+            aria-label="Taufik Malii - Kembali ke Beranda"
           >
-            <span className="font-display text-xl sm:text-2xl font-semibold tracking-[-0.025em] text-[#171717] dark:text-white uppercase transition-colors">
-              TAUFIK <span className="text-[#F9B51B] dark:text-[#d1fe17] transition-colors">MALII</span>
-            </span>
+            <div className="flex items-center dark:bg-white dark:px-2.5 dark:py-1 dark:rounded-xl dark:shadow-xs transition-all">
+              <img
+                src="/assets/aistudio/1793724557585_addf32d6.jpg"
+                alt="Taufik Malii"
+                className="h-8 sm:h-9 md:h-10 w-auto object-contain mix-blend-multiply transition-transform duration-200 group-hover:scale-105"
+              />
+            </div>
           </a>
 
           {/* Desktop Navigation */}

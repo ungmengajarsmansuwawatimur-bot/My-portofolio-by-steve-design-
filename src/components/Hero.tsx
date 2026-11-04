@@ -368,8 +368,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
         </div>
       </div>
 
-      {/* Signature Horizontal Yellow Marquee Ticker Strip with Green Diagonal Frame */}
-      <MarqueeTicker hasDiagonalFrame />
+      {/* Signature Horizontal Yellow Marquee Ticker Strip (Clean, without green diagonal frame) */}
+      <MarqueeTicker hasDiagonalFrame={false} />
     </section>
   );
 };

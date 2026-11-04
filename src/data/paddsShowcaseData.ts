@@ -40,7 +40,7 @@ export const paddsModulesData: PaddsModuleInfo[] = [
       {
         id: 'sc-01-dashboard',
         filename: '/assets/padds/21-dashboard-kembali.avif',
-        title: 'Dashboard Utama — Ringkasan Sistem Arsip Digital',
+        title: 'Dashboard Utama : Ringkasan Sistem Arsip Digital',
         caption:
           'Tampilan beranda utama yang menyajikan banner selamat datang peran Viewer, status retensi, metrik 80 arsip aktif & 80 QR aktif, serta 6 tombol pintasan akses cepat.',
       },
@@ -68,7 +68,7 @@ export const paddsModulesData: PaddsModuleInfo[] = [
       {
         id: 'sc-03-manajemen-arsip',
         filename: '/assets/padds/03-manajemen-arsip.avif',
-        title: 'Manajemen Arsip — Daftar Dokumen Terstruktur',
+        title: 'Manajemen Arsip : Daftar Dokumen Terstruktur',
         caption:
           'Tabel inventaris pusat yang menampilkan 80 dokumen arsip dengan kontrol pencarian nomor surat/judul, dropdown filter kategori, tahun, jenis surat, serta status aktif.',
       },
@@ -109,7 +109,7 @@ export const paddsModulesData: PaddsModuleInfo[] = [
       {
         id: 'sc-04-upload-arsip',
         filename: '/assets/padds/04-upload-arsip.avif',
-        title: 'Upload Arsip — Intake Dokumen & Analisis Metadata',
+        title: 'Upload Arsip : Intake Dokumen & Analisis Metadata',
         caption:
           'Antarmuka unggah dokumen dengan 4 panduan tahapan: Intake, AI Analisis Metadata, AI Pengecekan Nomor Surat, dan Upload, dilengkapi kartu ringkasan status antrian.',
       },
@@ -135,7 +135,7 @@ export const paddsModulesData: PaddsModuleInfo[] = [
       {
         id: 'sc-05-import-arsip',
         filename: '/assets/padds/05-import-arsip.avif',
-        title: 'Import Arsip — Migrasi Massal Multi PDF & ZIP',
+        title: 'Import Arsip : Migrasi Massal Multi PDF & ZIP',
         caption:
           'Halaman import arsip massal dengan tab opsi Multi PDF atau File ZIP serta area preview metadata untuk verifikasi data sebelum penyimpanan.',
       },
@@ -161,21 +161,21 @@ export const paddsModulesData: PaddsModuleInfo[] = [
       {
         id: 'sc-06-cari-standar',
         filename: '/assets/padds/06-cari-arsip.avif',
-        title: 'Cari Arsip — Mode Pencarian Standar',
+        title: 'Cari Arsip : Mode Pencarian Standar',
         caption:
           'Formulir pencarian berbasis kata kunci dan filter terperinci (Kategori, Tahun, Status, Lokasi, dan Pengurutan) dengan panel riwayat pencarian populer.',
       },
       {
         id: 'sc-06b-ai-search',
         filename: '/assets/padds/06b-ai-document-search.avif',
-        title: 'Cari Arsip — AI Document Search (Bahasa Alami)',
+        title: 'Cari Arsip : AI Document Search (Bahasa Alami)',
         caption:
           'Tab pencarian cerdas berbasis konteks bahasa alami di mana pengguna dapat mencari berkas cukup dengan mengingat inti kegiatan atau nama instansi terkait.',
       },
       {
         id: 'sc-06c-tindak-lanjut',
         filename: '/assets/padds/06c-tindak-lanjut.avif',
-        title: 'Cari Arsip — Tindak Lanjut & Investigasi Database',
+        title: 'Cari Arsip : Tindak Lanjut & Investigasi Database',
         caption:
           'Fitur pemeriksaan database arsip untuk mendeteksi kemungkinan penyimpanan ganda berdasarkan fokus kata kunci instansi atau topik tahunan.',
       },
@@ -201,14 +201,14 @@ export const paddsModulesData: PaddsModuleInfo[] = [
       {
         id: 'sc-07-kategori',
         filename: '/assets/padds/07-kategori-arsip.avif',
-        title: 'Master Data — Daftar Kategori Arsip',
+        title: 'Master Data : Daftar Kategori Arsip',
         caption:
           'Tabel 53 kategori arsip terdaftar dengan kode klasifikasi resmi (Hasil Verifikasi, Konfirmasi, Pengajuan Proposal, dsb.) untuk memastikan konsistensi penamaan.',
       },
       {
         id: 'sc-08-lokasi',
         filename: '/assets/padds/08-lokasi-fisik.avif',
-        title: 'Master Data — Pemetaan Lokasi Fisik Berkas',
+        title: 'Master Data : Pemetaan Lokasi Fisik Berkas',
         caption:
           'Halaman pemetaan lokasi fisik dokumen (Ruang Tata Usaha, Kode TU-A1, Lemari Arsip) yang mencatat 79 berkas fisik tersimpan untuk mempermudah audit fisik.',
       },
@@ -235,7 +235,7 @@ export const paddsModulesData: PaddsModuleInfo[] = [
       {
         id: 'sc-10-retensi',
         filename: '/assets/padds/10-retensi-dokumen.avif',
-        title: 'Retensi Dokumen — Monitoring Siklus Masa Simpan',
+        title: 'Retensi Dokumen : Monitoring Siklus Masa Simpan',
         caption:
           'Tampilan monitoring siklus simpan dokumen dengan 4 kartu status (Total Arsip, Mendekati Retensi, Kadaluarsa, Arsip Aktif) dan jadwal retensi berjangka panjang.',
       },
@@ -262,23 +262,23 @@ export const paddsModulesData: PaddsModuleInfo[] = [
       {
         id: 'sc-09-statistik-bulanan',
         filename: '/assets/padds/09-statistik-laporan.avif',
-        title: 'Statistik & Laporan — Grafik Pertumbuhan Bulanan',
+        title: 'Statistik & Laporan : Grafik Pertumbuhan Bulanan',
         caption:
           'Visualisasi tren arsip mode Bulanan dengan 5 kartu ringkasan (Total, Aktif, Retensi, Kategori, Lokasi Fisik) dan kontrol ekspor laporan PDF/Excel.',
       },
       {
         id: 'sc-09b-statistik-harian',
         filename: '/assets/padds/09b-statistik-harian.avif',
-        title: 'Statistik & Laporan — Grafik Mode Harian',
+        title: 'Statistik & Laporan : Grafik Mode Harian',
         caption:
-          'Tampilan tren pertumbuhan dokumen dalam skala tanggal harian (1–30) untuk memantau intensitas pencatatan arsip oleh staf tata usaha.',
+          'Tampilan tren pertumbuhan dokumen dalam skala tanggal harian (1 sampai 30) untuk memantau intensitas pencatatan arsip oleh staf tata usaha.',
       },
       {
         id: 'sc-09c-statistik-tahunan',
         filename: '/assets/padds/09c-statistik-tahunan.avif',
-        title: 'Statistik & Laporan — Grafik Mode Tahunan',
+        title: 'Statistik & Laporan : Grafik Mode Tahunan',
         caption:
-          'Tampilan grafik pertumbuhan jangka panjang antar-tahun (2024–2026) untuk analisis akumulasi arsip sekolah per tahun ajaran.',
+          'Tampilan grafik pertumbuhan jangka panjang antar-tahun (2024 sampai 2026) untuk analisis akumulasi arsip sekolah per tahun ajaran.',
       },
     ],
   },
@@ -303,7 +303,7 @@ export const paddsModulesData: PaddsModuleInfo[] = [
       {
         id: 'sc-11-qr-code',
         filename: '/assets/padds/11-qr-code.avif',
-        title: 'QR Code Management — Pengelolaan Label & Link Publik',
+        title: 'QR Code Management : Pengelolaan Label & Link Publik',
         caption:
           'Tabel sentral pengelolaan 80 QR Code aktif lengkap dengan tautan publik, penghitung scan, opsi filter status, serta tombol salin link dan unduh label QR.',
       },
@@ -330,7 +330,7 @@ export const paddsModulesData: PaddsModuleInfo[] = [
       {
         id: 'sc-12-log-aktivitas',
         filename: '/assets/padds/12-log-aktivitas.avif',
-        title: 'Log Aktivitas — Audit Trail & Jejak Operasional',
+        title: 'Log Aktivitas : Audit Trail & Jejak Operasional',
         caption:
           'Panel jejak audit sistem dengan kartu ringkasan (Total Aktivitas, Login, Upload, Edit, Hapus), timeline interaksi terkini, dan formulir filter audit.',
       },
@@ -357,7 +357,7 @@ export const paddsModulesData: PaddsModuleInfo[] = [
       {
         id: 'sc-13-ai-assistant',
         filename: '/assets/padds/13-ai-assistant.avif',
-        title: 'AI Assistant — Pusat Bantuan & Panduan Interaktif',
+        title: 'AI Assistant : Pusat Bantuan & Panduan Interaktif',
         caption:
           'Antarmuka asisten virtual dengan panel riwayat percakapan, rekomendasi pertanyaan cepat seputar alur arsip sekolah, serta kotak percakapan interaktif.',
       },
@@ -394,7 +394,7 @@ export const paddsGovernanceData: PaddsGovernanceItem[] = [
     screenshot: {
       id: 'sc-18-pengaturan',
       filename: '/assets/padds/18-pengaturan.avif',
-      title: 'Pengaturan Sistem — Konfigurasi Identitas & Profil Sekolah',
+      title: 'Pengaturan Sistem : Konfigurasi Identitas & Profil Sekolah',
       caption:
         'Halaman konfigurasi data sekolah dan identitas sistem dengan pembatasan akses berbasis peran khusus Administrator.',
     },
@@ -410,7 +410,7 @@ export const paddsGovernanceData: PaddsGovernanceItem[] = [
     screenshot: {
       id: 'sc-19-backup',
       filename: '/assets/padds/19-backup-restore.avif',
-      title: 'Backup & Restore — Perlindungan Data & Storage Monitoring',
+      title: 'Backup & Restore : Perlindungan Data & Storage Monitoring',
       caption:
         'Panel pemantauan cadangan berkas tabel arsip ke Cloudflare R2 dengan opsi jadwal otomatis dan pembatas wewenang Admin.',
     },
@@ -426,7 +426,7 @@ export const paddsGovernanceData: PaddsGovernanceItem[] = [
     screenshot: {
       id: 'sc-20-manajemen-user',
       filename: '/assets/padds/20-manajemen-user.avif',
-      title: 'Manajemen User — Pembagian Peran & Hak Akses Akun',
+      title: 'Manajemen User : Pembagian Peran & Hak Akses Akun',
       caption:
         'Tabel akun pengguna sistem dengan pembagian role (Admin, Staff TU, Viewer) untuk memastikan dokumen hanya dikelola oleh staf berwenang.',
     },
@@ -457,7 +457,7 @@ export const paddsSupportingDocsData: PaddsSupportingDocItem[] = [
     screenshot: {
       id: 'sc-14-ai-stats',
       filename: '/assets/padds/14-ai-statistics.avif',
-      title: 'AI Statistics — Monitoring Pemanggilan AI',
+      title: 'AI Statistics : Monitoring Pemanggilan AI',
       caption:
         'Metrik pemantauan utilisasi fitur AI (AI Analisis Metadata, Pengecekan Nomor Surat) selama periode 30 hari.',
     },
@@ -470,7 +470,7 @@ export const paddsSupportingDocsData: PaddsSupportingDocItem[] = [
     screenshot: {
       id: 'sc-15-pusat-informasi',
       filename: '/assets/padds/15-pusat-informasi.avif',
-      title: 'Pusat Informasi — Dokumentasi Resmi Platform',
+      title: 'Pusat Informasi : Dokumentasi Resmi Platform',
       caption:
         'Halaman profil platform PADDS SMANSAT yang memuat ringkasan kapabilitas sistem dan informasi versi 2.0.0.',
     },

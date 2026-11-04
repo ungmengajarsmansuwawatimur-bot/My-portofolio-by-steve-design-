@@ -110,7 +110,7 @@ export const ProjectDetailPadds: React.FC<ProjectDetailPaddsProps> = ({ onBack }
               <span className="font-display font-semibold text-[#171717] dark:text-white text-sm">
                 Modul {current.number}: {current.name}
               </span>
-              <span className="font-info text-[#666666] dark:text-[#A3A3A3] hidden sm:inline font-normal">— {current.tag}</span>
+              <span className="font-info text-[#666666] dark:text-[#A3A3A3] hidden sm:inline font-normal">• {current.tag}</span>
             </div>
           </div>
 

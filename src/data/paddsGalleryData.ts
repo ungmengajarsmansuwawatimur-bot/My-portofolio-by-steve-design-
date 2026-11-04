@@ -16,7 +16,7 @@ export const all24PaddsScreenshots: PaddsGalleryItem[] = [
     filename: '/assets/padds/21-dashboard-kembali.svg',
     moduleName: 'Dashboard',
     categoryTag: 'PUSAT INFORMASI OPERASIONAL',
-    title: 'Dashboard Utama — Ringkasan Sistem Arsip Digital',
+    title: 'Dashboard Utama : Ringkasan Sistem Arsip Digital',
     caption:
       'Beranda utama sistem yang menyajikan ringkasan 80 total arsip aktif, 80 QR aktif, status keamanan retensi dokumen, serta pintasan akses cepat.',
     description:
@@ -28,7 +28,7 @@ export const all24PaddsScreenshots: PaddsGalleryItem[] = [
     filename: '/assets/padds/03-manajemen-arsip.svg',
     moduleName: 'Manajemen Arsip',
     categoryTag: 'PROSES INTI',
-    title: 'Manajemen Arsip — Daftar Dokumen Terstruktur',
+    title: 'Manajemen Arsip : Daftar Dokumen Terstruktur',
     caption:
       'Daftar tabel inventaris pusat memuat 80 dokumen dengan filter tahun, kategori, jenis surat, status, pengurutan, pencarian, dan tombol aksi.',
     description:
@@ -64,7 +64,7 @@ export const all24PaddsScreenshots: PaddsGalleryItem[] = [
     filename: '/assets/padds/04-upload-arsip.svg',
     moduleName: 'Upload Arsip',
     categoryTag: 'INTAKE BERBANTUAN AI',
-    title: 'Upload Arsip — Intake Dokumen & Analisis Metadata',
+    title: 'Upload Arsip : Intake Dokumen & Analisis Metadata',
     caption:
       'Alur unggah berkas (drag-and-drop / kamera) dilengkapi tahapan AI Analisis Metadata, AI Pengecekan Nomor Surat, dan antrian dokumen.',
     description:
@@ -76,7 +76,7 @@ export const all24PaddsScreenshots: PaddsGalleryItem[] = [
     filename: '/assets/padds/05-import-arsip.svg',
     moduleName: 'Import Arsip',
     categoryTag: 'EFISIENSI MIGRASI',
-    title: 'Import Arsip — Migrasi Massal Multi PDF & ZIP',
+    title: 'Import Arsip : Migrasi Massal Multi PDF & ZIP',
     caption:
       'Fasilitas migrasi massal berkas lama menggunakan opsi Multi PDF atau File ZIP dengan panel preview metadata sebelum proses import.',
     description:
@@ -88,7 +88,7 @@ export const all24PaddsScreenshots: PaddsGalleryItem[] = [
     filename: '/assets/padds/06-cari-arsip.svg',
     moduleName: 'Cari Arsip',
     categoryTag: 'RETRIEVAL & INVESTIGASI',
-    title: 'Cari Arsip — Mode Pencarian Standar',
+    title: 'Cari Arsip : Mode Pencarian Standar',
     caption:
       'Formulir pencarian berbasis kata kunci nomor surat, judul, lokasi, serta filter komprehensif (Kategori, Tahun, Status, Urutan).',
     description:
@@ -100,9 +100,9 @@ export const all24PaddsScreenshots: PaddsGalleryItem[] = [
     filename: '/assets/padds/06b-ai-document-search.svg',
     moduleName: 'Cari Arsip',
     categoryTag: 'RETRIEVAL & INVESTIGASI',
-    title: 'Cari Arsip — AI Document Search (Bahasa Alami)',
+    title: 'Cari Arsip : AI Document Search (Bahasa Alami)',
     caption:
-      'Pencarian cerdas berbasis pemahaman bahasa alami — pengguna dapat menemukan dokumen cukup dengan mengingat konteks atau topik kegiatan.',
+      'Pencarian cerdas berbasis pemahaman bahasa alami : pengguna dapat menemukan dokumen cukup dengan mengingat konteks atau topik kegiatan.',
     description:
       'Memudahkan staf menemukan dokumen penting ketika nomor surat atau judul resmi berkas tidak diingat secara persis.',
   },
@@ -112,7 +112,7 @@ export const all24PaddsScreenshots: PaddsGalleryItem[] = [
     filename: '/assets/padds/06c-tindak-lanjut.svg',
     moduleName: 'Cari Arsip',
     categoryTag: 'RETRIEVAL & INVESTIGASI',
-    title: 'Cari Arsip — Tindak Lanjut & Investigasi Database',
+    title: 'Cari Arsip : Tindak Lanjut & Investigasi Database',
     caption:
       'Fitur investigasi cerdas untuk menelusuri database dan mengidentifikasi potensi duplikasi penyimpanan berkas arsip.',
     description:
@@ -124,7 +124,7 @@ export const all24PaddsScreenshots: PaddsGalleryItem[] = [
     filename: '/assets/padds/07-kategori-arsip.svg',
     moduleName: 'Master Data Arsip',
     categoryTag: 'STANDARDISASI DATA',
-    title: 'Master Data — Daftar Kategori Arsip',
+    title: 'Master Data : Daftar Kategori Arsip',
     caption:
       'Tabel klasifikasi 53 kategori arsip resmi (Surat Tugas, Hasil Verifikasi, Proposal, Legalitas, dsb.) dengan kode penomoran standar.',
     description:
@@ -136,7 +136,7 @@ export const all24PaddsScreenshots: PaddsGalleryItem[] = [
     filename: '/assets/padds/08-lokasi-fisik.svg',
     moduleName: 'Master Data Arsip',
     categoryTag: 'STANDARDISASI DATA',
-    title: 'Master Data — Pemetaan Lokasi Fisik Berkas',
+    title: 'Master Data : Pemetaan Lokasi Fisik Berkas',
     caption:
       'Pemetaan tempat penyimpanan fisik (Ruang Tata Usaha, Kode TU-A1, Lemari Arsip) yang mencatat 79 dokumen tersimpan.',
     description:
@@ -148,7 +148,7 @@ export const all24PaddsScreenshots: PaddsGalleryItem[] = [
     filename: '/assets/padds/10-retensi-dokumen.svg',
     moduleName: 'Retensi Dokumen',
     categoryTag: 'LIFECYCLE CONTROL',
-    title: 'Retensi Dokumen — Monitoring Siklus Simpan',
+    title: 'Retensi Dokumen : Monitoring Siklus Simpan',
     caption:
       'Pemantauan masa aktif dokumen dengan 4 kartu metrik (Total, Mendekati Retensi, Kadaluarsa, Aktif) dan jadwal retensi berjangka.',
     description:
@@ -160,7 +160,7 @@ export const all24PaddsScreenshots: PaddsGalleryItem[] = [
     filename: '/assets/padds/09-statistik-laporan.svg',
     moduleName: 'Statistik & Laporan',
     categoryTag: 'MONITORING & PELAPORAN',
-    title: 'Statistik & Laporan — Tren Pertumbuhan Bulanan',
+    title: 'Statistik & Laporan : Tren Pertumbuhan Bulanan',
     caption:
       'Grafik analitik arsip mode Bulanan dengan 5 kartu ringkasan serta tombol unduh laporan Export PDF dan Export Excel.',
     description:
@@ -172,9 +172,9 @@ export const all24PaddsScreenshots: PaddsGalleryItem[] = [
     filename: '/assets/padds/09b-statistik-harian.svg',
     moduleName: 'Statistik & Laporan',
     categoryTag: 'MONITORING & PELAPORAN',
-    title: 'Statistik & Laporan — Tren Mode Harian',
+    title: 'Statistik & Laporan : Tren Mode Harian',
     caption:
-      'Visualisasi tren pengarsipan dalam skala tanggal harian (1–30) untuk memonitor intensitas pengunggahan berkas harian staf.',
+      'Visualisasi tren pengarsipan dalam skala tanggal harian (1 sampai 30) untuk memonitor intensitas pengunggahan berkas harian staf.',
     description:
       'Menyajikan transparansi data aktivitas pengarsipan harian sekolah guna mendukung evaluasi ritme kerja administrasi.',
   },
@@ -184,9 +184,9 @@ export const all24PaddsScreenshots: PaddsGalleryItem[] = [
     filename: '/assets/padds/09c-statistik-tahunan.svg',
     moduleName: 'Statistik & Laporan',
     categoryTag: 'MONITORING & PELAPORAN',
-    title: 'Statistik & Laporan — Tren Skala Tahunan',
+    title: 'Statistik & Laporan : Tren Skala Tahunan',
     caption:
-      'Grafik pertumbuhan arsip lintas tahun (2024–2026) untuk memetakan akumulasi volume dokumen per tahun ajaran sekolah.',
+      'Grafik pertumbuhan arsip lintas tahun (2024 sampai 2026) untuk memetakan akumulasi volume dokumen per tahun ajaran sekolah.',
     description:
       'Membantu perencanaan kebutuhan kapasitas penyimpanan dan rekapitulasi data tahunan secara historis.',
   },
@@ -196,7 +196,7 @@ export const all24PaddsScreenshots: PaddsGalleryItem[] = [
     filename: '/assets/padds/11-qr-code.svg',
     moduleName: 'QR Code Management',
     categoryTag: 'AKSES CEPAT DOKUMEN',
-    title: 'QR Code Management — Pengelolaan QR & Link Publik',
+    title: 'QR Code Management : Pengelolaan QR & Link Publik',
     caption:
       'Panel pengelolaan 80 QR Code aktif, status scan, filter aktif/nonaktif, serta tombol salin public link dan unduh label QR.',
     description:
@@ -208,7 +208,7 @@ export const all24PaddsScreenshots: PaddsGalleryItem[] = [
     filename: '/assets/padds/12-log-aktivitas.svg',
     moduleName: 'Log Aktivitas',
     categoryTag: 'AUDIT OPERASIONAL',
-    title: 'Log Aktivitas — Audit Trail & Jejak Sistem',
+    title: 'Log Aktivitas : Audit Trail & Jejak Sistem',
     caption:
       'Riwayat audit pengguna dengan penghitung aktivitas (Total, Login, Upload, Edit, Hapus), timeline terkini, dan filter tanggal.',
     description:
@@ -220,7 +220,7 @@ export const all24PaddsScreenshots: PaddsGalleryItem[] = [
     filename: '/assets/padds/13-ai-assistant.svg',
     moduleName: 'AI Assistant',
     categoryTag: 'SELF-SERVICE KNOWLEDGE',
-    title: 'AI Assistant — Panduan & Bantuan Interaktif',
+    title: 'AI Assistant : Panduan & Bantuan Interaktif',
     caption:
       'Asisten virtual interaktif penyedia panduan modul, cara penggunaan fitur, alur kerja pengarsipan, dan FAQ operasional.',
     description:
@@ -232,7 +232,7 @@ export const all24PaddsScreenshots: PaddsGalleryItem[] = [
     filename: '/assets/padds/18-pengaturan.svg',
     moduleName: 'Pengaturan Sistem',
     categoryTag: 'GOVERNANCE PENDUKUNG',
-    title: 'Pengaturan Sistem — Profil Sekolah & Konfigurasi',
+    title: 'Pengaturan Sistem : Profil Sekolah & Konfigurasi',
     caption:
       'Konfigurasi identitas sekolah, NPSN, kontak, alamat, logo, serta identitas aplikasi versi 2.0.0 dengan pembatasan hak khusus Admin.',
     description:
@@ -244,7 +244,7 @@ export const all24PaddsScreenshots: PaddsGalleryItem[] = [
     filename: '/assets/padds/19-backup-restore.svg',
     moduleName: 'Backup & Restore',
     categoryTag: 'GOVERNANCE PENDUKUNG',
-    title: 'Backup & Restore — Perlindungan Data & Storage',
+    title: 'Backup & Restore : Perlindungan Data & Storage',
     caption:
       'Pemantauan snapshot database cadangan ke Cloudflare R2, jadwal auto backup (Harian/Mingguan/Bulanan), dan monitoring storage.',
     description:
@@ -256,7 +256,7 @@ export const all24PaddsScreenshots: PaddsGalleryItem[] = [
     filename: '/assets/padds/20-manajemen-user.svg',
     moduleName: 'Manajemen User',
     categoryTag: 'GOVERNANCE PENDUKUNG',
-    title: 'Manajemen User — Pembagian Peran & Hak Akses',
+    title: 'Manajemen User : Pembagian Peran & Hak Akses',
     caption:
       'Pengelolaan daftar akun pengguna, peran akses (Admin, Staff TU, Viewer), status keaktifan, dan stempel waktu login terakhir.',
     description:
@@ -268,7 +268,7 @@ export const all24PaddsScreenshots: PaddsGalleryItem[] = [
     filename: '/assets/padds/14-ai-statistics.svg',
     moduleName: 'AI Statistics',
     categoryTag: 'DOKUMENTASI PENDUKUNG',
-    title: 'AI Statistics — Monitoring Pemanggilan AI',
+    title: 'AI Statistics : Monitoring Pemanggilan AI',
     caption:
       'Panel teknis pemantauan utilisasi kapabilitas AI (analisis metadata & cek nomor surat) selama rentang waktu 30 hari.',
     description:
@@ -280,7 +280,7 @@ export const all24PaddsScreenshots: PaddsGalleryItem[] = [
     filename: '/assets/padds/15-pusat-informasi.svg',
     moduleName: 'Pusat Informasi',
     categoryTag: 'DOKUMENTASI PENDUKUNG',
-    title: 'Pusat Informasi — Dokumentasi Resmi Platform',
+    title: 'Pusat Informasi : Dokumentasi Resmi Platform',
     caption:
       'Halaman profil platform PADDS SMANSAT, daftar fitur utama terintegrasi, glosarium, changelog versi 2.0.0, dan kontak narahubung.',
     description:
@@ -292,7 +292,7 @@ export const all24PaddsScreenshots: PaddsGalleryItem[] = [
     filename: '/assets/padds/padds_tablet_manajemen.svg',
     moduleName: 'Tampilan Responsif',
     categoryTag: 'ARSITEKTUR ANTARMUKA',
-    title: 'Tampilan Responsif — Antarmuka Tablet & Portabel',
+    title: 'Tampilan Responsif : Antarmuka Tablet & Portabel',
     caption:
       'Tangkapan layar antarmuka manajemen arsip pada perangkat portabel/tablet dengan penyesuaian layout tabel dan bilah navigasi.',
     description:
