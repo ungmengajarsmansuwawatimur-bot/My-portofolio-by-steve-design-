@@ -135,17 +135,6 @@ export const HireMePage: React.FC<HireMePageProps> = ({ onBackToHome, onOpenCvMo
       {/* ========================================================================= */}
       <section className="pt-6 sm:pt-10 pb-10 sm:pb-14 border-b border-[#171717]/10 dark:border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-          {/* Top Return Button */}
-          <div className="flex justify-start">
-            <button
-              type="button"
-              onClick={onBackToHome}
-              className="font-display group inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-[#F5F5F5] dark:bg-[#1E1E1E] hover:bg-[#E9E9E9] dark:hover:bg-[#2A2A2A] text-[#171717] dark:text-white border border-[#171717]/20 dark:border-white/15 transition-all shadow-xs active:scale-95 cursor-pointer uppercase tracking-wider"
-            >
-              <span className="transition-transform group-hover:-translate-x-1">&larr;</span>
-              <span>Kembali ke Beranda</span>
-            </button>
-          </div>
 
           {/* Main Giant Editorial Heading */}
           <div className="max-w-4xl mx-auto space-y-3 text-center">
@@ -602,17 +591,6 @@ export const HireMePage: React.FC<HireMePageProps> = ({ onBackToHome, onOpenCvMo
         </div>
       </section>
 
-      {/* Bottom Back Button */}
-      <div className="py-10 bg-[#F9F9F9] dark:bg-[#161616] flex justify-center border-t border-[#171717]/10 dark:border-white/10">
-        <button
-          type="button"
-          onClick={onBackToHome}
-          className="font-display inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full text-xs sm:text-sm font-semibold bg-[#31543A] text-white hover:bg-[#26432E] border-2 border-[#171717] transition-all shadow-sm active:scale-95 cursor-pointer uppercase tracking-wider"
-        >
-          <span>&larr;</span>
-          <span>Kembali ke Beranda</span>
-        </button>
-      </div>
 
     </article>
   );

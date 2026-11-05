@@ -15,7 +15,7 @@ export const CircularOrbitBackdrop: React.FC<CircularOrbitBackdropProps> = ({
   const activePhotoSrc = photoSrc || '/assets/taufik_official_portrait.png';
 
   return (
-    <div className={`relative w-full h-full flex items-center justify-end select-none overflow-visible ${className}`}>
+    <div className={`relative w-full h-full flex items-center justify-center md:justify-end select-none overflow-visible ${className}`}>
 
       {/* Main Clean Circular Composition with Mockup Pill Badges */}
       <motion.svg
@@ -25,7 +25,7 @@ export const CircularOrbitBackdrop: React.FC<CircularOrbitBackdropProps> = ({
         viewBox="0 0 680 600"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="w-full h-full max-h-[380px] sm:max-h-[500px] md:max-h-[620px] lg:max-h-[760px] object-contain origin-right transition-all duration-300 overflow-visible scale-[1.06] sm:scale-[1.08] lg:scale-[1.08] xl:scale-[1.10]"
+        className="w-full h-full max-h-[380px] sm:max-h-[500px] md:max-h-[620px] lg:max-h-[760px] object-contain origin-center md:origin-right transition-all duration-300 overflow-visible scale-[1.03] sm:scale-[1.06] lg:scale-[1.08] xl:scale-[1.10]"
         aria-label="Mockup Background Bersih dengan Badge Mockup Website Creator dan Digital Maker"
       >
         <defs>
