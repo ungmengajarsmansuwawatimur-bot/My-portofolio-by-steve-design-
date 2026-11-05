@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { portfolioImages } from '../assets/images';
 import { EditableImage } from './EditableImage';
+import { UnderDevelopmentView } from './UnderDevelopmentView';
 
 interface ProjectDetailUsahaKeluargaProps {
   onBack: () => void;
@@ -10,6 +11,14 @@ export const ProjectDetailUsahaKeluarga: React.FC<ProjectDetailUsahaKeluargaProp
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' });
   }, []);
+
+  // Status penutupan sementara untuk halaman proyek Usaha Keluarga
+  // Konten asli di bawah tetap tersimpan utuh dan tidak dihapus
+  const isUnderDevelopment = true;
+
+  if (isUnderDevelopment) {
+    return <UnderDevelopmentView onBack={onBack} projectName="Pengelolaan Usaha Keluarga" />;
+  }
 
   const keyRoles = [
     {

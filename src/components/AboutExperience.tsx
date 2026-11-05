@@ -235,7 +235,7 @@ export const AboutExperience: React.FC<AboutExperienceProps> = () => {
                         <img
                           src="/assets/icons/education_degree_cap.png"
                           alt="Ikon S1 Bimbingan & Konseling"
-                          className="w-8 h-8 sm:w-9 sm:h-9 object-contain select-none dark:drop-shadow-[0_0_2px_rgba(255,255,255,0.7)]"
+                          className="w-8 h-8 sm:w-9 sm:h-9 object-contain select-none dark:drop-shadow-[0_0_3px_rgba(245,158,11,0.4)]"
                         />
                       </div>
                       <div className="space-y-0.5 min-w-0">
@@ -261,7 +261,7 @@ export const AboutExperience: React.FC<AboutExperienceProps> = () => {
                         <img
                           src="/assets/icons/education_open_book.png"
                           alt="Ikon Pendidikan SMA IPS"
-                          className="w-8 h-8 sm:w-9 sm:h-9 object-contain select-none dark:drop-shadow-[0_0_2px_rgba(255,255,255,0.7)]"
+                          className="w-8 h-8 sm:w-9 sm:h-9 object-contain select-none dark:drop-shadow-[0_0_3px_rgba(245,158,11,0.4)]"
                         />
                       </div>
                       <div className="space-y-0.5 min-w-0">
@@ -312,7 +312,7 @@ export const AboutExperience: React.FC<AboutExperienceProps> = () => {
                           <img
                             src="/assets/icons/experience_storefront.png"
                             alt="Ikon Pengelolaan Usaha Keluarga"
-                            className="w-8 h-8 sm:w-9 sm:h-9 object-contain select-none dark:drop-shadow-[0_0_2px_rgba(255,255,255,0.7)]"
+                            className="w-8 h-8 sm:w-9 sm:h-9 object-contain select-none dark:drop-shadow-[0_0_3px_rgba(245,158,11,0.4)]"
                           />
                         </div>
                       );
@@ -324,7 +324,7 @@ export const AboutExperience: React.FC<AboutExperienceProps> = () => {
                           <img
                             src="/assets/icons/experience_digital_megaphone.png"
                             alt="Ikon Pelayanan Jasa Digital"
-                            className="w-8 h-8 sm:w-9 sm:h-9 object-contain select-none dark:drop-shadow-[0_0_2px_rgba(255,255,255,0.7)]"
+                            className="w-8 h-8 sm:w-9 sm:h-9 object-contain select-none dark:drop-shadow-[0_0_3px_rgba(245,158,11,0.4)]"
                           />
                         </div>
                       );
@@ -335,7 +335,7 @@ export const AboutExperience: React.FC<AboutExperienceProps> = () => {
                         <img
                           src="/assets/icons/experience_retail_cart.png"
                           alt="Ikon Pembelajaran Retail Modern"
-                          className="w-8 h-8 sm:w-9 sm:h-9 object-contain select-none dark:drop-shadow-[0_0_2px_rgba(255,255,255,0.7)]"
+                          className="w-8 h-8 sm:w-9 sm:h-9 object-contain select-none dark:drop-shadow-[0_0_3px_rgba(245,158,11,0.4)]"
                         />
                       </div>
                     );

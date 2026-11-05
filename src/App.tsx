@@ -25,6 +25,7 @@ export default function App() {
     if (hash === '#/project/jasa-digital') return 'jasa-digital';
     if (hash === '#/project/padds-smansat') return 'padds-smansat';
     if (hash === '#/project/usaha-keluarga') return 'usaha-keluarga';
+    if (hash === '#/project/pembelajaran-retail') return 'pembelajaran-retail';
     if (hash === '#home' || hash === '#about' || hash === '#work' || hash === '#contact') return 'home';
     // Default directly to 'jasa-digital' so user immediately sees the temporary page with the gray button and no navigation/hire-me button
     return 'jasa-digital';
@@ -113,7 +114,7 @@ export default function App() {
   };
 
   const isDetailPage = currentRoute === 'jasa-digital' || currentRoute === 'padds-smansat' || currentRoute === 'usaha-keluarga' || currentRoute === 'pembelajaran-retail';
-  const isTemporaryPage = currentRoute === 'jasa-digital' || currentRoute === 'padds-smansat';
+  const isTemporaryPage = currentRoute === 'jasa-digital' || currentRoute === 'padds-smansat' || currentRoute === 'usaha-keluarga';
   const isHirePage = currentRoute === 'hire-me';
 
   return (
