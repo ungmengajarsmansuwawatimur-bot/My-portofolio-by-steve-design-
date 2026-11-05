@@ -150,10 +150,10 @@ export const HireMePage: React.FC<HireMePageProps> = ({ onBackToHome, onOpenCvMo
       {/* ========================================================================= */}
       {/* 2. VISUAL CONTEXT SECTION (LARGE WORKSPACE BANNER FROM PORTFOLIO ASSETS)  */}
       {/* ========================================================================= */}
-      <section className="py-8 sm:py-12 bg-[#F9F9F9] dark:bg-[#161616] border-b border-[#171717]/10 dark:border-white/10">
+      <section className="py-6 sm:py-10 bg-[#F9F9F9] dark:bg-[#161616] border-b border-[#171717]/10 dark:border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="relative border-2 border-[#171717] dark:border-white/20 bg-white dark:bg-[#1E1E1E] shadow-[6px_6px_0px_#171717] dark:shadow-[6px_6px_0px_#d1fe17] rounded-xs overflow-hidden">
-            <div className="w-full h-64 sm:h-80 md:h-[400px] lg:h-[460px] overflow-hidden">
+          <div className="relative border-2 border-[#171717] dark:border-white/20 bg-white dark:bg-[#1E1E1E] shadow-[4px_4px_0px_#171717] sm:shadow-[6px_6px_0px_#171717] dark:shadow-[4px_4px_0px_#d1fe17] sm:dark:shadow-[6px_6px_0px_#d1fe17] rounded-xs overflow-hidden">
+            <div className="w-full h-44 xs:h-52 sm:h-72 md:h-80 lg:h-[420px] overflow-hidden">
               <EditableImage
                 storageKey="hire_me_workspace_banner"
                 defaultSrc={portfolioImages.creativeDeskBanner}
@@ -170,15 +170,15 @@ export const HireMePage: React.FC<HireMePageProps> = ({ onBackToHome, onOpenCvMo
       {/* ========================================================================= */}
       {/* 3. CONTACT & HIRE ME MAIN SECTION (EDITORIAL INTRO + FORM + CHANNELS)     */}
       {/* ========================================================================= */}
-      <section className="py-14 sm:py-20 md:py-24">
+      <section className="py-10 sm:py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
             
             {/* LEFT COLUMN: Editorial Positioning & Direct Channels (Col 1-5) */}
-            <div className="lg:col-span-5 space-y-8">
+            <div className="lg:col-span-5 space-y-6 sm:space-y-8">
               
               {/* Section Kicker & Big Subhead */}
-              <div className="space-y-3">
+              <div className="space-y-2.5 sm:space-y-3">
                 <div className="font-display inline-flex items-center gap-2 text-xs font-bold tracking-[0.14em] uppercase text-[#F9B51B] dark:text-[#d1fe17]">
                   <span aria-hidden="true">✦</span>
                   <span>TERHUBUNG LANGSUNG</span>
@@ -190,7 +190,7 @@ export const HireMePage: React.FC<HireMePageProps> = ({ onBackToHome, onOpenCvMo
               </div>
 
               {/* Editorial Copy */}
-              <div className="font-body space-y-4 text-sm sm:text-base text-[#555555] dark:text-[#CCCCCC] leading-relaxed font-normal text-justify">
+              <div className="font-body space-y-3.5 sm:space-y-4 text-sm sm:text-base text-[#555555] dark:text-[#CCCCCC] leading-relaxed font-normal text-justify">
                 <p>
                   Siap bergabung untuk mengisi posisi <strong>Pramuniaga</strong>, <strong>Kasir Toko</strong>, atau <strong>Staff Operasional Retail</strong>. Berbekal pengalaman lebih dari 8 tahun membantu operasional usaha mandiri keluarga di Gorontalo, saya terbiasa melayani beragam karakter pelanggan dengan ramah, jujur, dan bertanggung jawab.
                 </p>
@@ -200,17 +200,17 @@ export const HireMePage: React.FC<HireMePageProps> = ({ onBackToHome, onOpenCvMo
               </div>
 
               {/* Direct Contact Cards (Inspired by Steve Mengelkoch circular yellow icon rows) */}
-              <div className="space-y-4 pt-2">
+              <div className="space-y-3.5 sm:space-y-4 pt-1 sm:pt-2">
                 
                 {/* Telepon / WhatsApp */}
                 <a
                   href="https://api.whatsapp.com/send?phone=6285656381485&text=Halo%20Taufik%20Hidayat,%20saya%20ingin%20mendiskusikan%20peluang%20kerja"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-center gap-4 p-3.5 sm:p-4 rounded-xs border-2 border-[#171717] dark:border-white/20 bg-[#FBFBFB] dark:bg-[#1A1A1A] hover:bg-[#FFF8E7] dark:hover:bg-[#252525] shadow-[3px_3px_0px_#171717] dark:shadow-[3px_3px_0px_#F9B51B] dark:shadow-[3px_3px_0px_#d1fe17] transition-all"
+                  className="group flex items-center gap-3.5 sm:gap-4 p-3 xs:p-3.5 sm:p-4 rounded-xs border-2 border-[#171717] dark:border-white/20 bg-[#FBFBFB] dark:bg-[#1A1A1A] hover:bg-[#FFF8E7] dark:hover:bg-[#252525] shadow-[3px_3px_0px_#171717] dark:shadow-[3px_3px_0px_#F9B51B] dark:shadow-[3px_3px_0px_#d1fe17] transition-all"
                 >
-                  <div className="w-12 h-12 rounded-full bg-[#F9B51B] dark:bg-[#d1fe17] border-2 border-[#171717] text-[#171717] flex items-center justify-center shrink-0 shadow-xs group-hover:scale-105 transition-transform">
-                    <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#F9B51B] dark:bg-[#d1fe17] border-2 border-[#171717] text-[#171717] flex items-center justify-center shrink-0 shadow-xs group-hover:scale-105 transition-transform">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5 fill-current" viewBox="0 0 24 24">
                       <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z" />
                     </svg>
                   </div>
@@ -230,10 +230,10 @@ export const HireMePage: React.FC<HireMePageProps> = ({ onBackToHome, onOpenCvMo
                 {/* Email Resmi */}
                 <a
                   href="mailto:taufikmalii281003@gmail.com"
-                  className="group flex items-center gap-4 p-3.5 sm:p-4 rounded-xs border-2 border-[#171717] dark:border-white/20 bg-[#FBFBFB] dark:bg-[#1A1A1A] hover:bg-[#FFF8E7] dark:hover:bg-[#252525] shadow-[3px_3px_0px_#171717] dark:shadow-[3px_3px_0px_#F9B51B] dark:shadow-[3px_3px_0px_#d1fe17] transition-all"
+                  className="group flex items-center gap-3.5 sm:gap-4 p-3 xs:p-3.5 sm:p-4 rounded-xs border-2 border-[#171717] dark:border-white/20 bg-[#FBFBFB] dark:bg-[#1A1A1A] hover:bg-[#FFF8E7] dark:hover:bg-[#252525] shadow-[3px_3px_0px_#171717] dark:shadow-[3px_3px_0px_#F9B51B] dark:shadow-[3px_3px_0px_#d1fe17] transition-all"
                 >
-                  <div className="w-12 h-12 rounded-full bg-[#F9B51B] dark:bg-[#d1fe17] border-2 border-[#171717] text-[#171717] flex items-center justify-center shrink-0 shadow-xs group-hover:scale-105 transition-transform">
-                    <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#F9B51B] dark:bg-[#d1fe17] border-2 border-[#171717] text-[#171717] flex items-center justify-center shrink-0 shadow-xs group-hover:scale-105 transition-transform">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5 fill-current" viewBox="0 0 24 24">
                       <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
                     </svg>
                   </div>
@@ -255,7 +255,7 @@ export const HireMePage: React.FC<HireMePageProps> = ({ onBackToHome, onOpenCvMo
 
             {/* RIGHT COLUMN: Architectural Form Container (Col 6-12) */}
             <div className="lg:col-span-7">
-              <div className="bg-[#FBFBFB] dark:bg-[#1A1A1A] border-2 border-[#171717] dark:border-white/20 p-6 sm:p-8 lg:p-10 rounded-xs shadow-[6px_6px_0px_#171717] dark:shadow-[6px_6px_0px_#d1fe17] transition-colors">
+              <div className="bg-[#FBFBFB] dark:bg-[#1A1A1A] border-2 border-[#171717] dark:border-white/20 p-4 xs:p-6 sm:p-8 lg:p-10 rounded-xs shadow-[4px_4px_0px_#171717] sm:shadow-[6px_6px_0px_#171717] dark:shadow-[4px_4px_0px_#d1fe17] sm:dark:shadow-[6px_6px_0px_#d1fe17] transition-colors">
                 
                 {/* Form Header */}
                 <div className="border-b border-[#171717]/15 dark:border-white/10 pb-4 mb-6">
@@ -496,16 +496,16 @@ export const HireMePage: React.FC<HireMePageProps> = ({ onBackToHome, onOpenCvMo
       {/* ========================================================================= */}
       {/* 7. SECOND HORIZONTAL TICKER / MARQUEE TRANSITION                          */}
       {/* ========================================================================= */}
-      <div className="w-full overflow-hidden bg-[#31543A] py-4.5 sm:py-5 select-none border-y-2 border-[#171717] relative z-20">
+      <div className="w-full overflow-hidden bg-[#31543A] py-4.5 sm:py-5 md:py-6 select-none border-y-2 border-[#171717] relative z-20">
         <div className="animate-ticker flex items-center" style={{ animationDuration: '65s' }}>
           {[...Array(4)].map((_, loopIdx) => (
             <div key={loopIdx} className="flex items-center shrink-0">
               {TICKER_ITEMS_2.map((item, idx) => (
                 <div key={idx} className="flex items-center shrink-0">
-                  <span className="font-display text-sm sm:text-base font-semibold tracking-wider text-white px-4 sm:px-5 uppercase whitespace-nowrap">
+                  <span className="font-heading text-xl sm:text-2xl md:text-3xl lg:text-[2rem] font-bold tracking-tight text-white px-4 sm:px-6 md:px-8 uppercase whitespace-nowrap">
                     {item}
                   </span>
-                  <span className="text-xl sm:text-2xl font-black text-[#F9B51B] dark:text-[#d1fe17] shrink-0 inline-flex items-center justify-center leading-none" aria-hidden="true">
+                  <span className="text-xl sm:text-2xl md:text-3xl font-black text-[#F9B51B] dark:text-[#d1fe17] shrink-0 inline-flex items-center justify-center leading-none" aria-hidden="true">
                     ✦
                   </span>
                 </div>
@@ -585,18 +585,6 @@ export const HireMePage: React.FC<HireMePageProps> = ({ onBackToHome, onOpenCvMo
               </div>
             </div>
 
-          </div>
-
-          {/* Bottom Return To Home Button */}
-          <div className="pt-8 border-t border-white/10 flex justify-center">
-            <button
-              type="button"
-              onClick={onBackToHome}
-              className="font-display inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider text-white/80 hover:text-white border border-white/20 hover:border-white transition-colors cursor-pointer select-none"
-            >
-              <span>&larr;</span>
-              <span>KEMBALI KE HALAMAN UTAMA BERANDA</span>
-            </button>
           </div>
 
         </div>

@@ -79,13 +79,13 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
   return (
     <section id="home" className="pt-24 sm:pt-28 md:pt-32 bg-white dark:bg-[#121212] transition-colors duration-200 overflow-x-clip overflow-y-visible relative z-20">
       {/* Full-Bleed Rectangular Banner Photo */}
-      <div className="w-full mb-5 sm:mb-10 lg:mb-14 relative">
+      <div className="w-full mb-4 sm:mb-8 lg:mb-12 relative">
         <EditableImage
           storageKey="hero_banner_theme_v2"
           defaultSrc={portfolioImages.creativeDeskBanner}
           darkSrc={portfolioImages.retailBannerDark}
           alt="Banner Pelayanan &amp; Operasional Retail Taufik Hidayat"
-          containerClassName="w-full h-44 sm:h-72 md:h-96 lg:h-[420px] relative overflow-hidden border-y-2 border-[#171717]/10 dark:border-white/10"
+          containerClassName="w-full h-36 xs:h-44 sm:h-60 md:h-80 lg:h-96 xl:h-[420px] relative overflow-hidden border-y-2 border-[#171717]/10 dark:border-white/10"
           imgClassName="w-full h-full object-cover object-center"
           buttonPosition="top-right"
         />
@@ -96,10 +96,10 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
         <div className="grid grid-cols-12 gap-2 sm:gap-6 lg:gap-8 items-center">
           
           {/* AREA KIRI — CONTENT (Col 1-7 on mobile, Col 1-6 on desktop) Posisi Seimbang & Terpusat */}
-          <div className="col-span-7 lg:col-span-6 flex flex-col justify-center items-start text-left space-y-3 sm:space-y-6 lg:space-y-7 z-10 py-1 sm:py-4 lg:py-8 pr-1 sm:pr-0">
+          <div className="col-span-7 lg:col-span-6 flex flex-col justify-center items-start text-left space-y-2 sm:space-y-5 lg:space-y-6 z-10 py-1 sm:py-4 lg:py-8 pr-1 sm:pr-0">
             {/* Small Official Label */}
             <div>
-              <div className="font-body inline-flex items-center gap-1 sm:gap-1.5 text-[9px] sm:text-xs md:text-sm font-bold tracking-[0.06em] sm:tracking-[0.1em] uppercase text-[#DD9B08] transition-colors">
+              <div className="font-body inline-flex items-center gap-1 sm:gap-1.5 text-[8.5px] xs:text-[10px] sm:text-xs md:text-sm font-bold tracking-[0.06em] sm:tracking-[0.1em] uppercase text-[#DD9B08] transition-colors">
                 <span aria-hidden="true">✦</span>
                 <span>MY PORTFOLIO • PROFIL RESMI</span>
                 <span aria-hidden="true">✦</span>
@@ -108,11 +108,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
 
             {/* Main Headline: Focal Point 1 */}
             <div>
-              <h1 className="font-heading text-xl sm:text-4xl md:text-5xl lg:text-[3.25rem] xl:text-[4rem] font-bold tracking-[-0.025em] leading-[1.12] sm:leading-[1.08] break-words">
-                <span className="block text-[#171717]">
+              <h1 className="font-heading text-lg xs:text-2xl sm:text-4xl md:text-5xl lg:text-[3.25rem] xl:text-[4rem] font-bold tracking-tight leading-[1.1] sm:leading-[1.08] break-words">
+                <span className="block text-[#171717] dark:text-white">
                   Taufik Hidayat Malii
                 </span>
-                <span className="block text-[#A2680A] mt-0.5 sm:mt-1.5 text-xs sm:text-2xl md:text-3xl lg:text-[2.6rem] xl:text-[3.2rem]">
+                <span className="block text-[#A2680A] dark:text-[#F9B51B] mt-0.5 sm:mt-1.5 text-[11px] xs:text-base sm:text-2xl md:text-3xl lg:text-[2.6rem] xl:text-[3.2rem]">
                   Operasional &amp; Pelayanan
                   <br className="hidden sm:inline" />
                   {' '}Retail Professional.
@@ -126,20 +126,20 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.0, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
-                className="font-body text-[11px] sm:text-sm md:text-base text-[#555555] dark:text-[#CCCCCC] leading-relaxed font-normal line-clamp-3 sm:line-clamp-none"
+                className="font-body text-[10px] xs:text-xs sm:text-sm md:text-base text-[#555555] dark:text-[#CCCCCC] leading-relaxed font-normal line-clamp-3 sm:line-clamp-none"
               >
                 {candidateProfile.summary}
               </motion.p>
             </div>
 
             {/* Two Action Buttons: VIEW MY WORK & UNDUH CV RESMI */}
-            <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-2 sm:gap-3.5 pt-0.5 sm:pt-1 w-full">
+            <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-1.5 xs:gap-2 sm:gap-3.5 pt-0.5 sm:pt-1 w-full">
               <motion.a
                 href="#work"
                 onClick={handleWorkClick}
                 layout
                 transition={{ type: 'spring', stiffness: 320, damping: 26 }}
-                className={`group inline-flex items-center gap-1 sm:gap-2 p-1 sm:p-2 rounded-full cursor-pointer select-none transition-colors duration-300 shadow-md hover:shadow-lg active:scale-95 ${
+                className={`group inline-flex items-center gap-1 sm:gap-2 p-0.5 xs:p-1 sm:p-2 rounded-full cursor-pointer select-none transition-colors duration-300 shadow-md hover:shadow-lg active:scale-95 ${
                   isWorkActive
                     ? 'flex-row-reverse bg-[#2B4734] dark:bg-[#31543A]'
                     : 'flex-row bg-[#F9B51B] dark:bg-[#d1fe17]'
@@ -151,7 +151,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
                 <motion.span
                   layout
                   transition={{ type: 'spring', stiffness: 320, damping: 26 }}
-                  className={`w-7 h-7 sm:w-11 sm:h-11 rounded-full flex items-center justify-center shrink-0 shadow-sm transition-colors duration-300 ${
+                  className={`w-6 h-6 xs:w-7 xs:h-7 sm:w-11 sm:h-11 rounded-full flex items-center justify-center shrink-0 shadow-sm transition-colors duration-300 ${
                     isWorkActive
                       ? 'bg-[#F9B51B] dark:bg-[#d1fe17] text-[#171717]'
                       : 'bg-white text-[#171717]'
@@ -159,7 +159,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
                 >
                   <motion.svg
                     layout
-                    className="w-3.5 h-3.5 sm:w-5 sm:h-5 text-[#171717]"
+                    className="w-3 h-3 xs:w-3.5 xs:h-3.5 sm:w-5 sm:h-5 text-[#171717]"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -177,7 +177,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
                 <motion.span
                   layout
                   transition={{ type: 'spring', stiffness: 320, damping: 26 }}
-                  className={`font-body px-3 sm:px-7 py-1.5 sm:py-3 rounded-full text-[10px] sm:text-sm font-semibold tracking-wider uppercase flex items-center justify-center transition-colors duration-300 ${
+                  className={`font-body px-2.5 xs:px-3 sm:px-7 py-1 xs:py-1.5 sm:py-3 rounded-full text-[9px] xs:text-[10px] sm:text-sm font-semibold tracking-wider uppercase flex items-center justify-center transition-colors duration-300 ${
                     isWorkActive
                       ? 'bg-white text-[#171717]'
                       : 'bg-[#2B4734] text-white'
@@ -194,10 +194,10 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
                 onClick={handleCvSwap}
                 title="Geser ke kanan atau klik untuk swap & unduh CV resmi"
                 aria-label="Unduh CV Resmi PDF via Swap Manual ke Kanan"
-                className={`font-body group inline-flex items-center gap-2 sm:gap-3 py-1.5 sm:py-2.5 rounded-full text-[10px] sm:text-sm font-semibold tracking-wider uppercase select-none cursor-pointer transition-colors duration-300 shadow-sm active:scale-95 ${
+                className={`font-body group inline-flex items-center gap-1.5 xs:gap-2 sm:gap-3 py-1 xs:py-1.5 sm:py-2.5 rounded-full text-[9px] xs:text-[10px] sm:text-sm font-semibold tracking-wider uppercase select-none cursor-pointer transition-colors duration-300 shadow-sm active:scale-95 ${
                   isCvSwapped
-                    ? 'flex-row bg-[#2B4734] dark:bg-[#31543A] text-white border-2 border-[#2B4734] dark:border-[#31543A] pr-1.5 sm:pr-2.5 pl-4 sm:pl-6'
-                    : 'flex-row-reverse bg-white dark:bg-[#1E1E1E] text-[#171717] dark:text-white border-2 border-[#171717] dark:border-white hover:border-[#F9B51B] dark:hover:border-[#d1fe17] pl-1.5 sm:pl-2.5 pr-4 sm:pr-6'
+                    ? 'flex-row bg-[#2B4734] dark:bg-[#31543A] text-white border-2 border-[#2B4734] dark:border-[#31543A] pr-1 xs:pr-1.5 sm:pr-2.5 pl-3 xs:pl-4 sm:pl-6'
+                    : 'flex-row-reverse bg-white dark:bg-[#1E1E1E] text-[#171717] dark:text-white border-2 border-[#171717] dark:border-white hover:border-[#F9B51B] dark:hover:border-[#d1fe17] pl-1 xs:pl-1.5 sm:pl-2.5 pr-3 xs:pr-4 sm:pr-6'
                 }`}
               >
                 <motion.span
@@ -218,7 +218,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
                       handleCvSwap();
                     }
                   }}
-                  className={`w-7 h-7 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-bold text-xs sm:text-sm shrink-0 transition-colors duration-300 shadow-sm ${
+                  className={`w-6 h-6 xs:w-7 xs:h-7 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-bold text-[10px] xs:text-xs sm:text-sm shrink-0 transition-colors duration-300 shadow-sm ${
                     isCvSwapped
                       ? 'bg-[#F9B51B] dark:bg-[#d1fe17] text-[#171717]'
                       : 'bg-[#171717] dark:bg-white text-white dark:text-[#171717] group-hover:bg-[#F9B51B] dark:group-hover:bg-[#d1fe17] group-hover:text-[#171717]'
@@ -234,7 +234,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
                   >
                     {isCvDownloading ? (
                       <svg
-                        className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#171717]"
+                        className="w-3 h-3 xs:w-3.5 xs:h-3.5 sm:w-4 sm:h-4 text-[#171717]"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
@@ -247,7 +247,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
                       </svg>
                     ) : (
                       <svg
-                        className="w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform group-hover:translate-x-0.5"
+                        className="w-3 h-3 xs:w-3.5 xs:h-3.5 sm:w-4 sm:h-4 transition-transform group-hover:translate-x-0.5"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
@@ -269,7 +269,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
           {/* AREA KANAN — MOCKUP BACKGROUND (Col 8-12 on mobile, Col 7-12 on desktop) */}
           <div className="col-span-5 lg:col-span-6 flex justify-end items-center relative select-none pt-0 overflow-visible">
             {/* Visual Container: Mockup Background Versi 2 Circular Orbit */}
-            <div className="relative w-full max-w-[280px] sm:max-w-[440px] md:max-w-[520px] lg:max-w-[600px] xl:max-w-[670px] 2xl:max-w-[720px] h-[260px] sm:h-[440px] md:h-[540px] lg:h-[700px] xl:h-[740px] flex items-center justify-end transition-all duration-300 overflow-visible translate-x-3 sm:translate-x-5 lg:translate-x-6 xl:translate-x-10 2xl:translate-x-12">
+            <div className="relative w-full max-w-[200px] xs:max-w-[240px] sm:max-w-[380px] md:max-w-[480px] lg:max-w-[580px] xl:max-w-[650px] 2xl:max-w-[700px] h-[200px] xs:h-[240px] sm:h-[380px] md:h-[480px] lg:h-[600px] xl:h-[660px] flex items-center justify-end transition-all duration-300 overflow-visible translate-x-0 sm:translate-x-2 md:translate-x-4 lg:translate-x-6 xl:translate-x-8">
               
               {/* Circular Orbit Composition (Versi 2) dengan Foto Resmi Permanen Taufik Hidayat Malii */}
               <CircularOrbitBackdrop photoSrc="/assets/taufik_official_portrait.png" />

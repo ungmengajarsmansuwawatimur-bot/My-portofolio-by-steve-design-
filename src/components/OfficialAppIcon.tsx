@@ -251,30 +251,18 @@ export const OfficialAppIcon: React.FC<OfficialAppIconProps> = ({ name, classNam
         </svg>
       );
 
-    // 8. OFFICIAL WEBSITE PLATFORM (Modern Web Platform / Browser Console)
+    // 8. OFFICIAL GOOGLE STUDIO (Replacing previous web platform SVG permanently)
+    case 'googlestudio':
+    case 'google studio':
+    case 'google-studio':
     case 'web':
     case 'website platform':
       return (
-        <svg className={className} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          {/* Sleek Modern Application Window */}
-          <rect x="6" y="8" width="36" height="32" rx="7" fill="#1E293B" />
-          {/* Title Bar */}
-          <path
-            d="M6 15C6 11.134 9.13401 8 13 8H35C38.866 8 42 11.134 42 15V16H6V15Z"
-            fill="#0F172A"
-          />
-          {/* 3 Window Controls (Red, Yellow, Green) */}
-          <circle cx="11.5" cy="12" r="1.8" fill="#EF4444" />
-          <circle cx="16.5" cy="12" r="1.8" fill="#F59E0B" />
-          <circle cx="21.5" cy="12" r="1.8" fill="#10B981" />
-          {/* Address Bar */}
-          <rect x="26" y="10.5" width="13" height="3" rx="1.5" fill="#334155" />
-          {/* Window Body: Modern Dashboard layout */}
-          <rect x="10" y="20" width="7" height="16" rx="2" fill="#3B82F6" fillOpacity="0.4" />
-          <rect x="19" y="20" width="19" height="7" rx="2" fill="#3B82F6" />
-          <rect x="19" y="29" width="9" height="7" rx="2" fill="#64748B" fillOpacity="0.5" />
-          <rect x="29.5" y="29" width="8.5" height="7" rx="2" fill="#10B981" fillOpacity="0.5" />
-        </svg>
+        <img
+          src="/assets/icons/google_studio.png"
+          alt="Google Studio"
+          className={`${className} object-contain select-none`}
+        />
       );
 
     // 9. OFFICIAL CANVA (Latest Brand Mark from provided image)

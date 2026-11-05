@@ -47,7 +47,7 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-8 bg-black/60 dark:bg-black/80 backdrop-blur-[2px] transition-opacity animate-in fade-in duration-200"
+      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 md:p-8 bg-black/60 dark:bg-black/80 backdrop-blur-[2px] transition-opacity animate-in fade-in duration-200"
       role="dialog"
       aria-modal="true"
       aria-labelledby="modal-headline"
@@ -59,10 +59,10 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
     >
       <div
         ref={modalRef}
-        className="relative w-full max-w-2xl bg-white dark:bg-[#1E1E1E] border-2 border-[#171717] dark:border-[#333333] rounded-3xl shadow-[8px_8px_0px_#171717] overflow-hidden flex flex-col max-h-[90vh]"
+        className="relative w-full max-w-2xl bg-white dark:bg-[#1E1E1E] border-2 border-[#171717] dark:border-[#333333] rounded-2xl sm:rounded-3xl shadow-[4px_4px_0px_#171717] sm:shadow-[8px_8px_0px_#171717] overflow-hidden flex flex-col max-h-[90vh]"
       >
         {/* Header */}
-        <div className="flex items-start justify-between p-5 md:p-6 border-b border-[#171717]/15 dark:border-[#2A2A2A] bg-[#F5F5F5] dark:bg-[#1E1E1E]">
+        <div className="flex items-start justify-between p-4 sm:p-5 md:p-6 border-b border-[#171717]/15 dark:border-[#2A2A2A] bg-[#F5F5F5] dark:bg-[#1E1E1E]">
           <div>
             {badge && (
               <span className="text-[11px] font-black tracking-widest text-[#F9B51B] dark:text-[#d1fe17] uppercase mb-1 block">

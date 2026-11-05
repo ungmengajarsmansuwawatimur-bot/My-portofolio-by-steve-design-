@@ -48,26 +48,7 @@ export const CircularOrbitBackdrop: React.FC<CircularOrbitBackdropProps> = ({
           </filter>
         </defs>
 
-        {/* 1. LAYER BACKGROUND: 4x3 Dot Matrix Grid (Upper Right) */}
-        <g className="fill-[#234B36] dark:fill-[#3E8A56] transition-colors duration-300">
-          {/* Row 1 */}
-          <circle cx="458" cy="158" r="3.7" />
-          <circle cx="480" cy="158" r="3.7" />
-          <circle cx="502" cy="158" r="3.7" />
-          <circle cx="524" cy="158" r="3.7" />
 
-          {/* Row 2 */}
-          <circle cx="458" cy="180" r="3.7" />
-          <circle cx="480" cy="180" r="3.7" />
-          <circle cx="502" cy="180" r="3.7" />
-          <circle cx="524" cy="180" r="3.7" />
-
-          {/* Row 3 */}
-          <circle cx="458" cy="202" r="3.7" />
-          <circle cx="480" cy="202" r="3.7" />
-          <circle cx="502" cy="202" r="3.7" />
-          <circle cx="524" cy="202" r="3.7" />
-        </g>
 
         {/* 2. LAYER UTAMA: Vibrant Sunny Yellow Circle (Center cx=300, cy=310, r=175) */}
         <circle

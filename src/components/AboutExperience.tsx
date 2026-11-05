@@ -128,8 +128,8 @@ export const AboutExperience: React.FC<AboutExperienceProps> = () => {
           </div>
 
           {/* Narrative Bio & 3 Key Metric Columns */}
-          <div className="max-w-4xl space-y-8">
-            <div className="font-body space-y-4 text-base sm:text-lg text-[#666666] dark:text-[#A3A3A3] leading-[1.65] font-normal text-refined-justify">
+          <div className="max-w-5xl 2xl:max-w-6xl space-y-6 sm:space-y-8">
+            <div className="font-body space-y-3.5 sm:space-y-4 text-sm sm:text-base md:text-lg text-[#666666] dark:text-[#A3A3A3] leading-[1.65] font-normal text-refined-justify">
               <p className="text-refined-justify">
                 Saya memiliki ketertarikan tinggi pada industri pelayanan ritel dan operasional toko modern. Melalui pengalaman lebih dari 8 tahun membantu usaha keluarga, saya terlatih melayani berbagai karakter pembeli, mengelola transaksi kasir, menjaga stok barang, serta memastikan area penjualan selalu tertata rapi.
               </p>
@@ -139,30 +139,30 @@ export const AboutExperience: React.FC<AboutExperienceProps> = () => {
             </div>
 
             {/* 3 Steve Mengelkoch Signature Stat Columns - Centered & Animated */}
-            <div className="grid grid-cols-3 divide-x divide-[#171717]/10 dark:divide-white/10 py-6 sm:py-8 border-y border-[#171717]/15 dark:border-white/10 text-center">
-              <div className="flex flex-col items-center justify-center text-center px-2 sm:px-4">
-                <span className="font-info text-xs sm:text-sm font-bold text-[#666666] dark:text-[#A3A3A3] block uppercase tracking-wide text-center">
+            <div className="grid grid-cols-3 divide-x divide-[#171717]/10 dark:divide-white/10 py-5 sm:py-8 border-y border-[#171717]/15 dark:border-white/10 text-center">
+              <div className="flex flex-col items-center justify-center text-center px-1 xs:px-2 sm:px-4">
+                <span className="font-info text-[9.5px] xs:text-xs sm:text-sm font-bold text-[#666666] dark:text-[#A3A3A3] block uppercase tracking-wide text-center">
                   Pelanggan &amp; Transaksi
                 </span>
-                <span className="font-info text-3xl sm:text-4xl md:text-5xl font-bold text-[#171717] dark:text-white tracking-tight mt-1.5 block text-center tabular-nums">
+                <span className="font-info text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold text-[#171717] dark:text-white tracking-tight mt-1 sm:mt-1.5 block text-center tabular-nums">
                   <AnimatedCounter target={250} suffix="+" duration={2400} />
                 </span>
               </div>
 
-              <div className="flex flex-col items-center justify-center text-center px-2 sm:px-4">
-                <span className="font-info text-xs sm:text-sm font-bold text-[#666666] dark:text-[#A3A3A3] block uppercase tracking-wide text-center">
+              <div className="flex flex-col items-center justify-center text-center px-1 xs:px-2 sm:px-4">
+                <span className="font-info text-[9.5px] xs:text-xs sm:text-sm font-bold text-[#666666] dark:text-[#A3A3A3] block uppercase tracking-wide text-center">
                   Modul Web Administrasi
                 </span>
-                <span className="font-info text-3xl sm:text-4xl md:text-5xl font-bold text-[#171717] dark:text-white tracking-tight mt-1.5 block text-center tabular-nums">
+                <span className="font-info text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold text-[#171717] dark:text-white tracking-tight mt-1 sm:mt-1.5 block text-center tabular-nums">
                   <AnimatedCounter target={24} duration={2000} />
                 </span>
               </div>
 
-              <div className="flex flex-col items-center justify-center text-center px-2 sm:px-4">
-                <span className="font-info text-xs sm:text-sm font-bold text-[#666666] dark:text-[#A3A3A3] block uppercase tracking-wide text-center">
+              <div className="flex flex-col items-center justify-center text-center px-1 xs:px-2 sm:px-4">
+                <span className="font-info text-[9.5px] xs:text-xs sm:text-sm font-bold text-[#666666] dark:text-[#A3A3A3] block uppercase tracking-wide text-center">
                   Kesiapan Kerja
                 </span>
-                <span className="font-info text-3xl sm:text-4xl md:text-5xl font-bold text-[#171717] dark:text-white tracking-tight mt-1.5 block text-center tabular-nums">
+                <span className="font-info text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold text-[#171717] dark:text-white tracking-tight mt-1 sm:mt-1.5 block text-center tabular-nums">
                   <AnimatedCounter target={100} suffix="%" duration={2200} />
                 </span>
               </div>
@@ -171,146 +171,174 @@ export const AboutExperience: React.FC<AboutExperienceProps> = () => {
         </div>
 
         {/* ========================================================================= */}
+        {/* EDUCATION & EXPERIENCE SECTIONS: Balanced Responsive Grid                 */}
+        {/* Mobile & Tablet: Clean Single-Column Flow                                 */}
+        {/* Laptop & Desktop: Balanced 5-Col Education + 7-Col Experience Side-by-Side */}
         {/* ========================================================================= */}
-        {/* EDUCATION SECTION                                                         */}
-        {/* ========================================================================= */}
-        <div id="credentials" className="max-w-4xl space-y-6 sm:space-y-8 pt-10 sm:pt-14 border-t border-[#171717]/15 dark:border-white/10">
-          <div>
-            {/* Header: Yellow/Amber Circular Badge with White Mortarboard Cap + "Education" */}
-            <div className="flex items-center gap-3.5 sm:gap-4 mb-6 sm:mb-8">
-              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#F59E0B] flex items-center justify-center shrink-0 shadow-sm">
-                <svg
-                  className="w-6 h-6 sm:w-7 sm:h-7 text-white"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z" />
-                  <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z" />
-                </svg>
-              </div>
-              <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-[#9A5B00] dark:text-[#F9B51B] tracking-tight">
-                Education
-              </h2>
-            </div>
-
-            {/* List of Education Cards */}
-            <div className="space-y-4 sm:space-y-5">
-              {/* Card 1: S1 Bimbingan & Konseling */}
-              <div className="bg-white dark:bg-[#1E1E22] border border-[#171717]/12 dark:border-white/10 rounded-2xl p-4 sm:p-5 md:p-6 shadow-xs hover:shadow-md hover:border-[#F59E0B]/60 transition-all duration-200">
-                <div className="flex items-center justify-between gap-3 sm:gap-4">
-                  <div className="flex items-center gap-3 sm:gap-3.5 min-w-0">
-                    <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-[#F59E0B]/10 dark:bg-[#F59E0B]/20 text-[#F59E0B] flex items-center justify-center shrink-0">
-                      <svg
-                        className="w-5 h-5 sm:w-6 sm:h-6 fill-current"
-                        viewBox="0 0 24 24"
-                        aria-hidden="true"
-                      >
-                        <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z" />
-                        <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z" />
-                      </svg>
-                    </div>
-                    <div className="space-y-0.5 min-w-0">
-                      <h3 className="font-heading text-base sm:text-lg md:text-xl font-bold text-[#171717] dark:text-white leading-snug">
-                        S1 Bimbingan &amp; Konseling
-                      </h3>
-                      <p className="font-body text-xs sm:text-sm text-[#71717A] dark:text-[#A1A1AA] font-normal">
-                        Universitas Negeri Gorontalo · 2022 – Sekarang
-                      </p>
-                    </div>
-                  </div>
-                  <span className="shrink-0 hidden xs:inline-flex font-body text-[10px] sm:text-xs font-semibold px-2.5 py-1 rounded-full bg-[#F59E0B]/10 text-[#9A5B00] dark:bg-[#F59E0B]/20 dark:text-[#F9B51B]">
-                    Mahasiswa Aktif
-                  </span>
+        <div className="pt-8 sm:pt-12 border-t border-[#171717]/15 dark:border-white/10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+            
+            {/* EDUCATION SECTION (lg:col-span-5) */}
+            <div id="credentials" className="lg:col-span-5 space-y-6 sm:space-y-8">
+              {/* Header: Yellow/Amber Circular Badge with White Mortarboard Cap + "Education" */}
+              <div className="flex items-center gap-3.5 sm:gap-4 mb-4 sm:mb-6">
+                <div className="w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-[#F59E0B] flex items-center justify-center shrink-0 shadow-sm">
+                  <svg
+                    className="w-5 h-5 sm:w-6 sm:h-6 text-white"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z" />
+                    <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z" />
+                  </svg>
                 </div>
+                <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-[#9A5B00] dark:text-[#F9B51B] tracking-tight">
+                  Education
+                </h2>
               </div>
 
-              {/* Card 2: SMA Negeri 1 Kabila */}
-              <div className="bg-white dark:bg-[#1E1E22] border border-[#171717]/12 dark:border-white/10 rounded-2xl p-4 sm:p-5 md:p-6 shadow-xs hover:shadow-md hover:border-[#F59E0B]/60 transition-all duration-200">
-                <div className="flex items-center justify-between gap-3 sm:gap-4">
-                  <div className="flex items-center gap-3 sm:gap-3.5 min-w-0">
-                    <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-[#F59E0B]/10 dark:bg-[#F59E0B]/20 text-[#F59E0B] flex items-center justify-center shrink-0">
-                      <svg
-                        className="w-5 h-5 sm:w-6 sm:h-6 fill-current"
-                        viewBox="0 0 24 24"
-                        aria-hidden="true"
-                      >
-                        <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z" />
-                        <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z" />
-                      </svg>
+              {/* List of Education Cards */}
+              <div className="space-y-4 sm:space-y-5">
+                {/* Card 1: S1 Bimbingan & Konseling */}
+                <div className="bg-white dark:bg-[#1E1E22] border border-[#171717]/12 dark:border-white/10 rounded-2xl p-4 sm:p-5 md:p-6 shadow-xs hover:shadow-md hover:border-[#F59E0B]/60 transition-all duration-200">
+                  <div className="flex items-center justify-between gap-3 sm:gap-4">
+                    <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
+                      <div className="shrink-0 flex items-center justify-center">
+                        <img
+                          src="/assets/icons/education_degree_cap.png"
+                          alt="Ikon S1 Bimbingan & Konseling"
+                          className="w-8 h-8 sm:w-9 sm:h-9 object-contain select-none dark:drop-shadow-[0_0_2px_rgba(255,255,255,0.7)]"
+                        />
+                      </div>
+                      <div className="space-y-0.5 min-w-0">
+                        <h3 className="font-heading text-base sm:text-lg md:text-xl font-bold text-[#171717] dark:text-white leading-snug">
+                          S1 Bimbingan &amp; Konseling
+                        </h3>
+                        <p className="font-body text-xs sm:text-sm text-[#71717A] dark:text-[#A1A1AA] font-normal">
+                          Universitas Negeri Gorontalo · 2022 – Sekarang
+                        </p>
+                      </div>
                     </div>
-                    <div className="space-y-0.5 min-w-0">
-                      <h3 className="font-heading text-base sm:text-lg md:text-xl font-bold text-[#171717] dark:text-white leading-snug">
-                        Pendidikan Menengah Atas (MIPA)
-                      </h3>
-                      <p className="font-body text-xs sm:text-sm text-[#71717A] dark:text-[#A1A1AA] font-normal">
-                        SMA Negeri 1 Kabila · 2020 – 2022
-                      </p>
-                    </div>
-                  </div>
-                  <span className="shrink-0 hidden xs:inline-flex font-body text-[10px] sm:text-xs font-semibold px-2.5 py-1 rounded-full bg-black/5 dark:bg-white/10 text-[#666666] dark:text-[#A3A3A3]">
-                    Lulus
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* ========================================================================= */}
-        {/* EXPERIENCE SECTION                                                        */}
-        {/* ========================================================================= */}
-        <div id="background" className="max-w-4xl space-y-6 sm:space-y-8 pt-10 sm:pt-14 border-t border-[#171717]/15 dark:border-white/10">
-          <div>
-            {/* Header: Yellow/Amber Circular Badge with White Briefcase + "Experience" */}
-            <div className="flex items-center gap-3.5 sm:gap-4 mb-6 sm:mb-8">
-              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#F59E0B] flex items-center justify-center shrink-0 shadow-sm">
-                <svg
-                  className="w-6 h-6 sm:w-7 sm:h-7 text-white"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z" />
-                </svg>
-              </div>
-              <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-[#9A5B00] dark:text-[#F9B51B] tracking-tight">
-                Experience
-              </h2>
-            </div>
-
-            {/* List of Experience Cards */}
-            <div className="space-y-4 sm:space-y-5">
-              {filteredItems.map((item) => (
-                <div
-                  key={item.id}
-                  className="bg-white dark:bg-[#1E1E22] border border-[#171717]/12 dark:border-white/10 rounded-2xl p-4 sm:p-5 md:p-6 shadow-xs hover:shadow-md hover:border-[#F59E0B]/60 transition-all duration-200"
-                >
-                  <div className="flex items-start gap-3 sm:gap-3.5 min-w-0">
-                    <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-[#F59E0B]/10 dark:bg-[#F59E0B]/20 text-[#F59E0B] flex items-center justify-center shrink-0 mt-0.5">
-                      <svg
-                        className="w-5 h-5 sm:w-6 sm:h-6 fill-current"
-                        viewBox="0 0 24 24"
-                        aria-hidden="true"
-                      >
-                        <path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z" />
-                      </svg>
-                    </div>
-                    <div className="space-y-1 min-w-0 flex-1">
-                      <h3 className="font-heading text-base sm:text-lg md:text-xl font-bold text-[#171717] dark:text-white leading-snug">
-                        {item.title}
-                      </h3>
-                      <p className="font-body text-xs sm:text-sm text-[#71717A] dark:text-[#A1A1AA] font-normal">
-                        {item.subtitle} · {item.period}
-                      </p>
-                      <p className="font-body text-xs sm:text-sm text-[#555555] dark:text-[#CCCCCC] leading-relaxed pt-1 text-refined-justify">
-                        {item.description}
-                      </p>
-                    </div>
+                    <span className="shrink-0 hidden xs:inline-flex font-body text-[10px] sm:text-xs font-semibold px-2.5 py-1 rounded-full bg-[#F59E0B]/10 text-[#9A5B00] dark:bg-[#F59E0B]/20 dark:text-[#F9B51B]">
+                      Mahasiswa Aktif
+                    </span>
                   </div>
                 </div>
-              ))}
+
+                {/* Card 2: SMA Negeri 1 Kabila */}
+                <div className="bg-white dark:bg-[#1E1E22] border border-[#171717]/12 dark:border-white/10 rounded-2xl p-4 sm:p-5 md:p-6 shadow-xs hover:shadow-md hover:border-[#F59E0B]/60 transition-all duration-200">
+                  <div className="flex items-center justify-between gap-3 sm:gap-4">
+                    <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
+                      <div className="shrink-0 flex items-center justify-center">
+                        <img
+                          src="/assets/icons/education_open_book.png"
+                          alt="Ikon Pendidikan SMA IPS"
+                          className="w-8 h-8 sm:w-9 sm:h-9 object-contain select-none dark:drop-shadow-[0_0_2px_rgba(255,255,255,0.7)]"
+                        />
+                      </div>
+                      <div className="space-y-0.5 min-w-0">
+                        <h3 className="font-heading text-base sm:text-lg md:text-xl font-bold text-[#171717] dark:text-white leading-snug">
+                          Pendidikan Menengah Atas (IPS)
+                        </h3>
+                        <p className="font-body text-xs sm:text-sm text-[#71717A] dark:text-[#A1A1AA] font-normal">
+                          SMA Negeri 1 Kabila · 2020 – 2022
+                        </p>
+                      </div>
+                    </div>
+                    <span className="shrink-0 hidden xs:inline-flex font-body text-[10px] sm:text-xs font-semibold px-2.5 py-1 rounded-full bg-black/5 dark:bg-white/10 text-[#666666] dark:text-[#A3A3A3]">
+                      Lulus
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
+
+            {/* EXPERIENCE SECTION (lg:col-span-7) */}
+            <div id="background" className="lg:col-span-7 space-y-6 sm:space-y-8">
+              {/* Header: Yellow/Amber Circular Badge with White Briefcase + "Experience" */}
+              <div className="flex items-center gap-3.5 sm:gap-4 mb-4 sm:mb-6">
+                <div className="w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-[#F59E0B] flex items-center justify-center shrink-0 shadow-sm">
+                  <svg
+                    className="w-5 h-5 sm:w-6 sm:h-6 text-white"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z" />
+                  </svg>
+                </div>
+                <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-[#9A5B00] dark:text-[#F9B51B] tracking-tight">
+                  Experience
+                </h2>
+              </div>
+
+              {/* List of Experience Cards */}
+              <div className="space-y-4 sm:space-y-5">
+                {filteredItems.map((item) => {
+                  // User-provided distinct icons for each experience card
+                  const renderExperienceIcon = () => {
+                    if (item.id === 'bg-1') {
+                      // Physical retail store / shop awning
+                      return (
+                        <div className="shrink-0 flex items-center justify-center mt-0.5">
+                          <img
+                            src="/assets/icons/experience_storefront.png"
+                            alt="Ikon Pengelolaan Usaha Keluarga"
+                            className="w-8 h-8 sm:w-9 sm:h-9 object-contain select-none dark:drop-shadow-[0_0_2px_rgba(255,255,255,0.7)]"
+                          />
+                        </div>
+                      );
+                    }
+                    if (item.id === 'bg-2') {
+                      // Client digital consultation / chat service (Laptop + Megaphone)
+                      return (
+                        <div className="shrink-0 flex items-center justify-center mt-0.5">
+                          <img
+                            src="/assets/icons/experience_digital_megaphone.png"
+                            alt="Ikon Pelayanan Jasa Digital"
+                            className="w-8 h-8 sm:w-9 sm:h-9 object-contain select-none dark:drop-shadow-[0_0_2px_rgba(255,255,255,0.7)]"
+                          />
+                        </div>
+                      );
+                    }
+                    // bg-3: Modern retail cart with stacked boxes
+                    return (
+                      <div className="shrink-0 flex items-center justify-center mt-0.5">
+                        <img
+                          src="/assets/icons/experience_retail_cart.png"
+                          alt="Ikon Pembelajaran Retail Modern"
+                          className="w-8 h-8 sm:w-9 sm:h-9 object-contain select-none dark:drop-shadow-[0_0_2px_rgba(255,255,255,0.7)]"
+                        />
+                      </div>
+                    );
+                  };
+
+                  return (
+                    <div
+                      key={item.id}
+                      className="bg-white dark:bg-[#1E1E22] border border-[#171717]/12 dark:border-white/10 rounded-2xl p-4 sm:p-5 md:p-6 shadow-xs hover:shadow-md hover:border-[#F59E0B]/60 transition-all duration-200"
+                    >
+                      <div className="flex items-start gap-3.5 sm:gap-4 min-w-0">
+                        {renderExperienceIcon()}
+                        <div className="space-y-1 min-w-0 flex-1">
+                          <h3 className="font-heading text-base sm:text-lg md:text-xl font-bold text-[#171717] dark:text-white leading-snug">
+                            {item.title}
+                          </h3>
+                          <p className="font-body text-xs sm:text-sm text-[#71717A] dark:text-[#A1A1AA] font-normal">
+                            {item.subtitle} · {item.period}
+                          </p>
+                          <p className="font-body text-xs sm:text-sm text-[#555555] dark:text-[#CCCCCC] leading-relaxed pt-1 text-refined-justify">
+                            {item.description}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
           </div>
         </div>
       </div>

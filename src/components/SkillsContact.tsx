@@ -101,13 +101,13 @@ export const SkillsContact: React.FC<SkillsContactProps> = ({ onOpenCvModal }) =
           </div>
 
           {/* Carousel Container matching reference image (2 cards side by side, subtle chevrons & 3 pagination dots) */}
-          <div className="relative max-w-6xl mx-auto">
+          <div className="relative max-w-6xl mx-auto px-4 xs:px-6 sm:px-10 lg:px-12">
             {/* Left Chevron Button */}
             <button
               type="button"
               onClick={handlePrevTesti}
               aria-label="Previous testimonials"
-              className="absolute -left-3 sm:-left-8 lg:-left-12 top-[38%] -translate-y-1/2 z-10 p-2 text-gray-300 hover:text-[#111827] transition-colors duration-200 cursor-pointer"
+              className="absolute left-0 sm:-left-4 lg:-left-8 top-[38%] -translate-y-1/2 z-10 p-1.5 sm:p-2 text-gray-400 hover:text-[#111827] dark:hover:text-white transition-colors duration-200 cursor-pointer"
             >
               <svg className="w-5 h-5 sm:w-6 sm:h-6 stroke-current" fill="none" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.2" d="M15 19l-7-7 7-7" />
@@ -119,7 +119,7 @@ export const SkillsContact: React.FC<SkillsContactProps> = ({ onOpenCvModal }) =
               type="button"
               onClick={handleNextTesti}
               aria-label="Next testimonials"
-              className="absolute -right-3 sm:-right-8 lg:-right-12 top-[38%] -translate-y-1/2 z-10 p-2 text-gray-300 hover:text-[#111827] transition-colors duration-200 cursor-pointer"
+              className="absolute right-0 sm:-right-4 lg:-right-8 top-[38%] -translate-y-1/2 z-10 p-1.5 sm:p-2 text-gray-400 hover:text-[#111827] dark:hover:text-white transition-colors duration-200 cursor-pointer"
             >
               <svg className="w-5 h-5 sm:w-6 sm:h-6 stroke-current" fill="none" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.2" d="M9 5l7 7-7 7" />
@@ -127,32 +127,32 @@ export const SkillsContact: React.FC<SkillsContactProps> = ({ onOpenCvModal }) =
             </button>
 
             {/* Testimonials 2-Column Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-7 sm:gap-9 lg:gap-11 items-stretch">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 items-stretch">
               {currentTestimonials.map((testi) => (
                 <div
                   key={testi.id}
                   className="flex flex-col justify-between h-full transition-all duration-300 ease-out"
                 >
                   {/* Speech Bubble Card Box */}
-                  <div className="relative bg-[#F8F9FA] rounded-2xl p-7 sm:p-9 md:p-10 flex-1 flex flex-col justify-between shadow-[0_1px_3px_rgba(0,0,0,0.03)] border border-[#EEEEEE]/70">
+                  <div className="relative bg-[#F8F9FA] dark:bg-[#1E1E22] rounded-2xl p-5 xs:p-6 sm:p-8 md:p-9 flex-1 flex flex-col justify-between shadow-[0_1px_3px_rgba(0,0,0,0.03)] border border-[#EEEEEE]/70 dark:border-white/10">
                     {/* Downward Triangular Speech Tail pointing directly down towards author name */}
                     <div
                       aria-hidden="true"
-                      className="absolute -bottom-3 left-9 sm:left-11 w-0 h-0 border-l-[9px] border-l-transparent border-r-[9px] border-r-transparent border-t-[12px] border-t-[#F8F9FA]"
+                      className="absolute -bottom-3 left-7 sm:left-9 w-0 h-0 border-l-[9px] border-l-transparent border-r-[9px] border-r-transparent border-t-[12px] border-t-[#F8F9FA] dark:border-t-[#1E1E22]"
                     />
 
                     {/* Testimonial Quote in Italic matching reference */}
-                    <p className="font-body text-[15px] sm:text-[16px] md:text-[16.5px] text-[#333333] leading-[1.75] italic font-normal text-left">
+                    <p className="font-body text-sm xs:text-[15px] sm:text-[16px] md:text-[16.5px] text-[#333333] dark:text-[#E5E5E5] leading-[1.7] italic font-normal text-left">
                       {testi.quote}
                     </p>
                   </div>
 
                   {/* Author Information below the speech bubble */}
-                  <div className="mt-5 sm:mt-6 pl-7 sm:pl-9 text-left">
-                    <h4 className="font-heading font-bold text-base sm:text-lg text-[#111827] leading-tight tracking-[-0.01em]">
+                  <div className="mt-4 sm:mt-5 pl-5 sm:pl-7 text-left">
+                    <h4 className="font-heading font-bold text-base sm:text-lg text-[#111827] dark:text-white leading-tight tracking-[-0.01em]">
                       {testi.name}
                     </h4>
-                    <p className="font-body font-semibold text-sm sm:text-base text-[#A86200] mt-1 leading-snug">
+                    <p className="font-body font-semibold text-xs sm:text-sm md:text-base text-[#A86200] dark:text-[#F9B51B] mt-0.5 leading-snug">
                       {testi.role}
                     </p>
                   </div>

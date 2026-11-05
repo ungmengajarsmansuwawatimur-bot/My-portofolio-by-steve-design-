@@ -20,9 +20,11 @@ export const ToolList: React.FC = () => {
         return <OfficialAppIcon name="chrome" className="w-8 h-8" />;
       case 'Notion':
         return <OfficialAppIcon name="notion" className="w-8 h-8" />;
+      case 'Google Studio':
       case 'Website Platform':
+        return <OfficialAppIcon name="google studio" className="w-8 h-8" />;
       default:
-        return <OfficialAppIcon name="website" className="w-8 h-8" />;
+        return <OfficialAppIcon name="google studio" className="w-8 h-8" />;
     }
   };
 

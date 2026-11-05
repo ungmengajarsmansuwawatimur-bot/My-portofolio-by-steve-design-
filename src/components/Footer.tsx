@@ -15,11 +15,11 @@ export const Footer: React.FC<FooterProps> = () => {
   return (
     <footer className="relative bg-white dark:bg-[#121212] border-t border-[#171717]/10 dark:border-white/10 transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-3.5 sm:py-5 md:py-6">
-        {/* Horizontal row layout on ALL screen sizes (mobile, tablet, and PC) */}
-        <div className="flex flex-row items-center justify-between gap-2 sm:gap-4 md:gap-6">
+        {/* Responsive row layout across mobile, tablet, and PC */}
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 md:gap-6">
           
-          {/* Left: Social Media Circular Buttons (Facebook, LinkedIn, Instagram, YouTube) */}
-          <div className="flex items-center gap-1.5 sm:gap-2.5 md:gap-3.5 shrink-0">
+          {/* Social Media Circular Buttons (Facebook, LinkedIn, Instagram, YouTube) */}
+          <div className="flex items-center gap-2 sm:gap-2.5 md:gap-3.5 shrink-0">
             {/* Facebook */}
             <a
               href="https://facebook.com"
@@ -76,7 +76,7 @@ export const Footer: React.FC<FooterProps> = () => {
           </div>
 
           {/* Center: Exact Copyright text */}
-          <div className="font-body text-[10px] sm:text-xs md:text-sm text-[#4B5563] dark:text-[#9CA3AF] text-center sm:text-left flex-1 px-1 sm:px-3 md:px-4 leading-tight sm:leading-normal">
+          <div className="font-body text-[11px] sm:text-xs md:text-sm text-[#4B5563] dark:text-[#9CA3AF] text-center sm:text-left flex-1 px-1 sm:px-3 md:px-4 leading-relaxed sm:leading-normal">
             <span>
               &copy; 2026{' '}
               <a

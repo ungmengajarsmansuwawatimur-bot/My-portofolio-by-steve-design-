@@ -42,9 +42,9 @@ export const PhotoGuideModal: React.FC<PhotoGuideModalProps> = ({
           </ul>
         </div>
 
-        <div className="p-3 bg-[#F8F9FA] dark:bg-[#18181B] border border-[#E5E7EB] dark:border-[#27272A] rounded-xl text-xs text-[#111827] dark:text-white">
+        <div className="p-3 bg-[#F8F9FA] dark:bg-[#18181B] border border-[#E5E7EB] dark:border-[#27272A] rounded-xl text-xs text-[#111827] dark:text-white break-words">
           <span className="font-bold block mb-1 text-[#111827] dark:text-white">Cara Menautkan:</span>
-          Simpan foto di <code className="font-mono text-[11px] bg-white dark:bg-[#27272A] text-[#111827] dark:text-white px-1 py-0.5 rounded border border-[#E5E7EB] dark:border-[#27272A]">public/taufik-portrait.jpg</code> lalu gantikan pemanggilan komponen <code className="font-mono text-[11px] bg-white dark:bg-[#27272A] text-[#111827] dark:text-white px-1 py-0.5 rounded border border-[#E5E7EB] dark:border-[#27272A]">ImageBlock</code> dengan tag gambar pada file <code className="font-mono text-[11px] bg-white dark:bg-[#27272A] text-[#111827] dark:text-white px-1 py-0.5 rounded border border-[#E5E7EB] dark:border-[#27272A]">Hero.tsx</code>.
+          Simpan foto di <code className="font-mono text-[11px] bg-white dark:bg-[#27272A] text-[#111827] dark:text-white px-1 py-0.5 rounded border border-[#E5E7EB] dark:border-[#27272A] break-all">public/taufik-portrait.jpg</code> lalu gantikan pemanggilan komponen <code className="font-mono text-[11px] bg-white dark:bg-[#27272A] text-[#111827] dark:text-white px-1 py-0.5 rounded border border-[#E5E7EB] dark:border-[#27272A] break-all">ImageBlock</code> dengan tag gambar pada file <code className="font-mono text-[11px] bg-white dark:bg-[#27272A] text-[#111827] dark:text-white px-1 py-0.5 rounded border border-[#E5E7EB] dark:border-[#27272A] break-all">Hero.tsx</code>.
         </div>
       </div>
     </LightboxModal>

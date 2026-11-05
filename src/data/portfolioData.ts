@@ -634,10 +634,10 @@ export const toolsData: ToolItem[] = [
     percentage: '88%',
   },
   {
-    name: 'Website Platform',
-    role: '(operasional)',
+    name: 'Google Studio',
+    role: '(AI & operasional)',
     category: 'Systems',
-    iconName: 'web',
+    iconName: 'google studio',
     percentage: '92%',
   },
   {

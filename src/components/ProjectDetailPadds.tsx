@@ -92,7 +92,7 @@ export const ProjectDetailPadds: React.FC<ProjectDetailPaddsProps> = ({ onBack }
           </div>
 
           {/* Video Container */}
-          <div className="relative w-full aspect-video max-h-[640px] bg-black rounded-3xl overflow-hidden shadow-[6px_6px_0px_#171717] border-2 border-[#171717] dark:border-[#333333]">
+          <div className="relative w-full aspect-video max-h-[640px] bg-black rounded-2xl sm:rounded-3xl overflow-hidden shadow-[3px_3px_0px_#171717] sm:shadow-[6px_6px_0px_#171717] border-2 border-[#171717] dark:border-[#333333]">
             <iframe
               key={current.youtubeId}
               src={`https://www.youtube-nocookie.com/embed/${current.youtubeId}?rel=0&modestbranding=1&playsinline=1`}
@@ -105,9 +105,9 @@ export const ProjectDetailPadds: React.FC<ProjectDetailPaddsProps> = ({ onBack }
           </div>
 
           {/* Bar Informasi Modul */}
-          <div className="flex items-center justify-between text-xs text-[#666666] dark:text-[#A3A3A3] px-1 flex-wrap gap-3">
+          <div className="flex items-center justify-between text-xs text-[#666666] dark:text-[#A3A3A3] px-1 flex-wrap gap-2 sm:gap-3">
             <div className="flex items-center gap-2">
-              <span className="font-display font-semibold text-[#171717] dark:text-white text-sm">
+              <span className="font-display font-semibold text-[#171717] dark:text-white text-xs sm:text-sm">
                 Modul {current.number}: {current.name}
               </span>
               <span className="font-info text-[#666666] dark:text-[#A3A3A3] hidden sm:inline font-normal">• {current.tag}</span>
@@ -115,15 +115,15 @@ export const ProjectDetailPadds: React.FC<ProjectDetailPaddsProps> = ({ onBack }
           </div>
 
           {/* Module Selector Horizontal Tabs Strip */}
-          <div className="flex items-center gap-2.5 overflow-x-auto pb-2 pt-1 no-scrollbar">
+          <div className="flex items-center gap-2 sm:gap-2.5 overflow-x-auto pb-2 pt-1 -mx-4 px-4 sm:mx-0 sm:px-0 scroll-smooth">
             {padds6VideoModules.map((mod, idx) => (
               <button
                 key={mod.number}
                 type="button"
                 onClick={() => setActiveIndex(idx)}
-                className={`px-4 py-2.5 rounded-full border-2 text-left transition-all cursor-pointer shrink-0 flex items-center gap-2 ${
+                className={`px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-full border-2 text-left transition-all cursor-pointer shrink-0 flex items-center gap-1.5 sm:gap-2 ${
                   activeIndex === idx
-                    ? 'bg-[#31543A] text-white border-[#171717] shadow-[3px_3px_0px_#171717]'
+                    ? 'bg-[#31543A] text-white border-[#171717] shadow-[2px_2px_0px_#171717] sm:shadow-[3px_3px_0px_#171717]'
                     : 'bg-[#F5F5F5] dark:bg-[#1E1E1E] text-[#171717] dark:text-white border-[#171717]/15 dark:border-[#333333] hover:border-[#171717]'
                 }`}
               >
