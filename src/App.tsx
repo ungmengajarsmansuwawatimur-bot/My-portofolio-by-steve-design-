@@ -12,10 +12,11 @@ const PhotoGuideModal = lazy(() => import('./components/PhotoGuideModal').then(m
 const ProjectDetailJasaDigital = lazy(() => import('./components/ProjectDetailJasaDigital').then(m => ({ default: m.ProjectDetailJasaDigital })));
 const ProjectDetailPadds = lazy(() => import('./components/ProjectDetailPadds').then(m => ({ default: m.ProjectDetailPadds })));
 const ProjectDetailUsahaKeluarga = lazy(() => import('./components/ProjectDetailUsahaKeluarga').then(m => ({ default: m.ProjectDetailUsahaKeluarga })));
+const ProjectDetailRetailLearning = lazy(() => import('./components/ProjectDetailRetailLearning').then(m => ({ default: m.ProjectDetailRetailLearning })));
 const HireMePage = lazy(() => import('./components/HireMePage').then(m => ({ default: m.HireMePage })));
 import { Footer } from './components/Footer';
 
-type AppRoute = 'home' | 'hire-me' | 'jasa-digital' | 'padds-smansat' | 'usaha-keluarga';
+type AppRoute = 'home' | 'hire-me' | 'jasa-digital' | 'padds-smansat' | 'usaha-keluarga' | 'pembelajaran-retail';
 
 export default function App() {
   const [currentRoute, setCurrentRoute] = useState<AppRoute>(() => {
@@ -24,13 +25,20 @@ export default function App() {
     if (hash === '#/project/jasa-digital') return 'jasa-digital';
     if (hash === '#/project/padds-smansat') return 'padds-smansat';
     if (hash === '#/project/usaha-keluarga') return 'usaha-keluarga';
-    return 'home';
+    if (hash === '#home' || hash === '#about' || hash === '#work' || hash === '#contact') return 'home';
+    // Default directly to 'jasa-digital' so user immediately sees the temporary page with the gray button and no navigation/hire-me button
+    return 'jasa-digital';
   });
 
   const [photoModalTarget, setPhotoModalTarget] = useState<string | null>(null);
 
   // Synchronize routing with browser history and hash navigation
   useEffect(() => {
+    // If no hash is specified, route to #/project/jasa-digital to display the temporary page directly
+    if (!window.location.hash || window.location.hash === '' || window.location.hash === '#') {
+      window.location.hash = '#/project/jasa-digital';
+    }
+
     const handleHashChange = () => {
       const hash = window.location.hash;
       if (hash === '#/hire-me') {
@@ -44,6 +52,9 @@ export default function App() {
         window.scrollTo({ top: 0, behavior: 'instant' });
       } else if (hash === '#/project/usaha-keluarga') {
         setCurrentRoute('usaha-keluarga');
+        window.scrollTo({ top: 0, behavior: 'instant' });
+      } else if (hash === '#/project/pembelajaran-retail') {
+        setCurrentRoute('pembelajaran-retail');
         window.scrollTo({ top: 0, behavior: 'instant' });
       } else {
         setCurrentRoute('home');
@@ -60,7 +71,7 @@ export default function App() {
     window.scrollTo({ top: 0, behavior: 'instant' });
   };
 
-  const handleSelectProject = (id: 'jasa-digital' | 'padds-smansat' | 'usaha-keluarga') => {
+  const handleSelectProject = (id: 'jasa-digital' | 'padds-smansat' | 'usaha-keluarga' | 'pembelajaran-retail') => {
     setCurrentRoute(id);
     window.location.hash = `#/project/${id}`;
     window.scrollTo({ top: 0, behavior: 'instant' });
@@ -101,7 +112,8 @@ export default function App() {
     }, 40);
   };
 
-  const isDetailPage = currentRoute === 'jasa-digital' || currentRoute === 'padds-smansat' || currentRoute === 'usaha-keluarga';
+  const isDetailPage = currentRoute === 'jasa-digital' || currentRoute === 'padds-smansat' || currentRoute === 'usaha-keluarga' || currentRoute === 'pembelajaran-retail';
+  const isTemporaryPage = currentRoute === 'jasa-digital' || currentRoute === 'padds-smansat';
   const isHirePage = currentRoute === 'hire-me';
 
   return (
@@ -118,6 +130,7 @@ export default function App() {
       <Navbar
         onOpenCvModal={downloadCv}
         isDetailPage={isDetailPage}
+        isTemporaryPage={isTemporaryPage}
         isHirePage={isHirePage}
         onNavigateHire={handleNavigateHire}
         onNavigateHome={handleNavigateHomeFromNav}
@@ -137,6 +150,8 @@ export default function App() {
             <ProjectDetailPadds onBack={handleBackToWorkSection} />
           ) : currentRoute === 'usaha-keluarga' ? (
             <ProjectDetailUsahaKeluarga onBack={handleBackToWorkSection} />
+          ) : currentRoute === 'pembelajaran-retail' ? (
+            <ProjectDetailRetailLearning onBack={handleBackToWorkSection} />
           ) : (
             /* Home Page View */
             <>
@@ -148,13 +163,10 @@ export default function App() {
                 onOpenStoreModal={() => setPhotoModalTarget('Visual Operasional Retail')}
               />
 
-              {/* 03 PORTFOLIO PROJECTS (THREE FOCAL MOCKUPS AS VISUAL ENTRY POINTS) */}
+              {/* 03 PORTFOLIO PROJECTS (FOUR FOCAL MOCKUPS AS VISUAL ENTRY POINTS) */}
               <RealWork onSelectProject={handleSelectProject} />
 
-              {/* 04 RETAIL LEARNING */}
-              <RetailLearning />
-
-              {/* 05 SKILLS / CV / CONTACT */}
+              {/* 04 SKILLS / CV / CONTACT */}
               <SkillsContact onOpenCvModal={downloadCv} />
             </>
           )}

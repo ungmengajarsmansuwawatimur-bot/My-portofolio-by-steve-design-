@@ -1,9 +1,7 @@
 import React from 'react';
-import { portfolioImages } from '../assets/images';
-import { EditableImage } from './EditableImage';
 
 export interface RealWorkProps {
-  onSelectProject?: (projectId: 'jasa-digital' | 'padds-smansat' | 'usaha-keluarga') => void;
+  onSelectProject?: (projectId: 'jasa-digital' | 'padds-smansat' | 'usaha-keluarga' | 'pembelajaran-retail') => void;
 }
 
 export const RealWork: React.FC<RealWorkProps> = ({ onSelectProject }) => {
@@ -16,8 +14,10 @@ export const RealWork: React.FC<RealWorkProps> = ({ onSelectProject }) => {
       title: 'Jasa Digital & Publikasi',
       teaser: 'Layanan koordinasi naskah publikasi artikel tugas mahasiswa via WhatsApp, transparansi tarif, dan penanganan revisi cepat.',
       badge: '5 Studi Alur Nyata',
-      mockupSrc: '/assets/mockups/exoticcarpartsus.webp?v=clean2',
-      ctaText: 'Buka Detail & Galeri Chat',
+      mockupSrc: '/assets/mockups/mockup_01_jasa_digital.webp?v=user-colorized',
+      accentColor: 'text-[#D97706] dark:text-[#F9B51B]',
+      hoverColor: 'group-hover:text-[#D97706] dark:group-hover:text-[#F9B51B]',
+      ringColor: 'focus-visible:ring-[#F9B51B]',
     },
     {
       id: 'padds-smansat' as const,
@@ -27,8 +27,10 @@ export const RealWork: React.FC<RealWorkProps> = ({ onSelectProject }) => {
       title: 'Pusat Arsip Digital Sekolah',
       teaser: 'Platform arsip digital SMAN 1 Suwawa Timur dengan pemusatan pencatatan surat, retensi, QR code, dan rekaman demo 6 modul video asli.',
       badge: '6 Video Demo Sistem',
-      mockupSrc: '/assets/mockups/creategroupllc.webp?v=clean2',
-      ctaText: 'Buka Detail & 6 Modul Video',
+      mockupSrc: '/assets/mockups/mockup_02_padds_smansat.webp?v=user-colorized',
+      accentColor: 'text-[#0284C7] dark:text-[#38BDF8]',
+      hoverColor: 'group-hover:text-[#0284C7] dark:group-hover:text-[#38BDF8]',
+      ringColor: 'focus-visible:ring-[#0284C7]',
     },
     {
       id: 'usaha-keluarga' as const,
@@ -38,12 +40,27 @@ export const RealWork: React.FC<RealWorkProps> = ({ onSelectProject }) => {
       title: 'Pengelolaan Usaha Keluarga',
       teaser: 'Praktik nyata melayani pembeli toko, penataan rak metode FIFO, pengecekan stok fisik, hingga ketelitian transaksi kasir tunai.',
       badge: 'Praktik Operasional Nyata',
-      mockupSrc: '/assets/mockups/finalwebdesign.webp?v=clean2',
-      ctaText: 'Buka Detail Pengelolaan Usaha',
+      mockupSrc: '/assets/mockups/mockup_03_usaha_keluarga.webp?v=user-colorized',
+      accentColor: 'text-[#15803D] dark:text-[#34D399]',
+      hoverColor: 'group-hover:text-[#15803D] dark:group-hover:text-[#34D399]',
+      ringColor: 'focus-visible:ring-[#16A34A]',
+    },
+    {
+      id: 'pembelajaran-retail' as const,
+      number: '04',
+      period: '6 Modul Kesiapan Retail',
+      category: 'LEARNING & DEVELOPMENT',
+      title: 'Pembelajaran Retail & Customer Service',
+      teaser: 'Modul dan keterampilan operasional retail yang dipelajari secara mandiri untuk kesiapan kerja di lingkungan retail modern.',
+      badge: '6 Modul Kesiapan Retail',
+      mockupSrc: '/assets/mockups/mockup_04_pembelajaran_retail.webp?v=user-pink',
+      accentColor: 'text-[#E11D48] dark:text-[#FB7185]',
+      hoverColor: 'group-hover:text-[#E11D48] dark:group-hover:text-[#FB7185]',
+      ringColor: 'focus-visible:ring-[#E11D48]',
     },
   ];
 
-  const handleCardClick = (id: 'jasa-digital' | 'padds-smansat' | 'usaha-keluarga') => {
+  const handleCardClick = (id: 'jasa-digital' | 'padds-smansat' | 'usaha-keluarga' | 'pembelajaran-retail') => {
     if (onSelectProject) {
       onSelectProject(id);
     } else {
@@ -68,27 +85,13 @@ export const RealWork: React.FC<RealWorkProps> = ({ onSelectProject }) => {
         </div>
       </div>
 
-      {/* Full-Width Image Banner (Tersambung langsung dengan sisi kiri dan kanan section website) */}
-      <div className="w-full mb-16 sm:mb-24 relative">
-        <EditableImage
-          storageKey="work_retail_service_counter_v2"
-          defaultSrc={portfolioImages.retailServiceCounter}
-          darkSrc={portfolioImages.retailBannerDark}
-          alt="Pelayanan Kerja Nyata"
-          containerClassName="w-full h-64 sm:h-80 md:h-96 lg:h-[440px] relative overflow-hidden"
-          imgClassName="w-full h-full object-cover object-center"
-          buttonPosition="top-right"
-        />
-      </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* ========================================================================= */}
-        {/* ASYMMETRIC EDITORIAL GRID (2 + 1 Centered Composition)                     */}
-        {/* Row 1: Project 1 & Project 2 in two columns                               */}
-        {/* Row 2: Project 3 centered with identical column width & visual weight     */}
+        {/* SYMMETRIC 2x2 EDITORIAL GRID FOR 4 FEATURED PROJECTS                      */}
         {/* ========================================================================= */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 lg:gap-x-16 gap-y-12 lg:gap-y-16 items-start">
-          {projectEntries.slice(0, 2).map((entry) => (
+          {projectEntries.map((entry) => (
             <article
               key={entry.id}
               onClick={() => handleCardClick(entry.id)}
@@ -101,7 +104,7 @@ export const RealWork: React.FC<RealWorkProps> = ({ onSelectProject }) => {
               tabIndex={0}
               role="button"
               aria-label={`Buka detail dan dokumentasi ${entry.title}`}
-              className="group flex flex-col items-center text-center cursor-pointer select-none focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F9B51B] dark:ring-[#d1fe17] rounded-xs transition-all duration-200"
+              className={`group flex flex-col items-center text-center cursor-pointer select-none focus:outline-none focus-visible:ring-2 ${entry.ringColor} rounded-xs transition-all duration-200`}
             >
               {/* [ 1. LARGE RESPONSIVE DEVICE MOCKUP - Primary Visual Hero ] */}
               <div className="w-full aspect-[4/3] sm:aspect-[16/11] flex items-center justify-center p-0 sm:p-1 overflow-visible">
@@ -115,62 +118,18 @@ export const RealWork: React.FC<RealWorkProps> = ({ onSelectProject }) => {
               </div>
 
               {/* [ 2. PROJECT TITLE & 3. PROJECT CATEGORY / TYPE ] */}
-              <div className="mt-2.5 sm:mt-3.5 space-y-1 text-center w-full">
-                <h3 className="font-heading text-xl sm:text-2xl lg:text-[28px] font-bold text-[#171717] dark:text-white tracking-tight leading-snug group-hover:text-[#F9B51B] dark:text-[#d1fe17] transition-colors duration-200 text-center">
+              <div className="mt-2.5 sm:mt-3.5 space-y-1.5 text-center w-full">
+                <h3 className={`font-unbounded font-semibold text-lg sm:text-xl lg:text-2xl text-[#171717] dark:text-white tracking-tight leading-snug ${entry.hoverColor} transition-colors duration-200 text-center`}>
                   {entry.title}
                 </h3>
 
-                <p className="font-info text-xs sm:text-sm font-bold tracking-[0.08em] text-[#F9B51B] dark:text-[#d1fe17] uppercase text-center transition-colors">
+                <p className="font-unbounded font-semibold text-[11px] sm:text-xs tracking-[0.1em] text-[#737373] dark:text-[#9CA3AF] uppercase text-center transition-colors">
                   {entry.category}
                 </p>
               </div>
             </article>
           ))}
         </div>
-
-        {/* Row 2: Centered Asymmetric Placement for Project 3 */}
-        {projectEntries[2] && (
-          <div className="mt-12 lg:mt-16 flex justify-center">
-            <div className="w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(50%-2rem)]">
-              <article
-                key={projectEntries[2].id}
-                onClick={() => handleCardClick(projectEntries[2].id)}
-                onKeyDown={(e) => {
-                  if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    handleCardClick(projectEntries[2].id);
-                  }
-                }}
-                tabIndex={0}
-                role="button"
-                aria-label={`Buka detail dan dokumentasi ${projectEntries[2].title}`}
-                className="group flex flex-col items-center text-center cursor-pointer select-none focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F9B51B] dark:ring-[#d1fe17] rounded-xs transition-all duration-200"
-              >
-                {/* [ 1. LARGE RESPONSIVE DEVICE MOCKUP - Primary Visual Hero ] */}
-                <div className="w-full aspect-[4/3] sm:aspect-[16/11] flex items-center justify-center p-0 sm:p-1 overflow-visible">
-                  <img
-                    src={projectEntries[2].mockupSrc}
-                    alt={`Mockup visual ${projectEntries[2].title}`}
-                    className="w-full h-full object-contain scale-[1.06] sm:scale-[1.08] filter drop-shadow-[0_16px_32px_rgba(0,0,0,0.12)] dark:drop-shadow-[0_16px_32px_rgba(0,0,0,0.45)] transition-all duration-500 ease-out group-hover:scale-[1.12] group-hover:-translate-y-1.5 will-change-transform"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </div>
-
-                {/* [ 2. PROJECT TITLE & 3. PROJECT CATEGORY / TYPE ] */}
-                <div className="mt-2.5 sm:mt-3.5 space-y-1 text-center w-full">
-                  <h3 className="font-heading text-xl sm:text-2xl lg:text-[28px] font-bold text-[#171717] dark:text-white tracking-tight leading-snug group-hover:text-[#F9B51B] dark:text-[#d1fe17] transition-colors duration-200 text-center">
-                    {projectEntries[2].title}
-                  </h3>
-
-                  <p className="font-info text-xs sm:text-sm font-bold tracking-[0.08em] text-[#F9B51B] dark:text-[#d1fe17] uppercase text-center transition-colors">
-                    {projectEntries[2].category}
-                  </p>
-                </div>
-              </article>
-            </div>
-          </div>
-        )}
       </div>
     </section>
   );

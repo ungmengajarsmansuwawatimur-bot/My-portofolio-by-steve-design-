@@ -7,6 +7,7 @@ import { PhoneChatMockup } from './PhoneChatMockup';
 import { LightboxModal } from './LightboxModal';
 import { OptimizedPicture } from './OptimizedPicture';
 import { WorkflowEvidenceItem } from '../types';
+import { UnderDevelopmentView } from './UnderDevelopmentView';
 
 interface ProjectDetailJasaDigitalProps {
   onBack: () => void;
@@ -26,6 +27,13 @@ export const ProjectDetailJasaDigital: React.FC<ProjectDetailJasaDigitalProps> =
       activeScreenshot || item.screenshotUrl || '/assets/chat/chat_real_evidence_01.avif'
     );
   }, []);
+
+  // Status penutupan sementara untuk halaman proyek Jasa Digital
+  const isUnderDevelopment = true;
+
+  if (isUnderDevelopment) {
+    return <UnderDevelopmentView onBack={onBack} projectName="Jasa Digital & Publikasi" />;
+  }
 
   return (
     <article className="min-h-screen py-10 md:py-16 bg-[#FFFFFF] dark:bg-[#121212] transition-colors duration-200">

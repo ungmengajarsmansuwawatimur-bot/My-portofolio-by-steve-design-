@@ -13,10 +13,36 @@ const AnimatedCounter: React.FC<{
   target: number;
   suffix?: string;
   duration?: number;
-}> = ({ target, suffix = '', duration = 2200 }) => {
+}> = ({ target, suffix = '', duration = 3800 }) => {
   const [count, setCount] = React.useState(0);
+  const containerRef = React.useRef<HTMLSpanElement>(null);
+  const [hasStarted, setHasStarted] = React.useState(false);
 
   React.useEffect(() => {
+    // Only start counting when user scrolls to this section
+    const el = containerRef.current;
+    if (!el) return;
+
+    if (typeof IntersectionObserver !== 'undefined') {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          if (entries[0].isIntersecting && !hasStarted) {
+            setHasStarted(true);
+            observer.disconnect();
+          }
+        },
+        { threshold: 0.15 }
+      );
+      observer.observe(el);
+      return () => observer.disconnect();
+    } else {
+      setHasStarted(true);
+    }
+  }, [hasStarted]);
+
+  React.useEffect(() => {
+    if (!hasStarted) return;
+
     let startTimestamp: number | null = null;
     let animationFrameId: number;
 
@@ -24,9 +50,10 @@ const AnimatedCounter: React.FC<{
       if (!startTimestamp) startTimestamp = timestamp;
       const elapsed = timestamp - startTimestamp;
       const progress = Math.min(elapsed / duration, 1);
-      // Ease out cubic for a silky smooth finish
-      const easeOut = 1 - Math.pow(1 - progress, 3);
-      setCount(Math.round(easeOut * target));
+      
+      // Gentle quadratic ease-out so counting numbers remain clearly visible and unhurried
+      const ease = 1 - Math.pow(1 - progress, 2);
+      setCount(Math.round(ease * target));
 
       if (progress < 1) {
         animationFrameId = requestAnimationFrame(step);
@@ -37,10 +64,10 @@ const AnimatedCounter: React.FC<{
 
     animationFrameId = requestAnimationFrame(step);
     return () => cancelAnimationFrame(animationFrameId);
-  }, [target, duration]);
+  }, [hasStarted, target, duration]);
 
   return (
-    <span className="tabular-nums font-bold">
+    <span ref={containerRef} className="tabular-nums font-bold">
       {count}
       {suffix}
     </span>
@@ -145,7 +172,7 @@ export const AboutExperience: React.FC<AboutExperienceProps> = () => {
                   Pelanggan &amp; Transaksi
                 </span>
                 <span className="font-info text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold text-[#171717] dark:text-white tracking-tight mt-1 sm:mt-1.5 block text-center tabular-nums">
-                  <AnimatedCounter target={250} suffix="+" duration={2400} />
+                  <AnimatedCounter target={250} suffix="+" duration={4200} />
                 </span>
               </div>
 
@@ -154,7 +181,7 @@ export const AboutExperience: React.FC<AboutExperienceProps> = () => {
                   Modul Web Administrasi
                 </span>
                 <span className="font-info text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold text-[#171717] dark:text-white tracking-tight mt-1 sm:mt-1.5 block text-center tabular-nums">
-                  <AnimatedCounter target={24} duration={2000} />
+                  <AnimatedCounter target={24} duration={3600} />
                 </span>
               </div>
 
@@ -163,7 +190,7 @@ export const AboutExperience: React.FC<AboutExperienceProps> = () => {
                   Kesiapan Kerja
                 </span>
                 <span className="font-info text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold text-[#171717] dark:text-white tracking-tight mt-1 sm:mt-1.5 block text-center tabular-nums">
-                  <AnimatedCounter target={100} suffix="%" duration={2200} />
+                  <AnimatedCounter target={100} suffix="%" duration={3800} />
                 </span>
               </div>
             </div>
@@ -239,7 +266,7 @@ export const AboutExperience: React.FC<AboutExperienceProps> = () => {
                       </div>
                       <div className="space-y-0.5 min-w-0">
                         <h3 className="font-heading text-base sm:text-lg md:text-xl font-bold text-[#171717] dark:text-white leading-snug">
-                          Pendidikan Menengah Atas (IPS)
+                          Ilmu Pengetahuan Sosial
                         </h3>
                         <p className="font-body text-xs sm:text-sm text-[#71717A] dark:text-[#A1A1AA] font-normal">
                           SMA Negeri 1 Kabila · 2020 – 2022

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { padds6VideoModules } from '../data/padds11Data';
+import { UnderDevelopmentView } from './UnderDevelopmentView';
 
 const FOCUS_CONTRIBUTIONS = [
   {
@@ -50,6 +51,13 @@ export const ProjectDetailPadds: React.FC<ProjectDetailPaddsProps> = ({ onBack }
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
   }, [handlePrev, handleNext]);
+
+  // Status penutupan sementara untuk halaman proyek PADDS SMANSAT
+  const isUnderDevelopment = true;
+
+  if (isUnderDevelopment) {
+    return <UnderDevelopmentView onBack={onBack} projectName="Pusat Arsip Digital Sekolah" />;
+  }
 
   return (
     <article className="min-h-screen py-10 md:py-16 bg-[#FFFFFF] dark:bg-[#121212] transition-colors duration-200">
