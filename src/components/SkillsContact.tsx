@@ -185,67 +185,78 @@ export const SkillsContact: React.FC<SkillsContactProps> = ({ onOpenCvModal }) =
       {/* ========================================================================= */}
       <section
         id="contact"
-        className="py-20 md:py-28 bg-white dark:bg-[#121212] text-[#171717] dark:text-white transition-colors duration-200 border-t border-[#171717]/10 dark:border-white/10"
+        className="py-16 sm:py-20 md:py-24 bg-white dark:bg-[#121212] text-[#171717] dark:text-white transition-colors duration-200 border-t border-[#171717]/10 dark:border-white/10"
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-          {/* Top Banner Headline */}
-          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
-            <div className="space-y-3 max-w-2xl">
-              <div className="font-body inline-flex items-center gap-2 text-xs font-semibold tracking-[0.08em] uppercase text-[#DD9B08] dark:text-[#F9B51B]">
-                <span aria-hidden="true">✦</span>
-                <span>LET'S WORK TOGETHER</span>
-                <span aria-hidden="true">✦</span>
-              </div>
-              <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-[-0.02em] text-[#171717] dark:text-white leading-[1.12]">
-                Tertarik Bekerja Sama atau Rekrutmen?
-              </h2>
-            </div>
-
-            {/* Button for direct WhatsApp */}
-            <div className="shrink-0">
-              <a
-                href="https://api.whatsapp.com/send?phone=6285656381485"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-body group inline-flex items-center gap-3 pl-6 pr-2 py-2.5 rounded-full text-xs sm:text-sm font-semibold tracking-wider uppercase bg-[#F9B51B] dark:bg-[#d1fe17] text-[#171717] hover:bg-[#E5A417] transition-all duration-150 shadow-md active:scale-95 cursor-pointer border border-[#171717]/10"
-              >
-                <span>HUBUNGI VIA WHATSAPP</span>
-                <span className="w-9 h-9 rounded-full bg-[#171717] text-white flex items-center justify-center font-bold text-sm shrink-0 transition-transform group-hover:translate-x-1">
-                  &rarr;
-                </span>
-              </a>
-            </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 sm:space-y-12">
+          {/* Top Stacked Big Editorial Headline matching screenshot */}
+          <div>
+            <h2 className="font-heading font-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-[#171717] dark:text-white leading-[1.08] tracking-[-0.03em]">
+              Let's<br />Work<br />Together
+            </h2>
+            <p className="font-heading font-semibold text-xs sm:text-sm tracking-wide text-[#4B5563] dark:text-[#9CA3AF] mt-4 sm:mt-5">
+              Based In Gorontalo, Indonesia &middot; Available Remote
+            </p>
           </div>
 
-          {/* 4 Contact Channels (Clean Open Editorial Columns) */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {contactData.map((contact) => (
-              <a
-                key={contact.platform}
-                href={contact.actionUrl || '#'}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="space-y-2 group cursor-pointer block"
-              >
-                <div className="flex items-center justify-between">
-                  <span className="font-body text-xs font-semibold tracking-[0.08em] text-[#A2680A] dark:text-[#F9B51B] uppercase">
-                    {contact.label}
-                  </span>
-                  <span className="text-[#171717]/40 group-hover:text-[#171717] dark:text-white/60 dark:group-hover:text-[#d1fe17] text-sm font-bold transition-colors">
-                    &rarr;
-                  </span>
-                </div>
+          {/* Two Prominent Cards Grid matching reference */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+            {/* Card 1: Email / Ready To Start A Project */}
+            <div className="bg-[#F8F9FA] dark:bg-[#1A1A1A] border border-[#E5E7EB] dark:border-white/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 flex flex-col justify-between shadow-xs hover:border-[#D1D5DB] dark:hover:border-white/20 transition-all duration-200 group">
+              <div>
+                <h3 className="font-heading font-bold text-xl sm:text-2xl md:text-3xl text-[#171717] dark:text-white tracking-tight leading-snug">
+                  Ready To Start A<br />Project?
+                </h3>
+              </div>
 
-                <div>
-                  <h4 className="font-heading text-base sm:text-lg font-semibold text-[#171717] dark:text-white group-hover:text-[#A2680A] dark:group-hover:text-[#F9B51B] transition-colors break-words">
-                    {contact.value}
-                  </h4>
-                  <p className="font-info text-xs text-[#666666] dark:text-[#A3A3A3] mt-1 font-normal">
-                    {contact.placeholderText}
-                  </p>
-                </div>
-              </a>
-            ))}
+              <div className="w-full border-t border-[#E5E7EB] dark:border-white/10 my-8 sm:my-10" />
+
+              <div className="flex items-center justify-between gap-4">
+                <a
+                  href="mailto:taufikmalii281003@gmail.com"
+                  className="font-heading font-semibold text-xs sm:text-sm md:text-base text-[#171717] dark:text-white hover:text-[#A86200] dark:hover:text-[#F9B51B] transition-colors break-all"
+                >
+                  taufikmalii281003@gmail.com
+                </a>
+                <a
+                  href="mailto:taufikmalii281003@gmail.com"
+                  aria-label="Kirim Email ke taufikmalii281003@gmail.com"
+                  className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full bg-[#F9B51B] text-[#171717] flex items-center justify-center font-bold text-base sm:text-lg hover:scale-105 active:scale-95 transition-all shadow-xs shrink-0 cursor-pointer"
+                >
+                  <span className="transition-transform group-hover:translate-x-0.5">&rarr;</span>
+                </a>
+              </div>
+            </div>
+
+            {/* Card 2: WhatsApp / Prefer To Talk It Through */}
+            <div className="bg-[#F8F9FA] dark:bg-[#1A1A1A] border border-[#E5E7EB] dark:border-white/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 flex flex-col justify-between shadow-xs hover:border-[#D1D5DB] dark:hover:border-white/20 transition-all duration-200 group">
+              <div>
+                <h3 className="font-heading font-bold text-xl sm:text-2xl md:text-3xl text-[#171717] dark:text-white tracking-tight leading-snug">
+                  Prefer To Talk It Through?
+                </h3>
+              </div>
+
+              <div className="w-full border-t border-[#E5E7EB] dark:border-white/10 my-8 sm:my-10" />
+
+              <div className="flex items-center justify-between gap-4">
+                <a
+                  href="https://api.whatsapp.com/send?phone=6285656381485"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-heading font-semibold text-xs sm:text-sm md:text-base text-[#171717] dark:text-white hover:text-[#A86200] dark:hover:text-[#F9B51B] transition-colors"
+                >
+                  +62 856 5638 1485
+                </a>
+                <a
+                  href="https://api.whatsapp.com/send?phone=6285656381485"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Hubungi WhatsApp +62 856 5638 1485"
+                  className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full bg-[#F9B51B] text-[#171717] flex items-center justify-center font-bold text-base sm:text-lg hover:scale-105 active:scale-95 transition-all shadow-xs shrink-0 cursor-pointer"
+                >
+                  <span className="transition-transform group-hover:translate-x-0.5">&rarr;</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>

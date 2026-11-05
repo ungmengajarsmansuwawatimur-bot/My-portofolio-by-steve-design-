@@ -234,13 +234,13 @@ export const AboutExperience: React.FC<AboutExperienceProps> = () => {
                       <div className="shrink-0 flex items-center justify-center">
                         <img
                           src="/assets/icons/education_degree_cap.png"
-                          alt="Ikon S1 Bimbingan & Konseling"
+                          alt="Ikon Bimbingan & Konseling"
                           className="w-8 h-8 sm:w-9 sm:h-9 object-contain select-none dark:drop-shadow-[0_0_3px_rgba(245,158,11,0.4)]"
                         />
                       </div>
                       <div className="space-y-0.5 min-w-0">
                         <h3 className="font-heading text-base sm:text-lg md:text-xl font-bold text-[#171717] dark:text-white leading-snug">
-                          S1 Bimbingan &amp; Konseling
+                          Bimbingan &amp; Konseling
                         </h3>
                         <p className="font-body text-xs sm:text-sm text-[#71717A] dark:text-[#A1A1AA] font-normal">
                           Universitas Negeri Gorontalo · 2022 – Sekarang

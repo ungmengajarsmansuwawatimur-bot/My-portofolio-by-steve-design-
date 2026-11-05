@@ -114,6 +114,10 @@ export const Navbar: React.FC<NavbarProps> = ({
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  if (isDetailPage || isTemporaryPage || isHirePage) {
+    return null;
+  }
+
   return (
     <header className="fixed top-0 left-0 right-0 z-40 transform-gpu bg-white dark:bg-[#121212] border-b border-[#171717]/15 dark:border-white/10 transition-all duration-200 shadow-xs">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-white dark:bg-[#121212]">

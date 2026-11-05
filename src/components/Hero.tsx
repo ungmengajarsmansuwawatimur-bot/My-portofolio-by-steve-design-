@@ -59,7 +59,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
     setIsCvSwapped(true);
     setIsCvDownloading(true);
 
-    // Animasi smooth spring swap (~420ms), lalu unduh / buka CV modal resmi
+    // Animasi swap cepat dan responsif (~180ms), lalu unduh / buka CV modal resmi
     setTimeout(() => {
       if (onOpenCvModal) {
         onOpenCvModal();
@@ -67,12 +67,12 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
         downloadCv();
       }
 
-      // Pertahankan status download sebentar lalu kembalikan posisi tombol secara halus
+      // Kembalikan posisi tombol secara halus setelah proses selesai
       setTimeout(() => {
         setIsCvSwapped(false);
         setIsCvDownloading(false);
-      }, 2500);
-    }, 420);
+      }, 2000);
+    }, 180);
   };
 
 
@@ -190,11 +190,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
               <motion.button
                 type="button"
                 layout
-                transition={{ type: 'spring', stiffness: 320, damping: 26 }}
+                transition={{ type: 'spring', stiffness: 450, damping: 28 }}
                 onClick={handleCvSwap}
-                title="Geser ke kanan atau klik untuk swap & unduh CV resmi"
-                aria-label="Unduh CV Resmi PDF via Swap Manual ke Kanan"
-                className={`font-body group inline-flex items-center gap-1.5 xs:gap-2 sm:gap-3 py-1 xs:py-1.5 sm:py-2.5 rounded-full text-[9px] xs:text-[10px] sm:text-sm font-semibold tracking-wider uppercase select-none cursor-pointer transition-colors duration-300 shadow-sm active:scale-95 ${
+                title="Klik untuk swap & unduh CV resmi"
+                aria-label="Unduh CV Resmi PDF"
+                className={`font-body group inline-flex items-center gap-1.5 xs:gap-2 sm:gap-3 py-1 xs:py-1.5 sm:py-2.5 rounded-full text-[9px] xs:text-[10px] sm:text-sm font-semibold tracking-wider uppercase select-none cursor-pointer transition-colors duration-200 shadow-sm active:scale-95 overflow-hidden relative ${
                   isCvSwapped
                     ? 'flex-row bg-[#2B4734] dark:bg-[#31543A] text-white border-2 border-[#2B4734] dark:border-[#31543A] pr-1 xs:pr-1.5 sm:pr-2.5 pl-3 xs:pl-4 sm:pl-6'
                     : 'flex-row-reverse bg-white dark:bg-[#1E1E1E] text-[#171717] dark:text-white border-2 border-[#171717] dark:border-white hover:border-[#F9B51B] dark:hover:border-[#d1fe17] pl-1 xs:pl-1.5 sm:pl-2.5 pr-3 xs:pr-4 sm:pr-6'
@@ -202,23 +202,15 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
               >
                 <motion.span
                   layout
-                  transition={{ type: 'spring', stiffness: 320, damping: 26 }}
+                  transition={{ type: 'spring', stiffness: 450, damping: 28 }}
                   className="font-bold tracking-wider"
                 >
                   {isCvDownloading ? 'MENGUNDUH CV...' : 'UNDUH CV RESMI'}
                 </motion.span>
                 <motion.span
                   layout
-                  transition={{ type: 'spring', stiffness: 320, damping: 26 }}
-                  drag={!isCvSwapped ? 'x' : false}
-                  dragConstraints={{ left: 0, right: 100 }}
-                  dragElastic={{ top: 0, bottom: 0, left: 0, right: 0.2 }}
-                  onDragEnd={(_, info) => {
-                    if (info.offset.x > 25 || info.velocity.x > 100) {
-                      handleCvSwap();
-                    }
-                  }}
-                  className={`w-6 h-6 xs:w-7 xs:h-7 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-bold text-[10px] xs:text-xs sm:text-sm shrink-0 transition-colors duration-300 shadow-sm ${
+                  transition={{ type: 'spring', stiffness: 450, damping: 28 }}
+                  className={`w-6 h-6 xs:w-7 xs:h-7 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-bold text-[10px] xs:text-xs sm:text-sm shrink-0 transition-colors duration-200 shadow-sm ${
                     isCvSwapped
                       ? 'bg-[#F9B51B] dark:bg-[#d1fe17] text-[#171717]'
                       : 'bg-[#171717] dark:bg-white text-white dark:text-[#171717] group-hover:bg-[#F9B51B] dark:group-hover:bg-[#d1fe17] group-hover:text-[#171717]'
@@ -227,9 +219,9 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
                   <motion.span
                     animate={{
                       rotate: isCvDownloading ? [0, 360] : 0,
-                      scale: isCvDownloading ? [1, 1.2, 1] : 1,
+                      scale: isCvDownloading ? [1, 1.15, 1] : 1,
                     }}
-                    transition={{ duration: 0.35 }}
+                    transition={{ duration: 0.25 }}
                     className="flex items-center justify-center"
                   >
                     {isCvDownloading ? (
@@ -268,8 +260,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
 
           {/* AREA KANAN — MOCKUP BACKGROUND (Col 8-12 on mobile, Col 7-12 on desktop) */}
           <div className="col-span-5 lg:col-span-6 flex justify-end items-center relative select-none pt-0 overflow-visible">
-            {/* Visual Container: Mockup Background Versi 2 Circular Orbit */}
-            <div className="relative w-full max-w-[200px] xs:max-w-[240px] sm:max-w-[380px] md:max-w-[480px] lg:max-w-[580px] xl:max-w-[650px] 2xl:max-w-[700px] h-[200px] xs:h-[240px] sm:h-[380px] md:h-[480px] lg:h-[600px] xl:h-[660px] flex items-center justify-end transition-all duration-300 overflow-visible translate-x-0 sm:translate-x-2 md:translate-x-4 lg:translate-x-6 xl:translate-x-8">
+            {/* Visual Container: Mockup Background Versi 2 Circular Orbit with Mockup Badges */}
+            <div className="relative w-full max-w-[220px] xs:max-w-[260px] sm:max-w-[420px] md:max-w-[520px] lg:max-w-[620px] xl:max-w-[680px] 2xl:max-w-[720px] aspect-[680/600] flex items-center justify-end transition-all duration-300 overflow-visible translate-x-0 sm:translate-x-1 md:translate-x-2 lg:translate-x-3">
               
               {/* Circular Orbit Composition (Versi 2) dengan Foto Resmi Permanen Taufik Hidayat Malii */}
               <CircularOrbitBackdrop photoSrc="/assets/taufik_official_portrait.png" />

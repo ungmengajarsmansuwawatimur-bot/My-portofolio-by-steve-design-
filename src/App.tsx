@@ -116,6 +116,7 @@ export default function App() {
   const isDetailPage = currentRoute === 'jasa-digital' || currentRoute === 'padds-smansat' || currentRoute === 'usaha-keluarga' || currentRoute === 'pembelajaran-retail';
   const isTemporaryPage = currentRoute === 'jasa-digital' || currentRoute === 'padds-smansat' || currentRoute === 'usaha-keluarga';
   const isHirePage = currentRoute === 'hire-me';
+  const showNavbar = currentRoute === 'home';
 
   return (
     <div className="min-h-screen bg-white text-[#171717] flex flex-col selection:bg-[#F9B51B] selection:text-[#171717] relative">
@@ -127,18 +128,20 @@ export default function App() {
         Lewati ke Konten Utama
       </a>
 
-      {/* Persistent Responsive Navbar */}
-      <Navbar
-        onOpenCvModal={downloadCv}
-        isDetailPage={isDetailPage}
-        isTemporaryPage={isTemporaryPage}
-        isHirePage={isHirePage}
-        onNavigateHire={handleNavigateHire}
-        onNavigateHome={handleNavigateHomeFromNav}
-      />
+      {/* Persistent Responsive Navbar - only shown on home */}
+      {showNavbar && (
+        <Navbar
+          onOpenCvModal={downloadCv}
+          isDetailPage={isDetailPage}
+          isTemporaryPage={isTemporaryPage}
+          isHirePage={isHirePage}
+          onNavigateHire={handleNavigateHire}
+          onNavigateHome={handleNavigateHomeFromNav}
+        />
+      )}
 
       {/* Main Content Area */}
-      <main className="flex-1 w-full overflow-x-hidden pt-20">
+      <main className={`flex-1 w-full overflow-x-hidden ${showNavbar ? 'pt-20' : 'pt-0'}`}>
         <Suspense fallback={null}>
           {currentRoute === 'hire-me' ? (
             <HireMePage

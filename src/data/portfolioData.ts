@@ -655,10 +655,10 @@ export const toolsData: ToolItem[] = [
     percentage: '85%',
   },
   {
-    name: 'Google AI Studio',
+    name: 'Antigravity',
     role: '(AI & pengembangan)',
     category: 'Development',
-    iconName: 'aistudio',
+    iconName: 'antigravity',
     percentage: '88%',
   },
   {

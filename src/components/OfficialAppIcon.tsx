@@ -356,25 +356,17 @@ export const OfficialAppIcon: React.FC<OfficialAppIconProps> = ({ name, classNam
         </svg>
       );
 
-    // 12. OFFICIAL GOOGLE AI STUDIO
+    // 12. OFFICIAL ANTIGRAVITY (Replacing previous Google AI Studio icon)
+    case 'antigravity':
     case 'aistudio':
     case 'google ai studio':
     case 'ai studio':
       return (
-        <svg className={className} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="2" y="2" width="44" height="44" rx="10" fill="#0D111A" />
-          <defs>
-            <linearGradient id="aiStudioGlowOfficial" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stopColor="#60A5FA" />
-              <stop offset="45%" stopColor="#3B82F6" />
-              <stop offset="100%" stopColor="#818CF8" />
-            </linearGradient>
-          </defs>
-          <path
-            d="M24 7C24 16.389 16.389 24 7 24C16.389 24 24 31.611 24 41C24 31.611 31.611 24 41 24C31.611 24 24 16.389 24 7Z"
-            fill="url(#aiStudioGlowOfficial)"
-          />
-        </svg>
+        <img
+          src="/assets/icons/antigravity_clean.png"
+          alt="Antigravity"
+          className={`${className} object-contain select-none`}
+        />
       );
 
     // 11. OFFICIAL LOVABLE (AI App Builder)
