@@ -5,8 +5,8 @@ import { toolsData } from '../data/portfolioData';
 export const InteractiveToolIndex: React.FC = () => {
   return (
     <div className="w-full max-w-6xl mx-auto">
-      {/* 2x6 Grid Formasi (2 baris x 6 kolom = 12 aplikasi) persis seperti foto referensi */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 xs:gap-4 sm:gap-5 md:gap-6 items-stretch">
+      {/* Grid Formasi (4 baris x 4 kolom = 16 aplikasi seimbang) */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-3.5 xs:gap-4 sm:gap-5 md:gap-6 items-stretch">
         {toolsData.map((tool) => (
           <div
             key={tool.name}

@@ -31,19 +31,16 @@ export const SkillsContact: React.FC<SkillsContactProps> = ({ onOpenCvModal }) =
     return [first, second];
   }, [currentTestiPage]);
 
-  // Generate running text items automatically matching section content
+  // Marquee running text items
   const skillsTickerItems = useMemo(() => {
-    const tools = toolsData.map((tool) => tool.name.toUpperCase());
-    const extra = [
-      'PRAMUNIAGA',
-      'OPERASIONAL TOKO',
-      'KASIR & SISTEM POS',
-      'PENATAAN DISPLAY PRODUK',
-      'CUSTOMER SERVICE',
-      'MANAJEMEN STOK',
-      'ADMINISTRASI DIGITAL',
+    return [
+      'Web Creator',
+      'UI/UX Design',
+      'Graphic Design',
+      'Video Editing',
+      'Digital Admin',
+      'Web Development',
     ];
-    return [...tools, ...extra];
   }, []);
 
   return (

@@ -2,72 +2,95 @@ import React from 'react';
 
 interface FooterProps {
   onOpenCvModal?: () => void;
+  onNavigateHome?: (sectionId?: string) => void;
 }
 
-export const Footer: React.FC<FooterProps> = () => {
+interface FooterNavItem {
+  id: string;
+  label: string;
+  href: string;
+  targetId: string;
+  hasDropdown?: boolean;
+}
+
+const FOOTER_NAV_ITEMS: FooterNavItem[] = [
+  { id: 'home', label: 'HOME', href: '#home', targetId: 'home' },
+  { id: 'about', label: 'ABOUT', href: '#about', targetId: 'about' },
+  { id: 'services', label: 'SERVICES', href: '#skills', targetId: 'skills', hasDropdown: true },
+  { id: 'portfolio', label: 'PORTFOLIO', href: '#work', targetId: 'work' },
+  { id: 'testimonials', label: 'TESTIMONI', href: '#testimonials', targetId: 'testimonials' },
+  { id: 'contact', label: 'CONTACT', href: '#contact', targetId: 'contact' },
+];
+
+export const Footer: React.FC<FooterProps> = ({ onNavigateHome }) => {
+  const handleNavClick = (e: React.MouseEvent, item: typeof FOOTER_NAV_ITEMS[number]) => {
+    e.preventDefault();
+
+    if (onNavigateHome) {
+      onNavigateHome(item.targetId);
+    } else {
+      if (item.targetId === 'home') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        window.location.hash = '#home';
+      } else {
+        const el = document.getElementById(item.targetId);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' });
+        } else {
+          window.location.hash = `#${item.targetId}`;
+        }
+      }
+    }
+  };
+
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
+    if (onNavigateHome) {
+      onNavigateHome('home');
+    } else {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+      window.location.hash = '#home';
+    }
   };
 
   return (
     <footer className="relative bg-white dark:bg-[#121212] border-t border-[#171717]/10 dark:border-white/10 transition-colors duration-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 md:py-12">
-        {/* Responsive container matching CSS selector 2 */}
-        <div className="space-y-6 sm:space-y-8">
-          {/* Top Horizontal Navigation Links Row */}
-          <nav aria-label="Footer Navigasi" className="flex flex-wrap items-center gap-x-6 sm:gap-x-8 md:gap-x-10 gap-y-3">
-            <a
-              href="#home"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToTop();
-              }}
-              className="font-heading font-bold text-xs sm:text-sm tracking-wider uppercase text-[#DD9B08] dark:text-[#F9B51B] transition-colors"
-            >
-              HOME
-            </a>
-            <a
-              href="#about"
-              className="font-heading font-bold text-xs sm:text-sm tracking-wider uppercase text-[#171717] dark:text-white hover:text-[#DD9B08] dark:hover:text-[#F9B51B] transition-colors"
-            >
-              ABOUT
-            </a>
-            <a
-              href="#skills"
-              className="font-heading font-bold text-xs sm:text-sm tracking-wider uppercase text-[#171717] dark:text-white hover:text-[#DD9B08] dark:hover:text-[#F9B51B] inline-flex items-center gap-1.5 transition-colors"
-            >
-              SERVICES <span className="text-[10px] leading-none" aria-hidden="true">&#9662;</span>
-            </a>
-            <a
-              href="#portfolio"
-              className="font-heading font-bold text-xs sm:text-sm tracking-wider uppercase text-[#171717] dark:text-white hover:text-[#DD9B08] dark:hover:text-[#F9B51B] transition-colors"
-            >
-              PORTFOLIO
-            </a>
-            <a
-              href="#testimonials"
-              className="font-heading font-bold text-xs sm:text-sm tracking-wider uppercase text-[#171717] dark:text-white hover:text-[#DD9B08] dark:hover:text-[#F9B51B] transition-colors"
-            >
-              BLOG
-            </a>
-            <a
-              href="#contact"
-              className="font-heading font-bold text-xs sm:text-sm tracking-wider uppercase text-[#171717] dark:text-white hover:text-[#DD9B08] dark:hover:text-[#F9B51B] transition-colors"
-            >
-              CONTACT
-            </a>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 md:py-12">
+        {/* Responsive container matching CSS selector 1 */}
+        <div className="space-y-5 sm:space-y-8">
+          {/* Top Horizontal Navigation Links Row - 1 Horizontal row across mobile, tablet, and desktop */}
+          <nav
+            aria-label="Footer Navigasi"
+            className="flex flex-nowrap items-center justify-between sm:justify-start gap-x-2 xs:gap-x-3.5 sm:gap-x-8 md:gap-x-10 overflow-x-auto scrollbar-none py-1 text-center sm:text-left"
+          >
+            {FOOTER_NAV_ITEMS.map((item) => (
+              <a
+                key={item.id}
+                href={item.href}
+                onClick={(e) => handleNavClick(e, item)}
+                className={`font-heading font-bold text-[10px] xs:text-[11px] sm:text-sm tracking-wide sm:tracking-wider uppercase transition-colors flex items-center justify-center sm:justify-start py-1 whitespace-nowrap shrink-0 cursor-pointer select-none ${
+                  item.id === 'home'
+                    ? 'text-[#DD9B08] dark:text-[#F9B51B]'
+                    : 'text-[#171717] dark:text-white hover:text-[#DD9B08] dark:hover:text-[#F9B51B]'
+                } ${item.hasDropdown ? 'gap-1' : ''}`}
+              >
+                <span>{item.label}</span>
+                {item.hasDropdown && (
+                  <span className="text-[9px] sm:text-[10px] leading-none" aria-hidden="true">&#9662;</span>
+                )}
+              </a>
+            ))}
           </nav>
 
-          {/* Divider line matching screenshot */}
+          {/* Divider line matching reference */}
           <div className="w-full border-t border-[#171717]/10 dark:border-white/10" />
 
-          {/* Bottom Row: Social Icons on Left, Copyright on Right */}
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+          {/* Bottom Row: Social Icons, Copyright & Back to Top */}
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-5 sm:gap-4">
             {/* Social Media Circular Buttons (Facebook, LinkedIn, Instagram, YouTube) */}
-            <div className="flex items-center gap-2 sm:gap-2.5 md:gap-3 shrink-0">
+            <div className="flex items-center justify-center gap-2.5 sm:gap-3 shrink-0">
               {/* Facebook */}
               <a
                 href="https://facebook.com"
@@ -123,9 +146,9 @@ export const Footer: React.FC<FooterProps> = () => {
               </a>
             </div>
 
-            {/* Copyright & Privacy Policy matching reference */}
-            <div className="flex items-center gap-4">
-              <span className="font-heading text-xs sm:text-sm text-[#4B5563] dark:text-[#9CA3AF] text-center sm:text-right">
+            {/* Copyright & Privacy Policy + Back to top */}
+            <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 text-center sm:text-right w-full sm:w-auto">
+              <span className="font-heading text-xs sm:text-sm text-[#4B5563] dark:text-[#9CA3AF] text-center sm:text-right leading-relaxed max-w-sm sm:max-w-none">
                 &copy; 2026 Final Web Design Inc. All rights reserved &middot;{' '}
                 <a
                   href="#home"
@@ -145,7 +168,7 @@ export const Footer: React.FC<FooterProps> = () => {
                 onClick={scrollToTop}
                 title="Kembali ke atas"
                 aria-label="Scroll to top"
-                className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#171717] dark:bg-white text-white dark:text-[#171717] hover:bg-[#333333] dark:hover:bg-[#E5E5E5] flex items-center justify-center transition-all hover:scale-105 active:scale-95 shadow-2xs shrink-0 cursor-pointer"
+                className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#171717] dark:bg-white text-white dark:text-[#171717] hover:bg-[#333333] dark:hover:bg-[#E5E5E5] flex items-center justify-center transition-all hover:scale-105 active:scale-95 shadow-sm shrink-0 cursor-pointer"
               >
                 <svg
                   className="w-3.5 h-3.5 sm:w-4 sm:h-4"

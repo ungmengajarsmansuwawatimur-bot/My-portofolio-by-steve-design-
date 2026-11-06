@@ -255,12 +255,16 @@ export const OfficialAppIcon: React.FC<OfficialAppIconProps> = ({ name, classNam
     case 'googlestudio':
     case 'google studio':
     case 'google-studio':
+    case 'google ai studio':
+    case 'google-ai-studio':
+    case 'aistudio':
+    case 'ai studio':
     case 'web':
     case 'website platform':
       return (
         <img
           src="/assets/icons/google_studio.png"
-          alt="Google Studio"
+          alt="Google AI Studio"
           className={`${className} object-contain select-none`}
         />
       );
@@ -356,15 +360,74 @@ export const OfficialAppIcon: React.FC<OfficialAppIconProps> = ({ name, classNam
         </svg>
       );
 
-    // 12. OFFICIAL ANTIGRAVITY (Replacing previous Google AI Studio icon)
+    // 11. OFFICIAL ANTIGRAVITY
     case 'antigravity':
-    case 'aistudio':
-    case 'google ai studio':
-    case 'ai studio':
       return (
         <img
           src="/assets/icons/antigravity_clean.png"
           alt="Antigravity"
+          className={`${className} object-contain select-none`}
+        />
+      );
+
+    // 12. OFFICIAL REPLIT
+    case 'replit':
+      return (
+        <img
+          src="/assets/icons/replit_logo.png"
+          alt="Replit"
+          className={`${className} object-contain select-none`}
+        />
+      );
+
+    // 13. OFFICIAL GOOGLE STITCH
+    case 'stitch':
+    case 'google stitch':
+    case 'google-stitch':
+      return (
+        <img
+          src="/assets/icons/google_stitch_logo.jpeg"
+          alt="Google Stitch"
+          className={`${className} object-contain rounded-md select-none`}
+        />
+      );
+
+    // 14. OFFICIAL FIREBASE
+    case 'firebase':
+      return (
+        <img
+          src="/assets/icons/firebase_logo.png"
+          alt="Firebase"
+          className={`${className} object-contain select-none`}
+        />
+      );
+
+    // 15. OFFICIAL SUPABASE
+    case 'supabase':
+      return (
+        <img
+          src="/assets/icons/supabase_logo.jpeg"
+          alt="Supabase"
+          className={`${className} object-contain rounded-md select-none`}
+        />
+      );
+
+    // 16. OFFICIAL EXABYTES
+    case 'exabytes':
+      return (
+        <img
+          src="/assets/icons/exabytes_logo.png"
+          alt="Exabytes"
+          className={`${className} object-contain select-none`}
+        />
+      );
+
+    // 17. OFFICIAL LONEX
+    case 'lonex':
+      return (
+        <img
+          src="/assets/icons/lonex_logo.png"
+          alt="Lonex"
           className={`${className} object-contain select-none`}
         />
       );

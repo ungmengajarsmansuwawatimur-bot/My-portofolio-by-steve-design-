@@ -4,28 +4,8 @@ import { OfficialAppIcon } from './OfficialAppIcon';
 
 export const ToolList: React.FC = () => {
   // SVG Icon mapping for clean editorial display
-  const getToolIcon = (name: string) => {
-    switch (name) {
-      case 'Microsoft Word':
-        return <OfficialAppIcon name="word" className="w-8 h-8" />;
-      case 'Microsoft Excel':
-        return <OfficialAppIcon name="excel" className="w-8 h-8" />;
-      case 'Google Sheets':
-        return <OfficialAppIcon name="sheets" className="w-8 h-8" />;
-      case 'Google Drive':
-        return <OfficialAppIcon name="drive" className="w-8 h-8" />;
-      case 'WhatsApp':
-        return <OfficialAppIcon name="whatsapp" className="w-8 h-8" />;
-      case 'Google Chrome':
-        return <OfficialAppIcon name="chrome" className="w-8 h-8" />;
-      case 'Notion':
-        return <OfficialAppIcon name="notion" className="w-8 h-8" />;
-      case 'Google Studio':
-      case 'Website Platform':
-        return <OfficialAppIcon name="google studio" className="w-8 h-8" />;
-      default:
-        return <OfficialAppIcon name="google studio" className="w-8 h-8" />;
-    }
+  const getToolIcon = (name: string, iconName?: string) => {
+    return <OfficialAppIcon name={iconName || name} className="w-8 h-8" />;
   };
 
   return (
@@ -50,7 +30,7 @@ export const ToolList: React.FC = () => {
             key={tool.name}
             className="p-4 rounded-xl bg-[#F8F9FA] dark:bg-[#202024] border border-[#E5E7EB] dark:border-[#27272A] flex items-center gap-3.5 hover:border-[#10B981] transition-colors"
           >
-            {getToolIcon(tool.name)}
+            {getToolIcon(tool.name, tool.iconName)}
             <div className="min-w-0">
               <h5 className="font-bold text-xs sm:text-sm text-[#111827] dark:text-[#F9FAFB] truncate">
                 {tool.name}

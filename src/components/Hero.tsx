@@ -92,43 +92,43 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
       </div>
 
       <div className="max-w-7xl 2xl:max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 pt-2 sm:pt-4 pb-6 sm:pb-10 lg:pb-2">
-        {/* Responsive Layout: Stacked Balanced on Mobile, 2-Column Side-by-Side on Tablet & PC */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-8 lg:gap-10 items-center">
+        {/* Responsive Layout: Stacked Balanced on Mobile & Tablet (< lg), 2-Column Side-by-Side on PC (lg+) */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-8 xl:gap-12 items-center">
           
-          {/* AREA KONTEN UTAMA (Col-span-1 on mobile, Col-span-6 on tablet & desktop) */}
-          <div className="col-span-1 md:col-span-6 flex flex-col justify-center items-start text-left space-y-3 sm:space-y-4 md:space-y-5 lg:space-y-6 z-10 py-1 sm:py-4 lg:py-8">
+          {/* AREA KONTEN UTAMA (Col-span-1 on mobile & tablet, Col-span-6 on desktop) */}
+          <div className="col-span-1 lg:col-span-6 flex flex-col justify-center items-start text-left space-y-3 sm:space-y-4 md:space-y-5 lg:space-y-5 xl:space-y-6 z-10 py-1 sm:py-4 lg:py-6">
             {/* Small Official Label */}
             <div>
               <div className="font-body inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold tracking-[0.08em] sm:tracking-[0.1em] uppercase text-[#DD9B08] transition-colors">
                 <span aria-hidden="true">✦</span>
-                <span>MY PORTFOLIO • PROFIL RESMI</span>
+                <span>MY PORTFOLIO · OPEN TO WORK</span>
                 <span aria-hidden="true">✦</span>
               </div>
             </div>
 
             {/* Main Headline: Focal Point 1 */}
             <div>
-              <h1 className="font-heading text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] xl:text-[4rem] font-bold tracking-tight leading-[1.12] sm:leading-[1.08] break-words">
+              <h1 className="font-heading text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-[2.75rem] xl:text-[3.5rem] 2xl:text-[3.75rem] font-bold tracking-tight leading-[1.12] sm:leading-[1.08] break-words">
                 <span className="block text-[#171717] dark:text-white">
                   Taufik Hidayat Malii
                 </span>
-                <span className="block text-[#A2680A] dark:text-[#F9B51B] mt-1 sm:mt-1.5 text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-[2.6rem] xl:text-[3.2rem]">
-                  Operasional &amp; Pelayanan
+                <span className="block text-[#A2680A] dark:text-[#F9B51B] mt-1 sm:mt-1.5 text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-[2rem] xl:text-[2.5rem] 2xl:text-[2.75rem]">
+                  Digital Admin, Web Creator
                   <br className="hidden sm:inline" />
-                  {' '}Retail Professional.
+                  {' '}&amp; Service-Minded Talent.
                 </span>
               </h1>
             </div>
 
-            {/* FOTO & MOCKUP UNTUK TAMPILAN MOBILE (< md) — Ukuran Seimbang & Proporsional */}
-            <div className="w-full flex md:hidden justify-center items-center py-2 xs:py-3 sm:py-4 select-none overflow-visible">
-              <div className="relative w-full max-w-[320px] xs:max-w-[360px] sm:max-w-[420px] aspect-[680/600] flex items-center justify-center overflow-visible">
+            {/* FOTO & MOCKUP UNTUK TAMPILAN MOBILE & TABLET (< lg) — Ukuran Seimbang & Proporsional */}
+            <div className="w-full flex lg:hidden justify-center items-center py-2 xs:py-3 sm:py-4 md:py-6 select-none overflow-visible">
+              <div className="relative w-full max-w-[320px] xs:max-w-[360px] sm:max-w-[420px] md:max-w-[480px] aspect-[680/600] flex items-center justify-center overflow-visible">
                 <CircularOrbitBackdrop photoSrc="/assets/taufik_official_portrait.png" />
               </div>
             </div>
 
-            {/* Deskripsi Profil Ringkas (Posisi Tepat di Bawah Foto pada Mobile, di bawah Headline pada Desktop) */}
-            <div className="max-w-xl">
+            {/* Deskripsi Profil Ringkas (Posisi Tepat di Bawah Foto pada Mobile & Tablet) */}
+            <div className="max-w-xl md:max-w-2xl lg:max-w-lg xl:max-w-xl">
               <motion.p
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -140,13 +140,13 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
             </div>
 
             {/* Two Action Buttons: VIEW MY WORK & UNDUH CV RESMI */}
-            <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-2.5 sm:gap-3.5 pt-1 w-full sm:w-auto">
+            <div className="flex flex-col lg:flex-row flex-wrap items-start lg:items-center gap-2.5 sm:gap-3.5 pt-1 w-full lg:w-auto">
               <motion.a
                 href="#work"
                 onClick={handleWorkClick}
                 layout
                 transition={{ type: 'spring', stiffness: 320, damping: 26 }}
-                className={`group inline-flex items-center justify-center sm:justify-start gap-2 p-1 sm:p-2 rounded-full cursor-pointer select-none transition-colors duration-300 shadow-md hover:shadow-lg active:scale-95 ${
+                className={`group inline-flex items-center gap-2 h-[46px] sm:h-[50px] lg:h-[52px] p-1 sm:p-1.5 rounded-full cursor-pointer select-none transition-colors duration-300 shadow-md hover:shadow-lg active:scale-95 w-fit ${
                   isWorkActive
                     ? 'flex-row-reverse bg-[#2B4734] dark:bg-[#31543A]'
                     : 'flex-row bg-[#F9B51B] dark:bg-[#d1fe17]'
@@ -158,7 +158,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
                 <motion.span
                   layout
                   transition={{ type: 'spring', stiffness: 320, damping: 26 }}
-                  className={`w-8 h-8 sm:w-11 sm:h-11 rounded-full flex items-center justify-center shrink-0 shadow-sm transition-colors duration-300 ${
+                  className={`w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center shrink-0 shadow-sm transition-colors duration-300 ${
                     isWorkActive
                       ? 'bg-[#F9B51B] dark:bg-[#d1fe17] text-[#171717]'
                       : 'bg-white text-[#171717]'
@@ -166,7 +166,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
                 >
                   <motion.svg
                     layout
-                    className="w-4 h-4 sm:w-5 sm:h-5 text-[#171717]"
+                    className="w-4 h-4 sm:w-4.5 sm:h-4.5 text-[#171717]"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -184,7 +184,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
                 <motion.span
                   layout
                   transition={{ type: 'spring', stiffness: 320, damping: 26 }}
-                  className={`font-body px-4 sm:px-7 py-2 sm:py-3 rounded-full text-xs sm:text-sm font-semibold tracking-wider uppercase flex items-center justify-center transition-colors duration-300 ${
+                  className={`font-body h-9 sm:h-10 px-4 sm:px-5 lg:px-6 rounded-full text-xs sm:text-sm font-semibold tracking-wider uppercase flex items-center justify-center transition-colors duration-300 ${
                     isWorkActive
                       ? 'bg-white text-[#171717]'
                       : 'bg-[#2B4734] text-white'
@@ -201,23 +201,23 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
                 onClick={handleCvSwap}
                 title="Klik untuk swap & unduh CV resmi"
                 aria-label="Unduh CV Resmi PDF"
-                className={`font-body group inline-flex items-center justify-center sm:justify-start gap-2.5 sm:gap-3 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold tracking-wider uppercase select-none cursor-pointer transition-colors duration-200 shadow-sm active:scale-95 overflow-hidden relative ${
+                className={`font-body group inline-flex items-center gap-2.5 sm:gap-3 h-[46px] sm:h-[50px] lg:h-[52px] rounded-full text-xs sm:text-sm font-semibold tracking-wider uppercase select-none cursor-pointer transition-colors duration-200 shadow-sm active:scale-95 overflow-hidden relative border-2 w-fit ${
                   isCvSwapped
-                    ? 'flex-row bg-[#2B4734] dark:bg-[#31543A] text-white border-2 border-[#2B4734] dark:border-[#31543A] pr-2 sm:pr-2.5 pl-4 sm:pl-6'
-                    : 'flex-row-reverse bg-white dark:bg-[#1E1E1E] text-[#171717] dark:text-white border-2 border-[#171717] dark:border-white hover:border-[#F9B51B] dark:hover:border-[#d1fe17] pl-2 sm:pl-2.5 pr-4 sm:pr-6'
+                    ? 'flex-row bg-[#2B4734] dark:bg-[#31543A] text-white border-[#2B4734] dark:border-[#31543A] pr-1 pl-4 sm:pr-1.5 sm:pl-5 lg:pl-6'
+                    : 'flex-row-reverse bg-white dark:bg-[#1E1E1E] text-[#171717] dark:text-white border-[#171717] dark:border-white hover:border-[#F9B51B] dark:hover:border-[#d1fe17] pl-1 pr-4 sm:pl-1.5 sm:pr-5 lg:pr-6'
                 }`}
               >
                 <motion.span
                   layout
                   transition={{ type: 'spring', stiffness: 450, damping: 28 }}
-                  className="font-bold tracking-wider"
+                  className="font-semibold tracking-wider"
                 >
                   {isCvDownloading ? 'MENGUNDUH CV...' : 'UNDUH CV RESMI'}
                 </motion.span>
                 <motion.span
                   layout
                   transition={{ type: 'spring', stiffness: 450, damping: 28 }}
-                  className={`w-7 h-7 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-bold text-xs sm:text-sm shrink-0 transition-colors duration-200 shadow-sm ${
+                  className={`w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-bold text-xs sm:text-sm shrink-0 transition-colors duration-200 shadow-sm ${
                     isCvSwapped
                       ? 'bg-[#F9B51B] dark:bg-[#d1fe17] text-[#171717]'
                       : 'bg-[#171717] dark:bg-white text-white dark:text-[#171717] group-hover:bg-[#F9B51B] dark:group-hover:bg-[#d1fe17] group-hover:text-[#171717]'
@@ -233,11 +233,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
                   >
                     {isCvDownloading ? (
                       <svg
-                        className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#171717]"
+                        className="w-4 h-4 sm:w-4.5 sm:h-4.5 text-current"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
-                        strokeWidth="2.4"
+                        strokeWidth="2.2"
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         aria-hidden="true"
@@ -246,17 +246,17 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
                       </svg>
                     ) : (
                       <svg
-                        className="w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform group-hover:translate-x-0.5"
+                        className="w-4 h-4 sm:w-4.5 sm:h-4.5 text-current transition-transform group-hover:translate-x-0.5"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
-                        strokeWidth="2.4"
+                        strokeWidth="2.2"
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         aria-hidden="true"
                       >
-                        <line x1="5" y1="12" x2="19" y2="12" />
-                        <polyline points="12 5 19 12 12 19" />
+                        <line x1="4" y1="12" x2="19" y2="12" />
+                        <polyline points="13 6 19 12 12 19" />
                       </svg>
                     )}
                   </motion.span>
@@ -265,11 +265,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
             </div>
           </div>
 
-          {/* AREA KANAN — FOTO & MOCKUP UNTUK TABLET & PC (md: dan ke atas) */}
-          <div className="hidden md:flex md:col-span-6 justify-end items-center relative select-none pt-0 overflow-visible">
-            {/* Visual Container: Mockup Background Versi 2 Circular Orbit with Mockup Badges */}
-            <div className="relative w-full max-w-[460px] lg:max-w-[580px] xl:max-w-[660px] 2xl:max-w-[700px] aspect-[680/600] flex items-center justify-end transition-all duration-300 overflow-visible translate-x-1 lg:translate-x-3">
-              {/* Circular Orbit Composition (Versi 2) dengan Foto Resmi Permanen Taufik Hidayat Malii */}
+          {/* AREA KANAN — FOTO & MOCKUP UNTUK PC / DESKTOP (lg: dan ke atas) */}
+          <div className="hidden lg:flex lg:col-span-6 justify-end items-center relative select-none pt-0 overflow-visible">
+            {/* Visual Container: Ukuran besar, megah & seimbang dengan seluruh teks di kiri */}
+            <div className="relative w-full max-w-[560px] lg:max-w-[620px] xl:max-w-[720px] 2xl:max-w-[780px] aspect-[680/600] flex items-center justify-end transition-all duration-300 overflow-visible translate-x-2 lg:translate-x-4">
+              {/* Circular Orbit Composition dengan Foto Resmi Permanen Taufik Hidayat Malii & Mockup Badges */}
               <CircularOrbitBackdrop photoSrc="/assets/taufik_official_portrait.png" />
             </div>
           </div>

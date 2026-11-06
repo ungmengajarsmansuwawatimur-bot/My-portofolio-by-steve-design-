@@ -27,18 +27,13 @@ export default function App() {
     if (hash === '#/project/usaha-keluarga') return 'usaha-keluarga';
     if (hash === '#/project/pembelajaran-retail') return 'pembelajaran-retail';
     if (hash === '#home' || hash === '#about' || hash === '#work' || hash === '#contact') return 'home';
-    // Default directly to 'jasa-digital' so user immediately sees the temporary page with the gray button and no navigation/hire-me button
-    return 'jasa-digital';
+    return 'home';
   });
 
   const [photoModalTarget, setPhotoModalTarget] = useState<string | null>(null);
 
   // Synchronize routing with browser history and hash navigation
   useEffect(() => {
-    // If no hash is specified, route to #/project/jasa-digital to display the temporary page directly
-    if (!window.location.hash || window.location.hash === '' || window.location.hash === '#') {
-      window.location.hash = '#/project/jasa-digital';
-    }
 
     const handleHashChange = () => {
       const hash = window.location.hash;
@@ -178,7 +173,7 @@ export default function App() {
       </main>
 
       {/* Global Consistent Footer */}
-      <Footer onOpenCvModal={downloadCv} />
+      <Footer onOpenCvModal={downloadCv} onNavigateHome={handleNavigateHomeFromNav} />
 
       {/* Interactive Global Modals */}
       <Suspense fallback={null}>

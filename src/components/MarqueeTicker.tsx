@@ -9,15 +9,12 @@ interface MarqueeTickerProps {
 }
 
 const DEFAULT_ITEMS = [
-  'Pramuniaga',
-  'Operasional Toko',
-  'Kasir & Sistem POS',
-  'Penataan Display Produk',
-  'Pelayanan Konsumen Prima',
-  'Manajemen Stok & Inventaris',
-  'Administrasi Dokumen Digital',
-  'Komunikasi Efektif',
-  'Disiplin & Tanggung Jawab',
+  'Web Creator',
+  'UI/UX Design',
+  'Graphic Design',
+  'Video Editing',
+  'Digital Admin',
+  'Web Development',
 ];
 
 export const MarqueeTicker: React.FC<MarqueeTickerProps> = ({

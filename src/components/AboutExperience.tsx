@@ -81,30 +81,12 @@ export const AboutExperience: React.FC<AboutExperienceProps> = () => {
       id: 'bg-1',
       type: 'experience' as const,
       category: 'Pengalaman Kerja',
-      period: '2016 s.d. Sekarang (± 8 Tahun)',
-      periodBadge: 'Paruh Waktu',
-      title: 'Pengelolaan Usaha Keluarga',
-      subtitle: 'Operasional Usaha Mandiri',
-      description:
-        'Membantu operasional toko fisik keluarga sejak 2016, melayani pembeli secara langsung, menjelaskan informasi produk, mengelola transaksi kasir tunai, serta menjaga ketersediaan barang.',
-      tags: ['Pelayanan Langsung', 'Kasir POS', 'Penataan Barang', 'Manajemen Stok'],
-      isFeatured: false,
-      icon: (
-        <svg className="w-10 h-10 sm:w-12 sm:h-12 fill-[#26492F] dark:fill-[#d1fe17] transition-colors" viewBox="0 0 24 24">
-          <path d="M4 4h16l1 4v12a1 1 0 01-1 1H4a1 1 0 01-1-1V8l1-4zm1 5v10h14V9H5zm2-3l-.5 2h15l-.5-2H7zm2 6h2v3H9v-3zm4 0h2v3h-2v-3z" />
-        </svg>
-      ),
-    },
-    {
-      id: 'bg-2',
-      type: 'experience' as const,
-      category: 'Pengalaman Kerja',
       period: 'Desember 2024 s.d. Sekarang',
       periodBadge: 'Layanan Mandiri',
       title: 'Pelayanan & Pengelolaan Jasa Digital',
       subtitle: 'Komunikasi Klien & Publikasi Naskah',
       description:
-        'Melayani pelanggan melalui komunikasi WhatsApp untuk pemenuhan kebutuhan naskah tugas kuliah, koordinasi proses pengerjaan, transparansi tarif, serta penanganan revisi hingga tuntas.',
+        'Melayani klien dan mahasiswa melalui WhatsApp untuk kebutuhan naskah, publikasi artikel, dan pembuatan website, mulai dari koordinasi pengerjaan, transparansi tarif, hingga revisi tuntas.',
       tags: ['Komunikasi Konsumen', 'Publikasi Media', 'Manajemen Revisi', 'Pelayanan Cepat'],
       isFeatured: true,
       icon: (
@@ -114,16 +96,34 @@ export const AboutExperience: React.FC<AboutExperienceProps> = () => {
       ),
     },
     {
+      id: 'bg-2',
+      type: 'experience' as const,
+      category: 'Pengalaman Kerja',
+      period: '2016 s.d. Sekarang (± 10 Tahun)',
+      periodBadge: 'Operasional',
+      title: 'Pelayanan & Operasional Harian',
+      subtitle: 'Pelayanan Langsung & Operasional',
+      description:
+        'Terlibat dalam operasional harian sejak 2016, melayani banyak orang secara langsung, memberikan informasi yang jelas, mengelola administrasi harian, serta menjaga kerapian kerja.',
+      tags: ['Pelayanan Langsung', 'Administrasi Harian', 'Operasional', 'Komunikasi Ramah'],
+      isFeatured: false,
+      icon: (
+        <svg className="w-10 h-10 sm:w-12 sm:h-12 fill-[#26492F] dark:fill-[#d1fe17] transition-colors" viewBox="0 0 24 24">
+          <path d="M4 4h16l1 4v12a1 1 0 01-1 1H4a1 1 0 01-1-1V8l1-4zm1 5v10h14V9H5zm2-3l-.5 2h15l-.5-2H7zm2 6h2v3H9v-3zm4 0h2v3h-2v-3z" />
+        </svg>
+      ),
+    },
+    {
       id: 'bg-3',
       type: 'experience' as const,
       category: 'Pengalaman Kerja & Pembelajaran',
       period: 'Februari 2025 s.d. Sekarang',
       periodBadge: 'Pengembangan Mandiri',
-      title: 'Pembelajaran Retail & Operasional Toko',
-      subtitle: 'Standar Ritel Modern & Penataan Rak',
+      title: 'Pengembangan Standar Pelayanan',
+      subtitle: 'Etika Layanan & Tata Kelola Kerja',
       description:
-        'Mendalami operasional ritel modern secara terarah, meliputi pelayanan ramah pembeli, penataan display produk sistem FIFO, pemahaman planogram rak, dan pengoperasian mesin kasir POS.',
-      tags: ['Customer Service', 'Display FIFO', 'Planogram Rak', 'Kasir POS'],
+        'Mempelajari tata kelola pelayanan secara terarah, meliputi sikap ramah, ketertiban kerja, ketelitian dalam pencatatan, dan pemanfaatan sistem digital.',
+      tags: ['Customer Service', 'Etika Layanan', 'Ketelitian Data', 'Sistem Digital'],
       isFeatured: false,
       icon: (
         <svg className="w-10 h-10 sm:w-12 sm:h-12 fill-[#26492F] dark:fill-[#d1fe17] transition-colors" viewBox="0 0 24 24">
@@ -158,10 +158,10 @@ export const AboutExperience: React.FC<AboutExperienceProps> = () => {
           <div className="max-w-5xl 2xl:max-w-6xl space-y-6 sm:space-y-8">
             <div className="font-body space-y-3.5 sm:space-y-4 text-sm sm:text-base md:text-lg text-[#666666] dark:text-[#A3A3A3] leading-[1.65] font-normal text-refined-justify">
               <p className="text-refined-justify">
-                Saya memiliki ketertarikan tinggi pada industri pelayanan ritel dan operasional toko modern. Melalui pengalaman lebih dari 8 tahun membantu usaha keluarga, saya terlatih melayani berbagai karakter pembeli, mengelola transaksi kasir, menjaga stok barang, serta memastikan area penjualan selalu tertata rapi.
+                Digital Admin dan Web Creator yang terbiasa bekerja dengan sistem, data, dan detail. Telah merancang program informasi arsip untuk membuat administrasi lebih efisien, sekaligus membantu puluhan klien dan mahasiswa melalui layanan digital.
               </p>
               <p className="text-refined-justify">
-                Selain pengalaman di toko fisik, saya juga menguasai keterampilan digital dan pengarsipan data yang dibuktikan melalui perancangan aplikasi website untuk membantu staf administrasi sekolah, yakni sebuah sistem informasi arsip yang seluruh tahapannya saya rancang secara mandiri, serta pelayanan puluhan mahasiswa pada jasa digital. Bagi saya, pelayanan prima bukan sekadar menjual barang, melainkan menciptakan kepercayaan dan kepuasan bagi pelanggan.
+                Lebih dari 8 tahun bekerja langsung dengan banyak orang membentuk pribadi yang komunikatif, teliti, dan bertanggung jawab. Terbiasa menghadapi beragam karakter dan menyelesaikan tugas dengan rapi, dengan keyakinan bahwa pelayanan yang baik berawal dari membangun kepercayaan dan kepuasan.
               </p>
             </div>
 
@@ -169,7 +169,7 @@ export const AboutExperience: React.FC<AboutExperienceProps> = () => {
             <div className="grid grid-cols-3 divide-x divide-[#171717]/10 dark:divide-white/10 py-5 sm:py-8 border-y border-[#171717]/15 dark:border-white/10 text-center">
               <div className="flex flex-col items-center justify-center text-center px-1 xs:px-2 sm:px-4">
                 <span className="font-info text-[9.5px] xs:text-xs sm:text-sm font-bold text-[#666666] dark:text-[#A3A3A3] block uppercase tracking-wide text-center">
-                  Pelanggan &amp; Transaksi
+                  Klien Dilayani
                 </span>
                 <span className="font-info text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold text-[#171717] dark:text-white tracking-tight mt-1 sm:mt-1.5 block text-center tabular-nums">
                   <AnimatedCounter target={250} suffix="+" duration={4200} />
@@ -178,16 +178,16 @@ export const AboutExperience: React.FC<AboutExperienceProps> = () => {
 
               <div className="flex flex-col items-center justify-center text-center px-1 xs:px-2 sm:px-4">
                 <span className="font-info text-[9.5px] xs:text-xs sm:text-sm font-bold text-[#666666] dark:text-[#A3A3A3] block uppercase tracking-wide text-center">
-                  Modul Web Administrasi
+                  Website Live
                 </span>
                 <span className="font-info text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold text-[#171717] dark:text-white tracking-tight mt-1 sm:mt-1.5 block text-center tabular-nums">
-                  <AnimatedCounter target={24} duration={3600} />
+                  <AnimatedCounter target={18} duration={3600} />
                 </span>
               </div>
 
               <div className="flex flex-col items-center justify-center text-center px-1 xs:px-2 sm:px-4">
                 <span className="font-info text-[9.5px] xs:text-xs sm:text-sm font-bold text-[#666666] dark:text-[#A3A3A3] block uppercase tracking-wide text-center">
-                  Kesiapan Kerja
+                  Komitmen Kerja
                 </span>
                 <span className="font-info text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold text-[#171717] dark:text-white tracking-tight mt-1 sm:mt-1.5 block text-center tabular-nums">
                   <AnimatedCounter target={100} suffix="%" duration={3800} />
@@ -306,18 +306,6 @@ export const AboutExperience: React.FC<AboutExperienceProps> = () => {
                   // User-provided distinct icons for each experience card
                   const renderExperienceIcon = () => {
                     if (item.id === 'bg-1') {
-                      // Physical retail store / shop awning
-                      return (
-                        <div className="shrink-0 flex items-center justify-center mt-0.5">
-                          <img
-                            src="/assets/icons/experience_storefront.png"
-                            alt="Ikon Pengelolaan Usaha Keluarga"
-                            className="w-8 h-8 sm:w-9 sm:h-9 object-contain select-none dark:drop-shadow-[0_0_3px_rgba(245,158,11,0.4)]"
-                          />
-                        </div>
-                      );
-                    }
-                    if (item.id === 'bg-2') {
                       // Client digital consultation / chat service (Laptop + Megaphone)
                       return (
                         <div className="shrink-0 flex items-center justify-center mt-0.5">
@@ -329,12 +317,24 @@ export const AboutExperience: React.FC<AboutExperienceProps> = () => {
                         </div>
                       );
                     }
-                    // bg-3: Modern retail cart with stacked boxes
+                    if (item.id === 'bg-2') {
+                      // Physical storefront / direct daily operations
+                      return (
+                        <div className="shrink-0 flex items-center justify-center mt-0.5">
+                          <img
+                            src="/assets/icons/experience_storefront.png"
+                            alt="Ikon Pelayanan &amp; Operasional Harian"
+                            className="w-8 h-8 sm:w-9 sm:h-9 object-contain select-none dark:drop-shadow-[0_0_3px_rgba(245,158,11,0.4)]"
+                          />
+                        </div>
+                      );
+                    }
+                    // bg-3: Modern service standard development
                     return (
                       <div className="shrink-0 flex items-center justify-center mt-0.5">
                         <img
                           src="/assets/icons/experience_retail_cart.png"
-                          alt="Ikon Pembelajaran Retail Modern"
+                          alt="Ikon Pengembangan Standar Pelayanan"
                           className="w-8 h-8 sm:w-9 sm:h-9 object-contain select-none dark:drop-shadow-[0_0_3px_rgba(245,158,11,0.4)]"
                         />
                       </div>
