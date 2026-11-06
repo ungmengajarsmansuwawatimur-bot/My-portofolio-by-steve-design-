@@ -135,11 +135,19 @@ export const Navbar: React.FC<NavbarProps> = ({
             aria-label="Taufik Malii - Kembali ke Beranda"
           >
             <div className="flex items-center">
-              <img
-                src="/assets/aistudio/d1966f85-30a4-42a2-a204-bb1333c65433_a9b1e3d4.png"
-                alt="Taufik Malii"
-                className="h-6 sm:h-7 lg:h-8 w-auto object-contain -ml-2 sm:-ml-3 lg:-ml-4 mr-3 sm:mr-4 lg:mr-6 transition-transform duration-200 group-hover:scale-105 dark:brightness-125"
-              />
+              <picture className="flex items-center">
+                <source srcSet="/assets/aistudio/d1966f85-30a4-42a2-a204-bb1333c65433_a9b1e3d4.avif" type="image/avif" />
+                <source srcSet="/assets/aistudio/d1966f85-30a4-42a2-a204-bb1333c65433_a9b1e3d4.webp" type="image/webp" />
+                <img
+                  src="/assets/aistudio/d1966f85-30a4-42a2-a204-bb1333c65433_a9b1e3d4.png"
+                  alt="Taufik Malii"
+                  width={201}
+                  height={32}
+                  loading="eager"
+                  decoding="sync"
+                  className="h-6 sm:h-7 lg:h-8 w-auto object-contain -ml-2 sm:-ml-3 lg:-ml-4 mr-3 sm:mr-4 lg:mr-6 transition-transform duration-200 group-hover:scale-105 dark:brightness-125"
+                />
+              </picture>
             </div>
           </a>
 

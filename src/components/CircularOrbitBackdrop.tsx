@@ -8,11 +8,11 @@ interface CircularOrbitBackdropProps {
 }
 
 export const CircularOrbitBackdrop: React.FC<CircularOrbitBackdropProps> = ({
-  photoSrc = '/assets/taufik_official_portrait.png',
+  photoSrc = '/assets/taufik_official_portrait.webp',
   altText = 'Taufik Hidayat Malii - Operasional & Pelayanan Retail',
   className = '',
 }) => {
-  const activePhotoSrc = photoSrc || '/assets/taufik_official_portrait.png';
+  const activePhotoSrc = photoSrc || '/assets/taufik_official_portrait.webp';
 
   return (
     <div className={`relative w-full h-full flex items-center justify-center md:justify-end select-none overflow-visible ${className}`}>

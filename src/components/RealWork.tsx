@@ -4,62 +4,70 @@ export interface RealWorkProps {
   onSelectProject?: (projectId: 'jasa-digital' | 'padds-smansat' | 'usaha-keluarga' | 'pembelajaran-retail') => void;
 }
 
-export const RealWork: React.FC<RealWorkProps> = ({ onSelectProject }) => {
-  const projectEntries = [
-    {
-      id: 'jasa-digital' as const,
-      number: '01',
-      period: 'Desember 2024 s.d. Sekarang',
-      category: 'PELAYANAN & PENGELOLAAN',
-      title: 'Layanan Digital & Publikasi Artikel',
-      teaser: 'Layanan koordinasi naskah publikasi artikel tugas mahasiswa via WhatsApp, transparansi tarif, dan penanganan revisi cepat.',
-      badge: '5 Studi Alur Nyata',
-      mockupSrc: '/assets/mockups/mockup_01_jasa_digital.webp?v=user-colorized',
-      accentColor: 'text-[#D97706] dark:text-[#F9B51B]',
-      hoverColor: 'group-hover:text-[#D97706] dark:group-hover:text-[#F9B51B]',
-      ringColor: 'focus-visible:ring-[#F9B51B]',
-    },
-    {
-      id: 'padds-smansat' as const,
-      number: '02',
-      period: 'PADDS SMANSAT · 6 Modul Video Asli',
-      category: 'PENGEMBANGAN SISTEM ARSIP',
-      title: 'Pusat Arsip Digital',
-      teaser: 'Platform arsip digital SMAN 1 Suwawa Timur dengan pemusatan pencatatan surat, retensi, QR code, dan rekaman demo 6 modul video asli.',
-      badge: '6 Video Demo Sistem',
-      mockupSrc: '/assets/mockups/mockup_02_padds_smansat.webp?v=user-colorized',
-      accentColor: 'text-[#0284C7] dark:text-[#38BDF8]',
-      hoverColor: 'group-hover:text-[#0284C7] dark:group-hover:text-[#38BDF8]',
-      ringColor: 'focus-visible:ring-[#0284C7]',
-    },
-    {
-      id: 'usaha-keluarga' as const,
-      number: '03',
-      period: '2016 s.d. Sekarang (±8 Tahun)',
-      category: 'OPERASIONAL & PELAYANAN LANGSUNG',
-      title: 'Administrasi & Layanan Harian',
-      teaser: 'Praktik nyata melayani pembeli toko, penataan rak metode FIFO, pengecekan stok fisik, hingga ketelitian transaksi kasir tunai.',
-      badge: 'Praktik Operasional Nyata',
-      mockupSrc: '/assets/mockups/mockup_03_usaha_keluarga.webp?v=user-colorized',
-      accentColor: 'text-[#15803D] dark:text-[#34D399]',
-      hoverColor: 'group-hover:text-[#15803D] dark:group-hover:text-[#34D399]',
-      ringColor: 'focus-visible:ring-[#16A34A]',
-    },
-    {
-      id: 'pembelajaran-retail' as const,
-      number: '04',
-      period: '6 Modul Kesiapan Retail',
-      category: 'LEARNING & DEVELOPMENT',
-      title: 'Standar Pelayanan & Tata Kerja',
-      teaser: 'Modul dan keterampilan operasional retail yang dipelajari secara mandiri untuk kesiapan kerja di lingkungan retail modern.',
-      badge: '6 Modul Kesiapan Retail',
-      mockupSrc: '/assets/mockups/mockup_04_pembelajaran_retail.webp?v=user-pink',
-      accentColor: 'text-[#E11D48] dark:text-[#FB7185]',
-      hoverColor: 'group-hover:text-[#E11D48] dark:group-hover:text-[#FB7185]',
-      ringColor: 'focus-visible:ring-[#E11D48]',
-    },
-  ];
+const projectEntries = [
+  {
+    id: 'jasa-digital' as const,
+    number: '01',
+    period: 'Desember 2024 s.d. Sekarang',
+    category: 'PELAYANAN & PENGELOLAAN',
+    title: 'Layanan Digital & Publikasi Artikel',
+    teaser: 'Layanan koordinasi naskah publikasi artikel tugas mahasiswa via WhatsApp, transparansi tarif, dan penanganan revisi cepat.',
+    badge: '5 Studi Alur Nyata',
+    avifSrc: '/assets/mockups/mockup_01_jasa_digital.avif',
+    webpSrc: '/assets/mockups/mockup_01_jasa_digital.webp',
+    fallbackSrc: '/assets/mockups/mockup_01_jasa_digital.webp',
+    accentColor: 'text-[#D97706] dark:text-[#F9B51B]',
+    hoverColor: 'group-hover:text-[#D97706] dark:group-hover:text-[#F9B51B]',
+    ringColor: 'focus-visible:ring-[#F9B51B]',
+  },
+  {
+    id: 'padds-smansat' as const,
+    number: '02',
+    period: 'PADDS SMANSAT · 6 Modul Video Asli',
+    category: 'PENGEMBANGAN SISTEM ARSIP',
+    title: 'Pusat Arsip Digital',
+    teaser: 'Platform arsip digital SMAN 1 Suwawa Timur dengan pemusatan pencatatan surat, retensi, QR code, dan rekaman demo 6 modul video asli.',
+    badge: '6 Video Demo Sistem',
+    avifSrc: '/assets/mockups/mockup_02_padds_smansat.avif',
+    webpSrc: '/assets/mockups/mockup_02_padds_smansat.webp',
+    fallbackSrc: '/assets/mockups/mockup_02_padds_smansat.webp',
+    accentColor: 'text-[#0284C7] dark:text-[#38BDF8]',
+    hoverColor: 'group-hover:text-[#0284C7] dark:group-hover:text-[#38BDF8]',
+    ringColor: 'focus-visible:ring-[#0284C7]',
+  },
+  {
+    id: 'usaha-keluarga' as const,
+    number: '03',
+    period: '2016 s.d. Sekarang (±8 Tahun)',
+    category: 'OPERASIONAL & PELAYANAN LANGSUNG',
+    title: 'Administrasi & Layanan Harian',
+    teaser: 'Praktik nyata melayani pembeli toko, penataan rak metode FIFO, pengecekan stok fisik, hingga ketelitian transaksi kasir tunai.',
+    badge: 'Praktik Operasional Nyata',
+    avifSrc: '/assets/mockups/mockup_03_usaha_keluarga.avif',
+    webpSrc: '/assets/mockups/mockup_03_usaha_keluarga.webp',
+    fallbackSrc: '/assets/mockups/mockup_03_usaha_keluarga.webp',
+    accentColor: 'text-[#15803D] dark:text-[#34D399]',
+    hoverColor: 'group-hover:text-[#15803D] dark:group-hover:text-[#34D399]',
+    ringColor: 'focus-visible:ring-[#16A34A]',
+  },
+  {
+    id: 'pembelajaran-retail' as const,
+    number: '04',
+    period: '6 Modul Kesiapan Retail',
+    category: 'LEARNING & DEVELOPMENT',
+    title: 'Standar Pelayanan & Tata Kerja',
+    teaser: 'Modul dan keterampilan operasional retail yang dipelajari secara mandiri untuk kesiapan kerja di lingkungan retail modern.',
+    badge: '6 Modul Kesiapan Retail',
+    avifSrc: '/assets/mockups/mockup_04_pembelajaran_retail.avif',
+    webpSrc: '/assets/mockups/mockup_04_pembelajaran_retail.webp',
+    fallbackSrc: '/assets/mockups/mockup_04_pembelajaran_retail.webp',
+    accentColor: 'text-[#E11D48] dark:text-[#FB7185]',
+    hoverColor: 'group-hover:text-[#E11D48] dark:group-hover:text-[#FB7185]',
+    ringColor: 'focus-visible:ring-[#E11D48]',
+  },
+];
 
+export const RealWork: React.FC<RealWorkProps> = ({ onSelectProject }) => {
   const handleCardClick = (id: 'jasa-digital' | 'padds-smansat' | 'usaha-keluarga' | 'pembelajaran-retail') => {
     if (onSelectProject) {
       onSelectProject(id);
@@ -70,9 +78,12 @@ export const RealWork: React.FC<RealWorkProps> = ({ onSelectProject }) => {
 
   return (
     <section id="work" className="py-20 md:py-28 bg-[#FFFFFF] dark:bg-[#121212] transition-colors duration-200">
-      {/* Top Header Typography (Editorial Center-Aligned Hierarchy matching reference) */}
+      {/* Top Header Typography (Editorial Center-Aligned Hierarchy matching reference) - delay 0ms */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 sm:mb-16">
-        <div className="text-center max-w-3xl mx-auto space-y-3 sm:space-y-4">
+        <div
+          className="text-center max-w-3xl mx-auto space-y-3 sm:space-y-4 fade-in-up"
+          style={{ '--delay': '0ms' } as React.CSSProperties}
+        >
           <div className="font-body inline-flex items-center gap-2 text-xs sm:text-sm font-semibold tracking-[0.12em] uppercase text-[#F9B51B] dark:text-[#d1fe17] transition-colors">
             <span aria-hidden="true">✦</span>
             <span>PORTFOLIO</span>
@@ -85,13 +96,12 @@ export const RealWork: React.FC<RealWorkProps> = ({ onSelectProject }) => {
         </div>
       </div>
 
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* ========================================================================= */}
         {/* SYMMETRIC 2x2 EDITORIAL GRID FOR 4 FEATURED PROJECTS                      */}
         {/* ========================================================================= */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 lg:gap-x-16 gap-y-12 lg:gap-y-16 items-start">
-          {projectEntries.map((entry) => (
+          {projectEntries.map((entry, index) => (
             <article
               key={entry.id}
               onClick={() => handleCardClick(entry.id)}
@@ -104,17 +114,24 @@ export const RealWork: React.FC<RealWorkProps> = ({ onSelectProject }) => {
               tabIndex={0}
               role="button"
               aria-label={`Buka detail dan dokumentasi ${entry.title}`}
-              className={`group flex flex-col items-center text-center cursor-pointer select-none focus:outline-none focus-visible:ring-2 ${entry.ringColor} rounded-xs transition-all duration-200`}
+              style={{ '--delay': `${(index + 1) * 100}ms` } as React.CSSProperties}
+              className={`group flex flex-col items-center text-center cursor-pointer select-none focus:outline-none focus-visible:ring-2 ${entry.ringColor} rounded-xs transition-all duration-200 fade-in-up`}
             >
               {/* [ 1. LARGE RESPONSIVE DEVICE MOCKUP - Primary Visual Hero ] */}
               <div className="w-full aspect-[4/3] sm:aspect-[16/11] flex items-center justify-center p-0 sm:p-1 overflow-visible">
-                <img
-                  src={entry.mockupSrc}
-                  alt={`Mockup visual ${entry.title}`}
-                  className="w-full h-full object-contain scale-[1.06] sm:scale-[1.08] filter drop-shadow-[0_16px_32px_rgba(0,0,0,0.12)] dark:drop-shadow-[0_16px_32px_rgba(0,0,0,0.45)] transition-all duration-500 ease-out group-hover:scale-[1.12] group-hover:-translate-y-1.5 will-change-transform"
-                  loading="lazy"
-                  decoding="async"
-                />
+                <picture className="w-full h-full flex items-center justify-center">
+                  <source srcSet={entry.avifSrc} type="image/avif" />
+                  <source srcSet={entry.webpSrc} type="image/webp" />
+                  <img
+                    src={entry.fallbackSrc}
+                    alt={`Mockup visual ${entry.title}`}
+                    width={800}
+                    height={600}
+                    className="w-full h-full object-contain scale-[1.06] sm:scale-[1.08] filter drop-shadow-[0_16px_32px_rgba(0,0,0,0.12)] dark:drop-shadow-[0_16px_32px_rgba(0,0,0,0.45)] transition-all duration-500 ease-out group-hover:scale-[1.12] group-hover:-translate-y-1.5 will-change-transform"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
               </div>
 
               {/* [ 2. PROJECT TITLE & 3. PROJECT CATEGORY / TYPE ] */}

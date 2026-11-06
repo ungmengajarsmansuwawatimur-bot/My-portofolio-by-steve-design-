@@ -7,10 +7,11 @@ export const InteractiveToolIndex: React.FC = () => {
     <div className="w-full max-w-6xl mx-auto">
       {/* Grid Formasi (4 baris x 4 kolom = 16 aplikasi seimbang) */}
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-3.5 xs:gap-4 sm:gap-5 md:gap-6 items-stretch">
-        {toolsData.map((tool) => (
+        {toolsData.map((tool, index) => (
           <div
             key={tool.name}
-            className="group flex flex-col items-center justify-between transition-all duration-300"
+            style={{ '--delay': `${((index % 4) + 1) * 100}ms` } as React.CSSProperties}
+            className="group flex flex-col items-center justify-between transition-all duration-300 fade-in-up"
           >
             {/* Kartu Persegi Putih dengan Sudut Membulat */}
             <div className="w-full bg-white rounded-xl xs:rounded-2xl sm:rounded-3xl p-3 xs:p-3.5 sm:p-5 flex flex-col items-center justify-between shadow-md transition-all duration-300 group-hover:-translate-y-1.5 group-hover:shadow-2xl cursor-pointer">

@@ -48,33 +48,61 @@ export const EditableImage: React.FC<EditableImageProps> = ({
     }
   }, [storageKey, darkSrc]);
 
+  const getSources = (src: string) => {
+    if (src.endsWith('.webp')) {
+      const base = src.replace(/\.webp$/, '');
+      return {
+        avif: `${base}.avif`,
+        webp: src,
+      };
+    }
+    return null;
+  };
+
+  const lightSources = getSources(currentSrc);
+  const darkSources = currentDarkSrc ? getSources(currentDarkSrc) : null;
+
   return (
     <div
       className={`relative overflow-hidden ${aspectRatioClass} ${containerClassName} ${className}`}
     >
-      <img
-        src={currentSrc}
-        alt={alt}
-        className={`w-full h-full ${imgClassName} ${darkSrc ? 'dark:hidden block' : ''}`}
-        referrerPolicy="no-referrer"
-        loading={loading}
-        decoding="async"
-        style={{
-          imageRendering: '-webkit-optimize-contrast' as React.CSSProperties['imageRendering'],
-        }}
-      />
-      {darkSrc && currentDarkSrc && (
+      <picture className={darkSrc ? 'dark:hidden block w-full h-full' : 'block w-full h-full'}>
+        {lightSources && <source srcSet={lightSources.avif} type="image/avif" />}
+        {lightSources && <source srcSet={lightSources.webp} type="image/webp" />}
         <img
-          src={currentDarkSrc}
+          src={currentSrc}
           alt={alt}
-          className={`w-full h-full ${imgClassName} hidden dark:block`}
+          width={1600}
+          height={420}
+          className={`w-full h-full ${imgClassName}`}
           referrerPolicy="no-referrer"
           loading={loading}
-          decoding="async"
+          decoding={loading === 'eager' ? 'sync' : 'async'}
+          fetchPriority={loading === 'eager' ? 'high' : 'auto'}
           style={{
             imageRendering: '-webkit-optimize-contrast' as React.CSSProperties['imageRendering'],
           }}
         />
+      </picture>
+      {darkSrc && currentDarkSrc && (
+        <picture className="hidden dark:block w-full h-full">
+          {darkSources && <source srcSet={darkSources.avif} type="image/avif" />}
+          {darkSources && <source srcSet={darkSources.webp} type="image/webp" />}
+          <img
+            src={currentDarkSrc}
+            alt={alt}
+            width={1600}
+            height={420}
+            className={`w-full h-full ${imgClassName}`}
+            referrerPolicy="no-referrer"
+            loading={loading}
+            decoding={loading === 'eager' ? 'sync' : 'async'}
+            fetchPriority={loading === 'eager' ? 'high' : 'auto'}
+            style={{
+              imageRendering: '-webkit-optimize-contrast' as React.CSSProperties['imageRendering'],
+            }}
+          />
+        </picture>
       )}
       {children}
     </div>

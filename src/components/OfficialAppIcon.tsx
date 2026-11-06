@@ -262,11 +262,19 @@ export const OfficialAppIcon: React.FC<OfficialAppIconProps> = ({ name, classNam
     case 'web':
     case 'website platform':
       return (
-        <img
-          src="/assets/icons/google_studio.png"
-          alt="Google AI Studio"
-          className={`${className} object-contain select-none`}
-        />
+        <picture className="flex items-center justify-center">
+          <source srcSet="/assets/icons/google_studio.avif" type="image/avif" />
+          <source srcSet="/assets/icons/google_studio.webp" type="image/webp" />
+          <img
+            src="/assets/icons/google_studio.png"
+            alt="Google AI Studio"
+            width={48}
+            height={48}
+            loading="lazy"
+            decoding="async"
+            className={`${className} object-contain select-none`}
+          />
+        </picture>
       );
 
     // 9. OFFICIAL CANVA (Latest Brand Mark from provided image)
@@ -363,21 +371,37 @@ export const OfficialAppIcon: React.FC<OfficialAppIconProps> = ({ name, classNam
     // 11. OFFICIAL ANTIGRAVITY
     case 'antigravity':
       return (
-        <img
-          src="/assets/icons/antigravity_clean.png"
-          alt="Antigravity"
-          className={`${className} object-contain select-none`}
-        />
+        <picture className="flex items-center justify-center">
+          <source srcSet="/assets/icons/antigravity_clean.avif" type="image/avif" />
+          <source srcSet="/assets/icons/antigravity_clean.webp" type="image/webp" />
+          <img
+            src="/assets/icons/antigravity_clean.png"
+            alt="Antigravity"
+            width={48}
+            height={48}
+            loading="lazy"
+            decoding="async"
+            className={`${className} object-contain select-none`}
+          />
+        </picture>
       );
 
     // 12. OFFICIAL REPLIT
     case 'replit':
       return (
-        <img
-          src="/assets/icons/replit_logo.png"
-          alt="Replit"
-          className={`${className} object-contain select-none`}
-        />
+        <picture className="flex items-center justify-center">
+          <source srcSet="/assets/icons/replit_logo.avif" type="image/avif" />
+          <source srcSet="/assets/icons/replit_logo.webp" type="image/webp" />
+          <img
+            src="/assets/icons/replit_logo.png"
+            alt="Replit"
+            width={48}
+            height={48}
+            loading="lazy"
+            decoding="async"
+            className={`${className} object-contain select-none`}
+          />
+        </picture>
       );
 
     // 13. OFFICIAL GOOGLE STITCH
@@ -385,51 +409,91 @@ export const OfficialAppIcon: React.FC<OfficialAppIconProps> = ({ name, classNam
     case 'google stitch':
     case 'google-stitch':
       return (
-        <img
-          src="/assets/icons/google_stitch_logo.jpeg"
-          alt="Google Stitch"
-          className={`${className} object-contain rounded-md select-none`}
-        />
+        <picture className="flex items-center justify-center">
+          <source srcSet="/assets/icons/google_stitch_logo.avif" type="image/avif" />
+          <source srcSet="/assets/icons/google_stitch_logo.webp" type="image/webp" />
+          <img
+            src="/assets/icons/google_stitch_logo.jpeg"
+            alt="Google Stitch"
+            width={48}
+            height={48}
+            loading="lazy"
+            decoding="async"
+            className={`${className} object-contain rounded-md select-none`}
+          />
+        </picture>
       );
 
     // 14. OFFICIAL FIREBASE
     case 'firebase':
       return (
-        <img
-          src="/assets/icons/firebase_logo.png"
-          alt="Firebase"
-          className={`${className} object-contain select-none`}
-        />
+        <picture className="flex items-center justify-center">
+          <source srcSet="/assets/icons/firebase_logo.avif" type="image/avif" />
+          <source srcSet="/assets/icons/firebase_logo.webp" type="image/webp" />
+          <img
+            src="/assets/icons/firebase_logo.png"
+            alt="Firebase"
+            width={48}
+            height={48}
+            loading="lazy"
+            decoding="async"
+            className={`${className} object-contain select-none`}
+          />
+        </picture>
       );
 
     // 15. OFFICIAL SUPABASE
     case 'supabase':
       return (
-        <img
-          src="/assets/icons/supabase_logo.jpeg"
-          alt="Supabase"
-          className={`${className} object-contain rounded-md select-none`}
-        />
+        <picture className="flex items-center justify-center">
+          <source srcSet="/assets/icons/supabase_logo.avif" type="image/avif" />
+          <source srcSet="/assets/icons/supabase_logo.webp" type="image/webp" />
+          <img
+            src="/assets/icons/supabase_logo.jpeg"
+            alt="Supabase"
+            width={48}
+            height={48}
+            loading="lazy"
+            decoding="async"
+            className={`${className} object-contain rounded-md select-none`}
+          />
+        </picture>
       );
 
     // 16. OFFICIAL EXABYTES
     case 'exabytes':
       return (
-        <img
-          src="/assets/icons/exabytes_logo.png"
-          alt="Exabytes"
-          className={`${className} object-contain select-none`}
-        />
+        <picture className="flex items-center justify-center">
+          <source srcSet="/assets/icons/exabytes_logo.avif" type="image/avif" />
+          <source srcSet="/assets/icons/exabytes_logo.webp" type="image/webp" />
+          <img
+            src="/assets/icons/exabytes_logo.png"
+            alt="Exabytes"
+            width={48}
+            height={48}
+            loading="lazy"
+            decoding="async"
+            className={`${className} object-contain select-none`}
+          />
+        </picture>
       );
 
     // 17. OFFICIAL LONEX
     case 'lonex':
       return (
-        <img
-          src="/assets/icons/lonex_logo.png"
-          alt="Lonex"
-          className={`${className} object-contain select-none`}
-        />
+        <picture className="flex items-center justify-center">
+          <source srcSet="/assets/icons/lonex_logo.avif" type="image/avif" />
+          <source srcSet="/assets/icons/lonex_logo.webp" type="image/webp" />
+          <img
+            src="/assets/icons/lonex_logo.png"
+            alt="Lonex"
+            width={48}
+            height={48}
+            loading="lazy"
+            decoding="async"
+            className={`${className} object-contain select-none`}
+          />
+        </picture>
       );
 
     // 11. OFFICIAL LOVABLE (AI App Builder)

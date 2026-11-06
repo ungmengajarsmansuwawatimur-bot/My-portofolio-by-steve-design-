@@ -104,6 +104,10 @@ export const Capabilities: React.FC<CapabilitiesProps> = ({ className = '' }) =>
                       <img
                         src={item.imageUrl}
                         alt="Display preview"
+                        width={128}
+                        height={80}
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-full object-cover"
                       />
                     </div>

@@ -577,3 +577,40 @@ p.text-justify,
   }
 }
 
+/* ========================================================================= */
+/* Scroll Animation System: fadeInUp (Single Reusable Block)                 */
+/* ========================================================================= */
+
+/* State awal: disembunyikan HANYA jika JavaScript aktif via class js-anim */
+html.js-anim .fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition-property: opacity, transform;
+  transition-duration: 0.8s;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--delay, 0ms);
+  will-change: opacity, transform;
+}
+
+/* State akhir: saat elemen pertama kali masuk viewport */
+html.js-anim .fade-in-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hapus will-change setelah animasi selesai untuk efisiensi memori browser */
+html.js-anim .fade-in-up.anim-done {
+  will-change: auto;
+}
+
+/* Aksesibilitas: Hormati prefers-reduced-motion: reduce */
+@media (prefers-reduced-motion: reduce) {
+  html.js-anim .fade-in-up {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    will-change: auto !important;
+  }
+}
+
+

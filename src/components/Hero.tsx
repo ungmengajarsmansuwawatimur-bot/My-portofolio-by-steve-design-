@@ -23,9 +23,17 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
 
   // Reset state when user scrolls back to top so animation can be played again
   React.useEffect(() => {
+    if (!isWorkActive) return;
+    let ticking = false;
     const handleScroll = () => {
-      if (window.scrollY < 120 && isWorkActive) {
-        setIsWorkActive(false);
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          if (window.scrollY < 120) {
+            setIsWorkActive(false);
+          }
+          ticking = false;
+        });
+        ticking = true;
       }
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -88,6 +96,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
           containerClassName="w-full h-36 xs:h-44 sm:h-60 md:h-80 lg:h-96 xl:h-[420px] relative overflow-hidden border-y-2 border-[#171717]/10 dark:border-white/10"
           imgClassName="w-full h-full object-cover object-center"
           buttonPosition="top-right"
+          loading="eager"
         />
       </div>
 
@@ -123,7 +132,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
             {/* FOTO & MOCKUP UNTUK TAMPILAN MOBILE & TABLET (< lg) — Ukuran Seimbang & Proporsional */}
             <div className="w-full flex lg:hidden justify-center items-center py-2 xs:py-3 sm:py-4 md:py-6 select-none overflow-visible">
               <div className="relative w-full max-w-[320px] xs:max-w-[360px] sm:max-w-[420px] md:max-w-[480px] aspect-[680/600] flex items-center justify-center overflow-visible">
-                <CircularOrbitBackdrop photoSrc="/assets/taufik_official_portrait.png" />
+                <CircularOrbitBackdrop photoSrc="/assets/taufik_official_portrait.webp" />
               </div>
             </div>
 
@@ -270,7 +279,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
             {/* Visual Container: Ukuran besar, megah & seimbang dengan seluruh teks di kiri */}
             <div className="relative w-full max-w-[560px] lg:max-w-[620px] xl:max-w-[720px] 2xl:max-w-[780px] aspect-[680/600] flex items-center justify-end transition-all duration-300 overflow-visible translate-x-2 lg:translate-x-4">
               {/* Circular Orbit Composition dengan Foto Resmi Permanen Taufik Hidayat Malii & Mockup Badges */}
-              <CircularOrbitBackdrop photoSrc="/assets/taufik_official_portrait.png" />
+              <CircularOrbitBackdrop photoSrc="/assets/taufik_official_portrait.webp" />
             </div>
           </div>
 

@@ -6,6 +6,7 @@ import { RealWork } from './components/RealWork';
 import { RetailLearning } from './components/RetailLearning';
 import { SkillsContact } from './components/SkillsContact';
 import { downloadCv } from './utils/downloadCv';
+import { useScrollAnimation } from './hooks/useScrollAnimation';
 
 // Code-split heavy below-the-fold detail pages and modals to slash initial bundle size
 const PhotoGuideModal = lazy(() => import('./components/PhotoGuideModal').then(m => ({ default: m.PhotoGuideModal })));
@@ -31,6 +32,9 @@ export default function App() {
   });
 
   const [photoModalTarget, setPhotoModalTarget] = useState<string | null>(null);
+
+  // Activate single reusable scroll animation for home page elements
+  useScrollAnimation(currentRoute === 'home');
 
   // Synchronize routing with browser history and hash navigation
   useEffect(() => {

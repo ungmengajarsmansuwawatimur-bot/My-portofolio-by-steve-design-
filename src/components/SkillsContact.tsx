@@ -54,8 +54,11 @@ export const SkillsContact: React.FC<SkillsContactProps> = ({ onOpenCvModal }) =
         className="py-20 md:py-28 bg-[#31543A] text-white transition-colors duration-200"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 sm:space-y-14">
-          {/* Section Kicker & Title - Centered matching screenshot */}
-          <div className="space-y-3 max-w-3xl mx-auto text-center flex flex-col items-center">
+          {/* Section Kicker & Title - Centered matching screenshot (delay 0ms) */}
+          <div
+            className="space-y-3 max-w-3xl mx-auto text-center flex flex-col items-center fade-in-up"
+            style={{ '--delay': '0ms' } as React.CSSProperties}
+          >
             <span className="font-body inline-flex items-center justify-center text-base sm:text-lg md:text-xl lg:text-2xl font-bold tracking-[0.18em] uppercase text-[#F9B51B]">
               SKILLS
             </span>
@@ -85,8 +88,11 @@ export const SkillsContact: React.FC<SkillsContactProps> = ({ onOpenCvModal }) =
         className="py-20 md:py-28 bg-[#FFFFFF] text-[#171717] transition-colors duration-200 border-t border-[#171717]/10"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 sm:space-y-16">
-          {/* Section Kicker & Title */}
-          <div className="text-center space-y-3 max-w-2xl mx-auto">
+          {/* Section Kicker & Title (delay 100ms) */}
+          <div
+            className="text-center space-y-3 max-w-2xl mx-auto fade-in-up"
+            style={{ '--delay': '100ms' } as React.CSSProperties}
+          >
             <div className="font-body inline-flex items-center gap-2 text-xs sm:text-sm font-semibold tracking-[0.08em] uppercase text-[#A86200]">
               <span aria-hidden="true">✦</span>
               <span>TESTIMONIALS</span>
@@ -97,8 +103,11 @@ export const SkillsContact: React.FC<SkillsContactProps> = ({ onOpenCvModal }) =
             </h2>
           </div>
 
-          {/* Carousel Container matching reference image (2 cards side by side, subtle chevrons & 3 pagination dots) */}
-          <div className="relative max-w-6xl mx-auto px-4 xs:px-6 sm:px-10 lg:px-12">
+          {/* Carousel Container matching reference image (2 cards side by side, subtle chevrons & 3 pagination dots) - delay 100ms */}
+          <div
+            className="relative max-w-6xl mx-auto px-4 xs:px-6 sm:px-10 lg:px-12 fade-in-up"
+            style={{ '--delay': '100ms' } as React.CSSProperties}
+          >
             {/* Left Chevron Button */}
             <button
               type="button"
